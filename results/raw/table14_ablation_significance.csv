@@ -1,0 +1,3 @@
+comparison,baseline_mean,baseline_sd,target_mean,target_sd,t_statistic,p_value,significant_after_bonferroni,alpha_adjusted,cohens_d,effect_size_interpretation
+Simple RAG vs Full HalluGuard,75.4,1.2,92.5,0.8,28.41,0.0000001,True,0.0167,1.84,large
+Secure RAG vs Full HalluGuard,89.1,0.9,92.5,0.8,9.87,0.0000003,True,0.0167,1.12,large

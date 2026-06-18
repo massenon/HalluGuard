@@ -1,0 +1,51 @@
+snippet_id,model,domain,final_label,annotator_a_label,annotator_b_label,halluguard_prediction,repaired_correctly
+gold_0001,Mistral 7B,MBPP,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0002,Mixtral 8x7B,CodeHaluEval,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0003,Mistral 7B,CodeHaluEval,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0004,Gemini 1.0 Pro,CodeHaluEval,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0005,Gemini 1.5 Pro,MBPP,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0006,Claude 3 Sonnet,MBPP,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0007,Phi-3-medium,NL-API,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0008,Claude 3 Sonnet,CodeHaluEval,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0009,Gemini 1.0 Pro,CodeHaluEval,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0010,Gemini 1.0 Pro,NL-API,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0011,GPT-3.5-Turbo,HumanEval+,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0012,Mistral Large,NL-API,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0013,GPT-3.5-Turbo,MBPP,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0014,Gemini 1.0 Pro,CodeHaluEval,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0015,Claude 3 Sonnet,CodeHaluEval,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0016,Llama 3 (8B),MBPP,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0017,Claude 3 Sonnet,CodeHaluEval,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0018,Gemini 1.5 Pro,HumanEval+,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0019,Claude 3 Sonnet,NL-API,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0020,Gemini 1.5 Pro,MBPP,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0021,Llama 3 (8B),CodeHaluEval,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0022,Mixtral 8x7B,MBPP,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0023,StarCoder2 (15B),MBPP,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0024,GPT-4,NL-API,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0025,Llama 3 (70B),MBPP,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0026,Phi-3-medium,HumanEval+,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0027,Llama 3 (70B),HumanEval+,hallucination,hallucination,hallucination,flagged,yes
+gold_0028,Gemini 1.0 Pro,HumanEval+,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0029,Mistral 7B,MBPP,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0030,GPT-4,HumanEval+,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0031,Mistral Large,HumanEval+,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0032,DeepSeek-Coder,HumanEval+,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0033,Gemini 1.0 Pro,MBPP,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0034,Mistral 7B,CodeHaluEval,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0035,Llama 3 (8B),MBPP,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0036,Mixtral 8x7B,MBPP,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0037,Llama 3 (70B),MBPP,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0038,Claude 3 Opus,HumanEval+,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0039,GPT-3.5-Turbo,NL-API,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0040,Llama 3 (8B),NL-API,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0041,Mistral Large,HumanEval+,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0042,StarCoder2 (15B),MBPP,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0043,Mixtral 8x7B,HumanEval+,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0044,Claude 3 Opus,CodeHaluEval,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0045,Mistral 7B,MBPP,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0046,Mixtral 8x7B,NL-API,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0047,GPT-4,HumanEval+,no_hallucination,no_hallucination,no_hallucination,not_flagged,na
+gold_0048,Code Llama (34B),HumanEval+,hallucination,hallucination,hallucination,flagged,yes
+gold_0049,StarCoder2 (15B),MBPP,hallucination,hallucination,hallucination,flagged,yes
+gold_0050,Gemini 1.0 Pro,HumanEval+,no_hallucination,no_hallucination,no_hallucination,not_flagged,na

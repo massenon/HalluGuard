@@ -1,0 +1,25 @@
+# Environments
+venv/
+.venv/
+__pycache__/
+*.pyc
+.env
+
+# API keys / secrets
+*.key
+secrets.yaml
+
+# Large data (use Zenodo / Git LFS instead)
+data/full_576k_corpus/
+*.parquet
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Docker
+docker/sandbox/*.log

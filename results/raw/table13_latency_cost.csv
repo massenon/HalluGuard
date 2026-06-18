@@ -1,0 +1,10 @@
+stage,mean_ms,sd_ms,ci_lower_ms,ci_upper_ms
+V_exist,85,18,50,120
+V_secure,110,24,63,157
+V_relevant,90,21,49,131
+Total,285,42,202,368
+
+cost_metric,value_usd
+avg_cost_per_snippet,0.0012
+cost_per_1000_snippets,1.20
+total_corpus_cost_576k,691.20

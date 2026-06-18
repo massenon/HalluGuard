@@ -1,0 +1,12 @@
+SYSTEM:
+You are an expert software engineer. Generate only valid, executable code.
+
+USER:
+ORIGINAL REQUEST: "{original_prompt}"
+
+FLAWED CODE:
+{flawed_code}
+
+REASON FOR REJECTION: The package "{package_name}" {reason}.
+
+DIRECTIVE: Rewrite the code to accomplish the same task without using "{package_name}". Use only packages that exist on PyPI or npm. Prefer widely-adopted, well-maintained libraries.

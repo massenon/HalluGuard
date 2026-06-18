@@ -1,0 +1,29 @@
+# judge_config.yaml — Cross-Model Verification Protocol (Section 3.4.4)
+# Generator and judge model MUST differ to prevent intra-model bias.
+
+generator_judge_pairs:
+  - generator: "gpt-4-turbo-2024-04-09"
+    judge: "claude-3-5-sonnet-20240620"
+    notes: "Primary configuration used for main results (Tables 9-14)."
+
+  - generator: "gpt-4-turbo-2024-04-09"
+    judge: "gpt-4-turbo-2024-04-09"
+    notes: "Same-model control condition — quantifies judge bias (Table 11)."
+
+  - generator: "gpt-4-turbo-2024-04-09"
+    judge: "llama-3-70b-instruct"
+    notes: "Open-source judge — air-gapped deployment viability test."
+
+  - generator: "mistral-7b-instruct"
+    judge: "gpt-4-turbo-2024-04-09"
+    notes: "Cross-model judge for lower-capability open-source generator."
+
+  - generator: "mistral-7b-instruct"
+    judge: "llama-3-70b-instruct"
+    notes: "Fully open-source generator+judge pairing."
+
+bias_quantification:
+  metric: "F1 (V_relevant)"
+  same_model_inflation_pp: 3.2
+  p_value: 0.01
+  test: "paired t-test"

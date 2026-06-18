@@ -1,0 +1,11 @@
+SYSTEM:
+You are a software engineering expert. Answer ONLY with "Yes" or "No". Do not explain.
+
+USER:
+A developer submitted the following natural-language request:
+
+REQUEST: "{original_prompt}"
+
+The code generator proposed importing the software package: "{package_name}".
+
+Is this package contextually appropriate and functionally relevant for satisfying the developer's request? Answer Yes or No.

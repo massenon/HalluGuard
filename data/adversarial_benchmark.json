@@ -1,0 +1,322 @@
+{
+  "description": "Representative sample of adversarial benchmark; full N=500 per manuscript Table 7",
+  "n_full_benchmark": 500,
+  "n_sample": 45,
+  "packages": [
+    {
+      "package": "colourama-fake",
+      "label": "malicious",
+      "s_vuln": 0.0,
+      "s_rep": 0.0,
+      "s_typo": 0.22
+    },
+    {
+      "package": "requests",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.72,
+      "s_typo": 0.08
+    },
+    {
+      "package": "tensorflow",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.78,
+      "s_typo": 0.13
+    },
+    {
+      "package": "pandass",
+      "label": "malicious",
+      "s_vuln": 0.33,
+      "s_rep": 0.04,
+      "s_typo": 0.94
+    },
+    {
+      "package": "celery",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.71,
+      "s_typo": 0.16
+    },
+    {
+      "package": "node-ipc-malicious",
+      "label": "malicious",
+      "s_vuln": 0.0,
+      "s_rep": 0.1,
+      "s_typo": 0.0
+    },
+    {
+      "package": "piillow",
+      "label": "malicious",
+      "s_vuln": 0.49,
+      "s_rep": 0.11,
+      "s_typo": 0.93
+    },
+    {
+      "package": "pytest",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.83,
+      "s_typo": 0.1
+    },
+    {
+      "package": "torch",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.84,
+      "s_typo": 0.03
+    },
+    {
+      "package": "crytography",
+      "label": "malicious",
+      "s_vuln": 0.36,
+      "s_rep": 0.01,
+      "s_typo": 0.94
+    },
+    {
+      "package": "beautifulsoap4",
+      "label": "malicious",
+      "s_vuln": 0.39,
+      "s_rep": 0.12,
+      "s_typo": 0.85
+    },
+    {
+      "package": "boto3",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.81,
+      "s_typo": 0.1
+    },
+    {
+      "package": "log4j-vulnerable-pkg",
+      "label": "malicious",
+      "s_vuln": 0.0,
+      "s_rep": 0.23,
+      "s_typo": 0.27
+    },
+    {
+      "package": "scikit-learn",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.86,
+      "s_typo": 0.03
+    },
+    {
+      "package": "transformers",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.95,
+      "s_typo": 0.14
+    },
+    {
+      "package": "lxml",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.92,
+      "s_typo": 0.17
+    },
+    {
+      "package": "click",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.94,
+      "s_typo": 0.17
+    },
+    {
+      "package": "tqdm",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.77,
+      "s_typo": 0.18
+    },
+    {
+      "package": "sqlalchemy",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.7,
+      "s_typo": 0.01
+    },
+    {
+      "package": "pydantic",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.98,
+      "s_typo": 0.11
+    },
+    {
+      "package": "seaborn",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.77,
+      "s_typo": 0.16
+    },
+    {
+      "package": "djanga",
+      "label": "malicious",
+      "s_vuln": 0.1,
+      "s_rep": 0.21,
+      "s_typo": 0.83
+    },
+    {
+      "package": "pillow",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.97,
+      "s_typo": 0.04
+    },
+    {
+      "package": "cryptography",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.82,
+      "s_typo": 0.01
+    },
+    {
+      "package": "aiohttp",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.87,
+      "s_typo": 0.14
+    },
+    {
+      "package": "numpyy",
+      "label": "malicious",
+      "s_vuln": 0.47,
+      "s_rep": 0.04,
+      "s_typo": 0.82
+    },
+    {
+      "package": "requesrs",
+      "label": "malicious",
+      "s_vuln": 0.19,
+      "s_rep": 0.27,
+      "s_typo": 0.89
+    },
+    {
+      "package": "ssl-decrypt-tool",
+      "label": "malicious",
+      "s_vuln": 0.0,
+      "s_rep": 0.03,
+      "s_typo": 0.09
+    },
+    {
+      "package": "reqeusts",
+      "label": "malicious",
+      "s_vuln": 0.33,
+      "s_rep": 0.18,
+      "s_typo": 0.95
+    },
+    {
+      "package": "fastapi",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.76,
+      "s_typo": 0.12
+    },
+    {
+      "package": "matplotlib",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.98,
+      "s_typo": 0.03
+    },
+    {
+      "package": "django",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.99,
+      "s_typo": 0.17
+    },
+    {
+      "package": "redis",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.73,
+      "s_typo": 0.1
+    },
+    {
+      "package": "psycopg2",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.94,
+      "s_typo": 0.0
+    },
+    {
+      "package": "event-stream-backdoor",
+      "label": "malicious",
+      "s_vuln": 0.0,
+      "s_rep": 0.29,
+      "s_typo": 0.23
+    },
+    {
+      "package": "jinja2",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.99,
+      "s_typo": 0.16
+    },
+    {
+      "package": "numpy",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 1.0,
+      "s_typo": 0.05
+    },
+    {
+      "package": "beautifulsoup4",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.99,
+      "s_typo": 0.03
+    },
+    {
+      "package": "pandas",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.8,
+      "s_typo": 0.16
+    },
+    {
+      "package": "langchain",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.92,
+      "s_typo": 0.18
+    },
+    {
+      "package": "flaskk",
+      "label": "malicious",
+      "s_vuln": 0.15,
+      "s_rep": 0.26,
+      "s_typo": 0.98
+    },
+    {
+      "package": "scipy",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.92,
+      "s_typo": 0.17
+    },
+    {
+      "package": "pyyaml",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.8,
+      "s_typo": 0.0
+    },
+    {
+      "package": "scikit-learm",
+      "label": "malicious",
+      "s_vuln": 0.28,
+      "s_rep": 0.24,
+      "s_typo": 0.87
+    },
+    {
+      "package": "flask",
+      "label": "benign",
+      "s_vuln": 1.0,
+      "s_rep": 0.97,
+      "s_typo": 0.1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "description": "Representative sample; full ~20,000-entry dictionary built from top PyPI packages metadata",
+  "n_full": 20000,
+  "n_sample": 15,
+  "mappings": {
+    "python:bs4": "beautifulsoup4",
+    "python:sklearn": "scikit-learn",
+    "python:cv2": "opencv-python",
+    "python:yaml": "pyyaml",
+    "python:PIL": "pillow",
+    "python:Crypto": "pycryptodome",
+    "python:dateutil": "python-dateutil",
+    "python:jwt": "pyjwt",
+    "python:dotenv": "python-dotenv",
+    "python:google": "google-api-python-client",
+    "python:attr": "attrs",
+    "python:nacl": "pynacl",
+    "python:psycopg2": "psycopg2-binary",
+    "python:OpenSSL": "pyopenssl",
+    "python:serial": "pyserial"
+  }
+}
