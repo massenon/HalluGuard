@@ -2,9 +2,24 @@
 
 **Vibe Coding at Risk: A CoV-RAG Framework for Mitigating Slopsquatting Attacks in AI-Generated Code**
 
-This repository contains the complete source code, configuration files,
-datasets, and experiment scripts required to independently reproduce every
-quantitative result reported in the manuscript.
+This repository contains the complete source code, configuration files, datasets, and experiment scripts required to independently reproduce every quantitative result reported in the manuscript.
+
+---
+
+## Project Overview
+
+**HalluGuard** is an active, verification-first security middleware designed to secure the AI-assisted software development cycle (often termed *vibe coding*) against the emerging threat of **slopsquatting**. While Large Language Models (LLMs) accelerate software production, they exhibit a critical vulnerability: package hallucination—the generation of plausible-sounding but non-existent package dependencies. Adversaries systematically exploit this by pre-registering these hallucinated names on public registries (like PyPI or npm) with malicious payloads, executing a silent, pre-installation supply-chain compromise when a developer runs `pip install` or `npm install`.
+
+Unlike existing hallucination-mitigation tools that rely on static text corpora or post-execution sandboxing, HalluGuard formally specializes the **Chain-of-Verification with Retrieval-Augmented Generation (CoV-RAG)** paradigm for live, stateful software-dependency security. It intercepts generated code, extracts imported packages, and validates them against live registry APIs, open-source vulnerability databases, and contextual relevance judgers before the code ever reaches the developer's workstation.
+
+---
+
+## Key Architectural Contributions
+
+*   **Stateful CoV-RAG Pipeline:** Integrates a three-stage, sequential, short-circuiting verification loop—$V_{\mathrm{exist}}$ (registry existence), $V_{\mathrm{secure}}$ (multi-factor posture analysis), and $V_{\mathrm{relevant}}$ (contextual alignment)—operating on live, real-time API states to eliminate the "temporal decay of truth" typical of standard RAG systems.
+*   **Adversarial Reputation Hardening ($S_{\mathrm{rep}}$):** Combines log-normalized package age, download velocity, and cryptographic PGP maintainer-key validation into a combined score, rendering the security checks highly resilient to automated reputation-tampering and download-inflation attacks.
+*   **Cross-Model Verification Protocol:** Decouples the code-generation LLM from the relevance-judging LLM (e.g., GPT-4 paired with Claude 3.5 Sonnet) to eliminate intra-model semantic self-consistency bias, which empirically inflates same-model judge accuracy by $+3.2$ percentage points.
+*   **Context-Preserving Mitigation Loop:** Automatically constructs non-truncated, structured regeneration prompts on verification failure, guiding the LLM toward safe, functionally equivalent repairs using PyPI-verified components without human manual intervention.
 
 ---
 
