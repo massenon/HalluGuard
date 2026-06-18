@@ -146,8 +146,6 @@ risk of live malware execution.
 
 ## 8. Data Availability
 
-The full 576,000-snippet evaluation corpus exceeds GitHub's file-size limits
-and is archived on Zenodo: **DOI: 10.5281/zenodo.[TO BE MINTED ON RELEASE]**.
 This repository includes the NL-API dataset (2,500 prompts), the adversarial
 benchmark (500 packages), and the human-annotated gold standard (800
 snippets) in full. See `data/README.md` for the complete provenance chain.
