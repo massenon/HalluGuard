@@ -1,0 +1,5 @@
+metric,result_pct,ci_lower,ci_upper,n
+Detection Rate (DR),98.7,97.9,99.3,800
+Automated Repair Rate (ARR),92.5,91.0,94.0,576000
+Semantic Correctness Rate (SCR),96.1,93.4,97.8,400
+False Positive Rate (FPR),0.2,0.1,0.5,800

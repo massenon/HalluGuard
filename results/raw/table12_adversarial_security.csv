@@ -1,0 +1,8 @@
+metric,result,ci_lower,ci_upper
+True Positives,485,,
+False Negatives,15,,
+True Negatives,491,,
+False Positives,9,,
+Precision,98.2,97.0,99.0
+Recall,97.0,95.4,98.1
+F1-Score,97.6,96.5,98.4

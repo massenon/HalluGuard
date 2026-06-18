@@ -1,0 +1,17 @@
+{
+  "description": "Representative sample; full ~20,000-entry dictionary built from top npm packages metadata",
+  "n_full": 20000,
+  "n_sample": 10,
+  "mappings": {
+    "javascript:lodash": "lodash",
+    "javascript:react": "react",
+    "javascript:axios": "axios",
+    "javascript:express": "express",
+    "javascript:moment": "moment",
+    "javascript:chalk": "chalk",
+    "javascript:dotenv": "dotenv",
+    "javascript:uuid": "uuid",
+    "javascript:jest": "jest",
+    "javascript:webpack": "webpack"
+  }
+}

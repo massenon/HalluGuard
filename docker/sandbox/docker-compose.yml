@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  sandbox:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: halluguard_scr_sandbox
+    network_mode: none          # air-gapped — no outbound network access
+    read_only: false
+    volumes:
+      - ../../data:/sandbox/data:ro
+      - ../../results/raw:/sandbox/results/raw
+    environment:
+      - PYTHONUNBUFFERED=1
+    mem_limit: 2g
+    cpus: 2.0
+    # Ephemeral container; logs and execution traces are written to
+    # results/raw/ on the host via the mounted volume above.

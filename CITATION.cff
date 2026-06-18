@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated paper."
+type: software
+title: "HalluGuard: A CoV-RAG Framework for Mitigating Slopsquatting Attacks in AI-Generated Code"
+authors:
+  - family-names: Massenon
+    given-names: Rhodes
+    affiliation: Obafemi Awolowo University
+  - family-names: Gambo
+    given-names: Ishaya
+    affiliation: Obafemi Awolowo University
+  - family-names: Okegbile
+    given-names: Samuel D.
+    affiliation: Wilfrid Laurier University
+  - family-names: Agarwal
+    given-names: Saurabh
+    affiliation: Yeungnam University
+  - family-names: Pak
+    given-names: Wooguil
+    affiliation: Yeungnam University
+license: MIT
+repository-code: "https://github.com/[YOUR-ORG]/halluguard"
+preferred-citation:
+  type: article
+  title: "Vibe Coding at Risk: A CoV-RAG Framework for Mitigating Slopsquatting Attacks in AI-Generated Code"
+  authors:
+    - family-names: Massenon
+      given-names: Rhodes
+    - family-names: Gambo
+      given-names: Ishaya
+    - family-names: Okegbile
+      given-names: Samuel D.
+    - family-names: Agarwal
+      given-names: Saurabh
+    - family-names: Pak
+      given-names: Wooguil
+  journal: "Information and Software Technology"
+  year: 2026
