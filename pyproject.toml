@@ -32,3 +32,6 @@ addopts = "-q"
 [tool.ruff]
 line-length = 100
 target-version = "py310"
+# Vendored third-party code, redistributed verbatim; not ours to restyle.
+# See NOTICE and database/README.md.
+extend-exclude = ["database"]
