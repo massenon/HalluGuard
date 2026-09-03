@@ -1,5 +1,9 @@
 # HalluGuard — Replication Package
 
+[![CI](https://github.com/massenon/HalluGuard/actions/workflows/ci.yml/badge.svg)](https://github.com/massenon/HalluGuard/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python 3.10–3.12](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue.svg)](pyproject.toml)
+
 HalluGuard is a registry-aware Chain-of-Verification (CoV-RAG) middleware that validates
 third-party package dependencies in LLM-generated Python code before installation. Each
 extracted dependency passes through a short-circuiting chain:
