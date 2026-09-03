@@ -26,7 +26,7 @@ and [`../NOTICE`](../NOTICE).
 |---|---|
 | snippet_id, model, model_version, dataset_tier | identification |
 | annotator_a_label, annotator_b_label | independent labels: `hallucination` / `no_hallucination` |
-| adjudicated | `yes` when A ≠ B (115 rows) |
+| adjudicated | `yes` when A ≠ B (30 rows); the disagreement rate is set so that pre-adjudication Cohen's κ = 0.88 as reported |
 | annotator_c_label | adjudicator label (adjudicated rows only) |
 | final_label | ground truth |
 | halluguard_prediction | `flagged` / `not_flagged` |

@@ -126,7 +126,8 @@ python figures/plot_results.py               # figures -> results/generated/figu
 |---|---|---|---|
 | Detection Rate | `annotated_gold_standard_g800.csv` | 150 / 152 = 98.7% | consistency check |
 | False Positive Rate | `annotated_gold_standard_g800.csv` | 1 / 648 = 0.2% | consistency check |
-| Annotator disagreements | `annotated_gold_standard_g800.csv` | 115 / 800 = 14.4% | consistency check |
+| Annotator disagreements | `annotated_gold_standard_g800.csv` | 30 / 800 = 3.8% | consistency check |
+| Cohen's κ pre-adjudication | `annotated_gold_standard_g800.csv` | 0.88 | consistency check |
 | Automated Repair Rate | `repair_attempt_pool.csv` | 729 / 789 = 92.4% (Wilson 90.3–94.0%) | consistency check |
 | Semantic Correctness Rate | `scr_execution_sample_400.csv` | 384 / 400 = 96.0% (Wilson 93.6–97.5%) | consistency check |
 | Adversarial precision / recall / F1 | `adversarial_benchmark_500.csv` | 99.7% / 97.4% / 98.6% (TP 341, FP 1, TN 149, FN 9) | consistency check |

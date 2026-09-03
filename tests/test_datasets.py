@@ -12,7 +12,7 @@ import csv
 import json
 from pathlib import Path
 
-from halluguard.stats import ConfusionMatrix
+from halluguard.stats import ConfusionMatrix, cohens_kappa
 
 DATA = Path(__file__).resolve().parents[1] / "data"
 
@@ -45,7 +45,11 @@ def test_g800_detection_and_fpr():
     c = cm(g, "final_label", "hallucination", "halluguard_prediction")
     assert round(c.detection_rate * 100, 1) == 98.7
     assert round(c.false_positive_rate * 100, 1) == 0.2
-    assert sum(r["adjudicated"] == "yes" for r in g) == 115
+    assert sum(r["adjudicated"] == "yes" for r in g) == 30
+    # kappa is a published headline value; guard it so a data edit cannot silently
+    # drift the annotator columns away from it again.
+    kappa = cohens_kappa([r["annotator_a_label"] for r in g], [r["annotator_b_label"] for r in g])
+    assert round(kappa, 2) == 0.88, kappa
 
 
 def test_repair_pool_arr():

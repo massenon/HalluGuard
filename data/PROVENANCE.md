@@ -44,7 +44,7 @@ are **not** the original annotation, repair, execution or benchmark logs.
 
 | File | Status | Basis |
 |---|---|---|
-| `gold_standard/annotated_gold_standard_g800.csv` | **Reconstructed** | Rows generated to reproduce the reported N = 800, 152 positives, DR 98.7%, FPR 0.2%, 115 adjudicated, κ = 0.88 |
+| `gold_standard/annotated_gold_standard_g800.csv` | **Reconstructed** | Rows generated to reproduce the reported N = 800, 152 positives, DR 98.7%, FPR 0.2% and pre-adjudication Cohen's κ = 0.88 (which fixes the adjudicated count at 30) |
 | `gold_standard/repair_attempt_pool.csv` | **Reconstructed** | Rows generated to reproduce ARR = 729/789 |
 | `gold_standard/scr_execution_sample_400.csv` | **Reconstructed** | Rows generated to reproduce SCR = 384/400 and the 7/6/3 failure taxonomy |
 | `adversarial_benchmark/adversarial_benchmark_500.csv` | **Reconstructed** | Rows generated to reproduce TP/FP/TN/FN = 341/1/149/9 and the 3/3/3 false-negative taxonomy; malicious identifiers are pseudonyms (`cve-pkg-###`, `typo-pkg-###`, `slop-pkg-###`), benign identifiers are real PyPI names |

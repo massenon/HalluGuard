@@ -7,6 +7,15 @@ Replaces the initial release. The earlier tree remains reachable at tag
 
 ### Corrected
 
+* **Cohen's κ now matches the manuscript.** The first reconstruction of the `G_800` annotator
+  columns targeted the confusion matrix but not the inter-rater statistic, producing 115
+  disagreements and κ = 0.60 against a manuscript reporting κ = 0.88 — visible to anyone running
+  `experiments/rq2_detection_repair.py`, which prints κ. The two are mutually exclusive: with a
+  152/800 positive class, κ = 0.88 requires ~30 disagreements, not 115. The annotator A/B,
+  `adjudicated` and `annotator_c_label` columns were regenerated (seed 42) to reproduce
+  κ = 0.8800 exactly, at 30 adjudicated rows. `final_label` and `halluguard_prediction` were left
+  untouched, so TP/FN/FP/TN remain 150/2/1/647 and DR/FPR remain 98.7% / 0.2%.
+  `tests/test_datasets.py` now asserts κ directly so this cannot drift again.
 * **Record counts now match the manuscript.** The previous release shipped a 50-row gold
   standard, 250 NL-API prompts, a 45-package "representative sample" of the adversarial
   benchmark and a 15-entry module dictionary, against a manuscript reporting 800, 2,500, 500 and

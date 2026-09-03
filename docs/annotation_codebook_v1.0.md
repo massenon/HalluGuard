@@ -46,7 +46,7 @@ Snippets receiving discordant labels from the two primary annotators were adjudi
 third, independent annotator, whose label was final.
 
 * `adjudicated` = `yes` marks the rows where annotator A and annotator B disagreed
-  (115 of 800 = 14.4%).
+  (30 of 800 = 3.8%; this count is what reproduces the reported κ = 0.88).
 * `annotator_c_label` carries the adjudicator's label and is populated on adjudicated rows only.
 * `final_label` is the ground truth: the agreed label where A = B, otherwise the adjudicator's.
 
