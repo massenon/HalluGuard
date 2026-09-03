@@ -1,0 +1,56 @@
+HalluGuard replication package
+Copyright (c) 2026 Rhodes Massenon, Ishaya Gambo, Samuel D. Okegbile,
+                   Saurabh Agarwal, Wooguil Pak
+
+This product is released under the MIT License (see LICENSE) and includes
+third-party material redistributed under its own terms, listed below.
+
+================================================================================
+1. EvalPlus dataset loaders
+================================================================================
+Files:    database/humaneval.py
+          database/mbpp.py
+Source:   https://github.com/evalplus/evalplus
+License:  Apache License 2.0
+Notice:   Copyright (c) 2023 EvalPlus Team.
+          These files are redistributed verbatim except for an added provenance
+          header. Obtain a copy of the Apache License 2.0 at
+          http://www.apache.org/licenses/LICENSE-2.0
+          Both files import the `evalplus` package, which is NOT a declared
+          dependency of this project; see database/README.md.
+
+================================================================================
+2. HumanEval
+================================================================================
+File:     database/HumanEval.jsonl.gz  (164 tasks)
+Source:   https://github.com/openai/human-eval
+License:  MIT License
+Notice:   Copyright (c) 2021 OpenAI.
+Citation: Chen et al., "Evaluating Large Language Models Trained on Code", 2021.
+
+================================================================================
+3. MBPP (sanitized subset)
+================================================================================
+File:     database/sanitized-mbpp.json  (427 tasks)
+Source:   https://github.com/google-research/google-research/tree/master/mbpp
+License:  CC-BY-4.0
+Citation: Austin et al., "Program Synthesis with Large Language Models", 2021.
+
+================================================================================
+4. CodeHalu / CodeHaluEval subsets
+================================================================================
+Files:    database/data_compliance_hallucination.json   (941 records)
+          database/external_source_hallucination.json   (530 records)
+Source:   https://github.com/rongcuid/CodeHalu  (CodeHaluEval benchmark)
+Notice:   Redistributed under the terms of the upstream project. Records carry
+          the upstream `halu_type`, `task_id`, `test_case_id` and `url` fields.
+Citation: Tian et al., "CodeHalu: Code Hallucinations in LLMs Driven by
+          Execution-based Verification", 2025.
+
+================================================================================
+5. Referenced but not redistributed
+================================================================================
+The Open Source Vulnerability (OSV) database (https://osv.dev) and the
+libraries.io API (https://libraries.io) are queried at runtime. No data from
+either service is redistributed in this package. The 2025-03-01 OSV snapshot
+used during the study is not distributed; see docs/DEVIATIONS.md.

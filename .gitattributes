@@ -1,0 +1,11 @@
+# Byte-stable artifact: every text file is stored and checked out as LF on all
+# platforms, so `sha256sum -c data/checksums.sha256` verifies identically on
+# Windows, macOS and Linux regardless of the user's core.autocrlf setting.
+* text=auto eol=lf
+
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gz   binary
+*.zip  binary
+*.pdf  binary

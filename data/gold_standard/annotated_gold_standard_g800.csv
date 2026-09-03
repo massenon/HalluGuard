@@ -1,0 +1,801 @@
+snippet_id,model,model_version,dataset_tier,annotator_a_label,annotator_b_label,adjudicated,annotator_c_label,final_label,halluguard_prediction,codebook_version
+G800_0001,Claude 3 Opus,claude-3-opus-20240229,MBPP,hallucination,hallucination,no,,hallucination,not_flagged,1.0
+G800_0002,Claude 3 Opus,claude-3-opus-20240229,CodeHaluEval,hallucination,hallucination,no,,hallucination,not_flagged,1.0
+G800_0003,Claude 3 Opus,claude-3-opus-20240229,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0004,Claude 3 Opus,claude-3-opus-20240229,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,flagged,1.0
+G800_0005,Claude 3 Opus,claude-3-opus-20240229,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0006,Claude 3 Opus,claude-3-opus-20240229,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0007,Claude 3 Opus,claude-3-opus-20240229,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0008,Claude 3 Opus,claude-3-opus-20240229,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0009,Claude 3 Opus,claude-3-opus-20240229,MBPP,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0010,Claude 3 Opus,claude-3-opus-20240229,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0011,Claude 3 Opus,claude-3-opus-20240229,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0012,Claude 3 Opus,claude-3-opus-20240229,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0013,Claude 3 Opus,claude-3-opus-20240229,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0014,Claude 3 Opus,claude-3-opus-20240229,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0015,Claude 3 Opus,claude-3-opus-20240229,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0016,Claude 3 Opus,claude-3-opus-20240229,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0017,Claude 3 Opus,claude-3-opus-20240229,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0018,Claude 3 Opus,claude-3-opus-20240229,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0019,Claude 3 Opus,claude-3-opus-20240229,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0020,Claude 3 Opus,claude-3-opus-20240229,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0021,Claude 3 Opus,claude-3-opus-20240229,MBPP,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0022,Claude 3 Opus,claude-3-opus-20240229,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0023,Claude 3 Opus,claude-3-opus-20240229,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0024,Claude 3 Opus,claude-3-opus-20240229,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0025,Claude 3 Opus,claude-3-opus-20240229,MBPP,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0026,Claude 3 Opus,claude-3-opus-20240229,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0027,Claude 3 Opus,claude-3-opus-20240229,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0028,Claude 3 Opus,claude-3-opus-20240229,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0029,Claude 3 Opus,claude-3-opus-20240229,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0030,Claude 3 Opus,claude-3-opus-20240229,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0031,Claude 3 Opus,claude-3-opus-20240229,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0032,Claude 3 Opus,claude-3-opus-20240229,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0033,Claude 3 Opus,claude-3-opus-20240229,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0034,Claude 3 Opus,claude-3-opus-20240229,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0035,Claude 3 Opus,claude-3-opus-20240229,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0036,Claude 3 Opus,claude-3-opus-20240229,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0037,Claude 3 Opus,claude-3-opus-20240229,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0038,Claude 3 Opus,claude-3-opus-20240229,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0039,Claude 3 Opus,claude-3-opus-20240229,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0040,Claude 3 Opus,claude-3-opus-20240229,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0041,Claude 3 Opus,claude-3-opus-20240229,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0042,Claude 3 Opus,claude-3-opus-20240229,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0043,Claude 3 Opus,claude-3-opus-20240229,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0044,Claude 3 Opus,claude-3-opus-20240229,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0045,Claude 3 Opus,claude-3-opus-20240229,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0046,Claude 3 Opus,claude-3-opus-20240229,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0047,Claude 3 Opus,claude-3-opus-20240229,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0048,Claude 3 Opus,claude-3-opus-20240229,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0049,Claude 3 Opus,claude-3-opus-20240229,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0050,Claude 3 Opus,claude-3-opus-20240229,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0051,DeepSeek-Coder,deepseek-coder-33b-instruct,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0052,DeepSeek-Coder,deepseek-coder-33b-instruct,HumanEval+,hallucination,no_hallucination,yes,hallucination,hallucination,flagged,1.0
+G800_0053,DeepSeek-Coder,deepseek-coder-33b-instruct,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0054,DeepSeek-Coder,deepseek-coder-33b-instruct,CodeHaluEval,hallucination,no_hallucination,yes,hallucination,hallucination,flagged,1.0
+G800_0055,DeepSeek-Coder,deepseek-coder-33b-instruct,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0056,DeepSeek-Coder,deepseek-coder-33b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0057,DeepSeek-Coder,deepseek-coder-33b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0058,DeepSeek-Coder,deepseek-coder-33b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0059,DeepSeek-Coder,deepseek-coder-33b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0060,DeepSeek-Coder,deepseek-coder-33b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0061,DeepSeek-Coder,deepseek-coder-33b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0062,DeepSeek-Coder,deepseek-coder-33b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0063,DeepSeek-Coder,deepseek-coder-33b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0064,DeepSeek-Coder,deepseek-coder-33b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0065,DeepSeek-Coder,deepseek-coder-33b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0066,DeepSeek-Coder,deepseek-coder-33b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0067,DeepSeek-Coder,deepseek-coder-33b-instruct,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0068,DeepSeek-Coder,deepseek-coder-33b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0069,DeepSeek-Coder,deepseek-coder-33b-instruct,MBPP,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0070,DeepSeek-Coder,deepseek-coder-33b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0071,DeepSeek-Coder,deepseek-coder-33b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0072,DeepSeek-Coder,deepseek-coder-33b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0073,DeepSeek-Coder,deepseek-coder-33b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0074,DeepSeek-Coder,deepseek-coder-33b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0075,DeepSeek-Coder,deepseek-coder-33b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0076,DeepSeek-Coder,deepseek-coder-33b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0077,DeepSeek-Coder,deepseek-coder-33b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0078,DeepSeek-Coder,deepseek-coder-33b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0079,DeepSeek-Coder,deepseek-coder-33b-instruct,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0080,DeepSeek-Coder,deepseek-coder-33b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0081,DeepSeek-Coder,deepseek-coder-33b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0082,DeepSeek-Coder,deepseek-coder-33b-instruct,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0083,DeepSeek-Coder,deepseek-coder-33b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0084,DeepSeek-Coder,deepseek-coder-33b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0085,DeepSeek-Coder,deepseek-coder-33b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0086,DeepSeek-Coder,deepseek-coder-33b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0087,DeepSeek-Coder,deepseek-coder-33b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0088,DeepSeek-Coder,deepseek-coder-33b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0089,DeepSeek-Coder,deepseek-coder-33b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0090,DeepSeek-Coder,deepseek-coder-33b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0091,DeepSeek-Coder,deepseek-coder-33b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0092,DeepSeek-Coder,deepseek-coder-33b-instruct,HumanEval+,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0093,DeepSeek-Coder,deepseek-coder-33b-instruct,MBPP,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0094,DeepSeek-Coder,deepseek-coder-33b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0095,DeepSeek-Coder,deepseek-coder-33b-instruct,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0096,DeepSeek-Coder,deepseek-coder-33b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0097,DeepSeek-Coder,deepseek-coder-33b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0098,DeepSeek-Coder,deepseek-coder-33b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0099,DeepSeek-Coder,deepseek-coder-33b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0100,DeepSeek-Coder,deepseek-coder-33b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0101,Gemini 1.5 Pro,gemini-1.5-pro-001,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0102,Gemini 1.5 Pro,gemini-1.5-pro-001,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0103,Gemini 1.5 Pro,gemini-1.5-pro-001,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0104,Gemini 1.5 Pro,gemini-1.5-pro-001,HumanEval+,hallucination,no_hallucination,yes,hallucination,hallucination,flagged,1.0
+G800_0105,Gemini 1.5 Pro,gemini-1.5-pro-001,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0106,Gemini 1.5 Pro,gemini-1.5-pro-001,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0107,Gemini 1.5 Pro,gemini-1.5-pro-001,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0108,Gemini 1.5 Pro,gemini-1.5-pro-001,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0109,Gemini 1.5 Pro,gemini-1.5-pro-001,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0110,Gemini 1.5 Pro,gemini-1.5-pro-001,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0111,Gemini 1.5 Pro,gemini-1.5-pro-001,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0112,Gemini 1.5 Pro,gemini-1.5-pro-001,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0113,Gemini 1.5 Pro,gemini-1.5-pro-001,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0114,Gemini 1.5 Pro,gemini-1.5-pro-001,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0115,Gemini 1.5 Pro,gemini-1.5-pro-001,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0116,Gemini 1.5 Pro,gemini-1.5-pro-001,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0117,Gemini 1.5 Pro,gemini-1.5-pro-001,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0118,Gemini 1.5 Pro,gemini-1.5-pro-001,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0119,Gemini 1.5 Pro,gemini-1.5-pro-001,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0120,Gemini 1.5 Pro,gemini-1.5-pro-001,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0121,Gemini 1.5 Pro,gemini-1.5-pro-001,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0122,Gemini 1.5 Pro,gemini-1.5-pro-001,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0123,Gemini 1.5 Pro,gemini-1.5-pro-001,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0124,Gemini 1.5 Pro,gemini-1.5-pro-001,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0125,Gemini 1.5 Pro,gemini-1.5-pro-001,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0126,Gemini 1.5 Pro,gemini-1.5-pro-001,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0127,Gemini 1.5 Pro,gemini-1.5-pro-001,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0128,Gemini 1.5 Pro,gemini-1.5-pro-001,HumanEval+,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0129,Gemini 1.5 Pro,gemini-1.5-pro-001,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0130,Gemini 1.5 Pro,gemini-1.5-pro-001,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0131,Gemini 1.5 Pro,gemini-1.5-pro-001,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0132,Gemini 1.5 Pro,gemini-1.5-pro-001,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0133,Gemini 1.5 Pro,gemini-1.5-pro-001,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0134,Gemini 1.5 Pro,gemini-1.5-pro-001,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0135,Gemini 1.5 Pro,gemini-1.5-pro-001,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0136,Gemini 1.5 Pro,gemini-1.5-pro-001,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0137,Gemini 1.5 Pro,gemini-1.5-pro-001,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0138,Gemini 1.5 Pro,gemini-1.5-pro-001,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0139,Gemini 1.5 Pro,gemini-1.5-pro-001,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0140,Gemini 1.5 Pro,gemini-1.5-pro-001,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0141,Gemini 1.5 Pro,gemini-1.5-pro-001,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0142,Gemini 1.5 Pro,gemini-1.5-pro-001,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0143,Gemini 1.5 Pro,gemini-1.5-pro-001,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0144,Gemini 1.5 Pro,gemini-1.5-pro-001,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0145,Gemini 1.5 Pro,gemini-1.5-pro-001,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0146,Gemini 1.5 Pro,gemini-1.5-pro-001,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0147,Gemini 1.5 Pro,gemini-1.5-pro-001,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0148,Gemini 1.5 Pro,gemini-1.5-pro-001,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0149,Gemini 1.5 Pro,gemini-1.5-pro-001,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0150,Gemini 1.5 Pro,gemini-1.5-pro-001,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0151,GPT-4,gpt-4-turbo-2024-04-09,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0152,GPT-4,gpt-4-turbo-2024-04-09,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0153,GPT-4,gpt-4-turbo-2024-04-09,MBPP,hallucination,no_hallucination,yes,hallucination,hallucination,flagged,1.0
+G800_0154,GPT-4,gpt-4-turbo-2024-04-09,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0155,GPT-4,gpt-4-turbo-2024-04-09,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0156,GPT-4,gpt-4-turbo-2024-04-09,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0157,GPT-4,gpt-4-turbo-2024-04-09,MBPP,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0158,GPT-4,gpt-4-turbo-2024-04-09,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0159,GPT-4,gpt-4-turbo-2024-04-09,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0160,GPT-4,gpt-4-turbo-2024-04-09,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0161,GPT-4,gpt-4-turbo-2024-04-09,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0162,GPT-4,gpt-4-turbo-2024-04-09,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0163,GPT-4,gpt-4-turbo-2024-04-09,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0164,GPT-4,gpt-4-turbo-2024-04-09,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0165,GPT-4,gpt-4-turbo-2024-04-09,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0166,GPT-4,gpt-4-turbo-2024-04-09,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0167,GPT-4,gpt-4-turbo-2024-04-09,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0168,GPT-4,gpt-4-turbo-2024-04-09,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0169,GPT-4,gpt-4-turbo-2024-04-09,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0170,GPT-4,gpt-4-turbo-2024-04-09,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0171,GPT-4,gpt-4-turbo-2024-04-09,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0172,GPT-4,gpt-4-turbo-2024-04-09,HumanEval+,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0173,GPT-4,gpt-4-turbo-2024-04-09,MBPP,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0174,GPT-4,gpt-4-turbo-2024-04-09,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0175,GPT-4,gpt-4-turbo-2024-04-09,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0176,GPT-4,gpt-4-turbo-2024-04-09,HumanEval+,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0177,GPT-4,gpt-4-turbo-2024-04-09,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0178,GPT-4,gpt-4-turbo-2024-04-09,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0179,GPT-4,gpt-4-turbo-2024-04-09,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0180,GPT-4,gpt-4-turbo-2024-04-09,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0181,GPT-4,gpt-4-turbo-2024-04-09,MBPP,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0182,GPT-4,gpt-4-turbo-2024-04-09,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0183,GPT-4,gpt-4-turbo-2024-04-09,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0184,GPT-4,gpt-4-turbo-2024-04-09,HumanEval+,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0185,GPT-4,gpt-4-turbo-2024-04-09,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0186,GPT-4,gpt-4-turbo-2024-04-09,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0187,GPT-4,gpt-4-turbo-2024-04-09,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0188,GPT-4,gpt-4-turbo-2024-04-09,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0189,GPT-4,gpt-4-turbo-2024-04-09,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0190,GPT-4,gpt-4-turbo-2024-04-09,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0191,GPT-4,gpt-4-turbo-2024-04-09,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0192,GPT-4,gpt-4-turbo-2024-04-09,HumanEval+,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0193,GPT-4,gpt-4-turbo-2024-04-09,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0194,GPT-4,gpt-4-turbo-2024-04-09,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0195,GPT-4,gpt-4-turbo-2024-04-09,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0196,GPT-4,gpt-4-turbo-2024-04-09,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0197,GPT-4,gpt-4-turbo-2024-04-09,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0198,GPT-4,gpt-4-turbo-2024-04-09,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0199,GPT-4,gpt-4-turbo-2024-04-09,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0200,GPT-4,gpt-4-turbo-2024-04-09,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0201,Claude 3 Sonnet,claude-3-sonnet-20240229,MBPP,hallucination,no_hallucination,yes,hallucination,hallucination,flagged,1.0
+G800_0202,Claude 3 Sonnet,claude-3-sonnet-20240229,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0203,Claude 3 Sonnet,claude-3-sonnet-20240229,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0204,Claude 3 Sonnet,claude-3-sonnet-20240229,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0205,Claude 3 Sonnet,claude-3-sonnet-20240229,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0206,Claude 3 Sonnet,claude-3-sonnet-20240229,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0207,Claude 3 Sonnet,claude-3-sonnet-20240229,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0208,Claude 3 Sonnet,claude-3-sonnet-20240229,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0209,Claude 3 Sonnet,claude-3-sonnet-20240229,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0210,Claude 3 Sonnet,claude-3-sonnet-20240229,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0211,Claude 3 Sonnet,claude-3-sonnet-20240229,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0212,Claude 3 Sonnet,claude-3-sonnet-20240229,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0213,Claude 3 Sonnet,claude-3-sonnet-20240229,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0214,Claude 3 Sonnet,claude-3-sonnet-20240229,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0215,Claude 3 Sonnet,claude-3-sonnet-20240229,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0216,Claude 3 Sonnet,claude-3-sonnet-20240229,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0217,Claude 3 Sonnet,claude-3-sonnet-20240229,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0218,Claude 3 Sonnet,claude-3-sonnet-20240229,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0219,Claude 3 Sonnet,claude-3-sonnet-20240229,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0220,Claude 3 Sonnet,claude-3-sonnet-20240229,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0221,Claude 3 Sonnet,claude-3-sonnet-20240229,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0222,Claude 3 Sonnet,claude-3-sonnet-20240229,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0223,Claude 3 Sonnet,claude-3-sonnet-20240229,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0224,Claude 3 Sonnet,claude-3-sonnet-20240229,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0225,Claude 3 Sonnet,claude-3-sonnet-20240229,MBPP,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0226,Claude 3 Sonnet,claude-3-sonnet-20240229,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0227,Claude 3 Sonnet,claude-3-sonnet-20240229,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0228,Claude 3 Sonnet,claude-3-sonnet-20240229,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0229,Claude 3 Sonnet,claude-3-sonnet-20240229,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0230,Claude 3 Sonnet,claude-3-sonnet-20240229,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0231,Claude 3 Sonnet,claude-3-sonnet-20240229,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0232,Claude 3 Sonnet,claude-3-sonnet-20240229,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0233,Claude 3 Sonnet,claude-3-sonnet-20240229,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0234,Claude 3 Sonnet,claude-3-sonnet-20240229,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0235,Claude 3 Sonnet,claude-3-sonnet-20240229,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0236,Claude 3 Sonnet,claude-3-sonnet-20240229,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0237,Claude 3 Sonnet,claude-3-sonnet-20240229,MBPP,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0238,Claude 3 Sonnet,claude-3-sonnet-20240229,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0239,Claude 3 Sonnet,claude-3-sonnet-20240229,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0240,Claude 3 Sonnet,claude-3-sonnet-20240229,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0241,Claude 3 Sonnet,claude-3-sonnet-20240229,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0242,Claude 3 Sonnet,claude-3-sonnet-20240229,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0243,Claude 3 Sonnet,claude-3-sonnet-20240229,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0244,Claude 3 Sonnet,claude-3-sonnet-20240229,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0245,Claude 3 Sonnet,claude-3-sonnet-20240229,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0246,Claude 3 Sonnet,claude-3-sonnet-20240229,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0247,Claude 3 Sonnet,claude-3-sonnet-20240229,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0248,Claude 3 Sonnet,claude-3-sonnet-20240229,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0249,Claude 3 Sonnet,claude-3-sonnet-20240229,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0250,Claude 3 Sonnet,claude-3-sonnet-20240229,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0251,Code Llama (34B),codellama-34b-instruct,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0252,Code Llama (34B),codellama-34b-instruct,HumanEval+,hallucination,no_hallucination,yes,hallucination,hallucination,flagged,1.0
+G800_0253,Code Llama (34B),codellama-34b-instruct,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0254,Code Llama (34B),codellama-34b-instruct,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0255,Code Llama (34B),codellama-34b-instruct,NL-API,hallucination,no_hallucination,yes,hallucination,hallucination,flagged,1.0
+G800_0256,Code Llama (34B),codellama-34b-instruct,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0257,Code Llama (34B),codellama-34b-instruct,MBPP,hallucination,no_hallucination,yes,hallucination,hallucination,flagged,1.0
+G800_0258,Code Llama (34B),codellama-34b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0259,Code Llama (34B),codellama-34b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0260,Code Llama (34B),codellama-34b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0261,Code Llama (34B),codellama-34b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0262,Code Llama (34B),codellama-34b-instruct,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0263,Code Llama (34B),codellama-34b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0264,Code Llama (34B),codellama-34b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0265,Code Llama (34B),codellama-34b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0266,Code Llama (34B),codellama-34b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0267,Code Llama (34B),codellama-34b-instruct,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0268,Code Llama (34B),codellama-34b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0269,Code Llama (34B),codellama-34b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0270,Code Llama (34B),codellama-34b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0271,Code Llama (34B),codellama-34b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0272,Code Llama (34B),codellama-34b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0273,Code Llama (34B),codellama-34b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0274,Code Llama (34B),codellama-34b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0275,Code Llama (34B),codellama-34b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0276,Code Llama (34B),codellama-34b-instruct,HumanEval+,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0277,Code Llama (34B),codellama-34b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0278,Code Llama (34B),codellama-34b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0279,Code Llama (34B),codellama-34b-instruct,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0280,Code Llama (34B),codellama-34b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0281,Code Llama (34B),codellama-34b-instruct,MBPP,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0282,Code Llama (34B),codellama-34b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0283,Code Llama (34B),codellama-34b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0284,Code Llama (34B),codellama-34b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0285,Code Llama (34B),codellama-34b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0286,Code Llama (34B),codellama-34b-instruct,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0287,Code Llama (34B),codellama-34b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0288,Code Llama (34B),codellama-34b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0289,Code Llama (34B),codellama-34b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0290,Code Llama (34B),codellama-34b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0291,Code Llama (34B),codellama-34b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0292,Code Llama (34B),codellama-34b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0293,Code Llama (34B),codellama-34b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0294,Code Llama (34B),codellama-34b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0295,Code Llama (34B),codellama-34b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0296,Code Llama (34B),codellama-34b-instruct,HumanEval+,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0297,Code Llama (34B),codellama-34b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0298,Code Llama (34B),codellama-34b-instruct,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0299,Code Llama (34B),codellama-34b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0300,Code Llama (34B),codellama-34b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0301,Gemini 1.0 Pro,gemini-1.0-pro-001,MBPP,hallucination,no_hallucination,yes,hallucination,hallucination,flagged,1.0
+G800_0302,Gemini 1.0 Pro,gemini-1.0-pro-001,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0303,Gemini 1.0 Pro,gemini-1.0-pro-001,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0304,Gemini 1.0 Pro,gemini-1.0-pro-001,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0305,Gemini 1.0 Pro,gemini-1.0-pro-001,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0306,Gemini 1.0 Pro,gemini-1.0-pro-001,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0307,Gemini 1.0 Pro,gemini-1.0-pro-001,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0308,Gemini 1.0 Pro,gemini-1.0-pro-001,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0309,Gemini 1.0 Pro,gemini-1.0-pro-001,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0310,Gemini 1.0 Pro,gemini-1.0-pro-001,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0311,Gemini 1.0 Pro,gemini-1.0-pro-001,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0312,Gemini 1.0 Pro,gemini-1.0-pro-001,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0313,Gemini 1.0 Pro,gemini-1.0-pro-001,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0314,Gemini 1.0 Pro,gemini-1.0-pro-001,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0315,Gemini 1.0 Pro,gemini-1.0-pro-001,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0316,Gemini 1.0 Pro,gemini-1.0-pro-001,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0317,Gemini 1.0 Pro,gemini-1.0-pro-001,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0318,Gemini 1.0 Pro,gemini-1.0-pro-001,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0319,Gemini 1.0 Pro,gemini-1.0-pro-001,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0320,Gemini 1.0 Pro,gemini-1.0-pro-001,HumanEval+,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0321,Gemini 1.0 Pro,gemini-1.0-pro-001,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0322,Gemini 1.0 Pro,gemini-1.0-pro-001,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0323,Gemini 1.0 Pro,gemini-1.0-pro-001,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0324,Gemini 1.0 Pro,gemini-1.0-pro-001,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0325,Gemini 1.0 Pro,gemini-1.0-pro-001,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0326,Gemini 1.0 Pro,gemini-1.0-pro-001,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0327,Gemini 1.0 Pro,gemini-1.0-pro-001,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0328,Gemini 1.0 Pro,gemini-1.0-pro-001,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0329,Gemini 1.0 Pro,gemini-1.0-pro-001,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0330,Gemini 1.0 Pro,gemini-1.0-pro-001,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0331,Gemini 1.0 Pro,gemini-1.0-pro-001,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0332,Gemini 1.0 Pro,gemini-1.0-pro-001,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0333,Gemini 1.0 Pro,gemini-1.0-pro-001,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0334,Gemini 1.0 Pro,gemini-1.0-pro-001,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0335,Gemini 1.0 Pro,gemini-1.0-pro-001,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0336,Gemini 1.0 Pro,gemini-1.0-pro-001,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0337,Gemini 1.0 Pro,gemini-1.0-pro-001,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0338,Gemini 1.0 Pro,gemini-1.0-pro-001,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0339,Gemini 1.0 Pro,gemini-1.0-pro-001,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0340,Gemini 1.0 Pro,gemini-1.0-pro-001,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0341,Gemini 1.0 Pro,gemini-1.0-pro-001,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0342,Gemini 1.0 Pro,gemini-1.0-pro-001,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0343,Gemini 1.0 Pro,gemini-1.0-pro-001,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0344,Gemini 1.0 Pro,gemini-1.0-pro-001,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0345,Gemini 1.0 Pro,gemini-1.0-pro-001,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0346,Gemini 1.0 Pro,gemini-1.0-pro-001,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0347,Gemini 1.0 Pro,gemini-1.0-pro-001,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0348,Gemini 1.0 Pro,gemini-1.0-pro-001,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0349,Gemini 1.0 Pro,gemini-1.0-pro-001,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0350,Gemini 1.0 Pro,gemini-1.0-pro-001,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0351,GPT-3.5-Turbo,gpt-3.5-turbo-0125,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0352,GPT-3.5-Turbo,gpt-3.5-turbo-0125,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0353,GPT-3.5-Turbo,gpt-3.5-turbo-0125,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0354,GPT-3.5-Turbo,gpt-3.5-turbo-0125,CodeHaluEval,hallucination,no_hallucination,yes,hallucination,hallucination,flagged,1.0
+G800_0355,GPT-3.5-Turbo,gpt-3.5-turbo-0125,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0356,GPT-3.5-Turbo,gpt-3.5-turbo-0125,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0357,GPT-3.5-Turbo,gpt-3.5-turbo-0125,MBPP,hallucination,no_hallucination,yes,hallucination,hallucination,flagged,1.0
+G800_0358,GPT-3.5-Turbo,gpt-3.5-turbo-0125,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0359,GPT-3.5-Turbo,gpt-3.5-turbo-0125,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0360,GPT-3.5-Turbo,gpt-3.5-turbo-0125,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0361,GPT-3.5-Turbo,gpt-3.5-turbo-0125,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0362,GPT-3.5-Turbo,gpt-3.5-turbo-0125,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0363,GPT-3.5-Turbo,gpt-3.5-turbo-0125,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0364,GPT-3.5-Turbo,gpt-3.5-turbo-0125,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0365,GPT-3.5-Turbo,gpt-3.5-turbo-0125,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0366,GPT-3.5-Turbo,gpt-3.5-turbo-0125,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0367,GPT-3.5-Turbo,gpt-3.5-turbo-0125,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0368,GPT-3.5-Turbo,gpt-3.5-turbo-0125,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0369,GPT-3.5-Turbo,gpt-3.5-turbo-0125,MBPP,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0370,GPT-3.5-Turbo,gpt-3.5-turbo-0125,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0371,GPT-3.5-Turbo,gpt-3.5-turbo-0125,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0372,GPT-3.5-Turbo,gpt-3.5-turbo-0125,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0373,GPT-3.5-Turbo,gpt-3.5-turbo-0125,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0374,GPT-3.5-Turbo,gpt-3.5-turbo-0125,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0375,GPT-3.5-Turbo,gpt-3.5-turbo-0125,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0376,GPT-3.5-Turbo,gpt-3.5-turbo-0125,HumanEval+,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0377,GPT-3.5-Turbo,gpt-3.5-turbo-0125,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0378,GPT-3.5-Turbo,gpt-3.5-turbo-0125,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0379,GPT-3.5-Turbo,gpt-3.5-turbo-0125,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0380,GPT-3.5-Turbo,gpt-3.5-turbo-0125,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0381,GPT-3.5-Turbo,gpt-3.5-turbo-0125,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0382,GPT-3.5-Turbo,gpt-3.5-turbo-0125,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0383,GPT-3.5-Turbo,gpt-3.5-turbo-0125,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0384,GPT-3.5-Turbo,gpt-3.5-turbo-0125,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0385,GPT-3.5-Turbo,gpt-3.5-turbo-0125,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0386,GPT-3.5-Turbo,gpt-3.5-turbo-0125,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0387,GPT-3.5-Turbo,gpt-3.5-turbo-0125,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0388,GPT-3.5-Turbo,gpt-3.5-turbo-0125,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0389,GPT-3.5-Turbo,gpt-3.5-turbo-0125,MBPP,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0390,GPT-3.5-Turbo,gpt-3.5-turbo-0125,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0391,GPT-3.5-Turbo,gpt-3.5-turbo-0125,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0392,GPT-3.5-Turbo,gpt-3.5-turbo-0125,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0393,GPT-3.5-Turbo,gpt-3.5-turbo-0125,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0394,GPT-3.5-Turbo,gpt-3.5-turbo-0125,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0395,GPT-3.5-Turbo,gpt-3.5-turbo-0125,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0396,GPT-3.5-Turbo,gpt-3.5-turbo-0125,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0397,GPT-3.5-Turbo,gpt-3.5-turbo-0125,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0398,GPT-3.5-Turbo,gpt-3.5-turbo-0125,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0399,GPT-3.5-Turbo,gpt-3.5-turbo-0125,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0400,GPT-3.5-Turbo,gpt-3.5-turbo-0125,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0401,StarCoder2 (15B),starcoder2-15b,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0402,StarCoder2 (15B),starcoder2-15b,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0403,StarCoder2 (15B),starcoder2-15b,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0404,StarCoder2 (15B),starcoder2-15b,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0405,StarCoder2 (15B),starcoder2-15b,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0406,StarCoder2 (15B),starcoder2-15b,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0407,StarCoder2 (15B),starcoder2-15b,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0408,StarCoder2 (15B),starcoder2-15b,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0409,StarCoder2 (15B),starcoder2-15b,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0410,StarCoder2 (15B),starcoder2-15b,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0411,StarCoder2 (15B),starcoder2-15b,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0412,StarCoder2 (15B),starcoder2-15b,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0413,StarCoder2 (15B),starcoder2-15b,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0414,StarCoder2 (15B),starcoder2-15b,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0415,StarCoder2 (15B),starcoder2-15b,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0416,StarCoder2 (15B),starcoder2-15b,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0417,StarCoder2 (15B),starcoder2-15b,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0418,StarCoder2 (15B),starcoder2-15b,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0419,StarCoder2 (15B),starcoder2-15b,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0420,StarCoder2 (15B),starcoder2-15b,HumanEval+,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0421,StarCoder2 (15B),starcoder2-15b,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0422,StarCoder2 (15B),starcoder2-15b,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0423,StarCoder2 (15B),starcoder2-15b,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0424,StarCoder2 (15B),starcoder2-15b,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0425,StarCoder2 (15B),starcoder2-15b,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0426,StarCoder2 (15B),starcoder2-15b,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0427,StarCoder2 (15B),starcoder2-15b,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0428,StarCoder2 (15B),starcoder2-15b,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0429,StarCoder2 (15B),starcoder2-15b,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0430,StarCoder2 (15B),starcoder2-15b,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0431,StarCoder2 (15B),starcoder2-15b,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0432,StarCoder2 (15B),starcoder2-15b,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0433,StarCoder2 (15B),starcoder2-15b,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0434,StarCoder2 (15B),starcoder2-15b,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0435,StarCoder2 (15B),starcoder2-15b,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0436,StarCoder2 (15B),starcoder2-15b,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0437,StarCoder2 (15B),starcoder2-15b,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0438,StarCoder2 (15B),starcoder2-15b,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0439,StarCoder2 (15B),starcoder2-15b,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0440,StarCoder2 (15B),starcoder2-15b,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0441,StarCoder2 (15B),starcoder2-15b,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0442,StarCoder2 (15B),starcoder2-15b,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0443,StarCoder2 (15B),starcoder2-15b,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0444,StarCoder2 (15B),starcoder2-15b,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0445,StarCoder2 (15B),starcoder2-15b,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0446,StarCoder2 (15B),starcoder2-15b,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0447,StarCoder2 (15B),starcoder2-15b,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0448,StarCoder2 (15B),starcoder2-15b,HumanEval+,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0449,StarCoder2 (15B),starcoder2-15b,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0450,StarCoder2 (15B),starcoder2-15b,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0451,Claude 3 Haiku,claude-3-haiku-20240307,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0452,Claude 3 Haiku,claude-3-haiku-20240307,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0453,Claude 3 Haiku,claude-3-haiku-20240307,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0454,Claude 3 Haiku,claude-3-haiku-20240307,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0455,Claude 3 Haiku,claude-3-haiku-20240307,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0456,Claude 3 Haiku,claude-3-haiku-20240307,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0457,Claude 3 Haiku,claude-3-haiku-20240307,MBPP,hallucination,no_hallucination,yes,hallucination,hallucination,flagged,1.0
+G800_0458,Claude 3 Haiku,claude-3-haiku-20240307,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0459,Claude 3 Haiku,claude-3-haiku-20240307,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0460,Claude 3 Haiku,claude-3-haiku-20240307,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0461,Claude 3 Haiku,claude-3-haiku-20240307,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0462,Claude 3 Haiku,claude-3-haiku-20240307,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0463,Claude 3 Haiku,claude-3-haiku-20240307,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0464,Claude 3 Haiku,claude-3-haiku-20240307,HumanEval+,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0465,Claude 3 Haiku,claude-3-haiku-20240307,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0466,Claude 3 Haiku,claude-3-haiku-20240307,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0467,Claude 3 Haiku,claude-3-haiku-20240307,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0468,Claude 3 Haiku,claude-3-haiku-20240307,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0469,Claude 3 Haiku,claude-3-haiku-20240307,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0470,Claude 3 Haiku,claude-3-haiku-20240307,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0471,Claude 3 Haiku,claude-3-haiku-20240307,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0472,Claude 3 Haiku,claude-3-haiku-20240307,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0473,Claude 3 Haiku,claude-3-haiku-20240307,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0474,Claude 3 Haiku,claude-3-haiku-20240307,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0475,Claude 3 Haiku,claude-3-haiku-20240307,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0476,Claude 3 Haiku,claude-3-haiku-20240307,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0477,Claude 3 Haiku,claude-3-haiku-20240307,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0478,Claude 3 Haiku,claude-3-haiku-20240307,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0479,Claude 3 Haiku,claude-3-haiku-20240307,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0480,Claude 3 Haiku,claude-3-haiku-20240307,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0481,Claude 3 Haiku,claude-3-haiku-20240307,MBPP,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0482,Claude 3 Haiku,claude-3-haiku-20240307,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0483,Claude 3 Haiku,claude-3-haiku-20240307,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0484,Claude 3 Haiku,claude-3-haiku-20240307,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0485,Claude 3 Haiku,claude-3-haiku-20240307,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0486,Claude 3 Haiku,claude-3-haiku-20240307,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0487,Claude 3 Haiku,claude-3-haiku-20240307,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0488,Claude 3 Haiku,claude-3-haiku-20240307,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0489,Claude 3 Haiku,claude-3-haiku-20240307,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0490,Claude 3 Haiku,claude-3-haiku-20240307,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0491,Claude 3 Haiku,claude-3-haiku-20240307,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0492,Claude 3 Haiku,claude-3-haiku-20240307,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0493,Claude 3 Haiku,claude-3-haiku-20240307,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0494,Claude 3 Haiku,claude-3-haiku-20240307,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0495,Claude 3 Haiku,claude-3-haiku-20240307,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0496,Claude 3 Haiku,claude-3-haiku-20240307,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0497,Claude 3 Haiku,claude-3-haiku-20240307,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0498,Claude 3 Haiku,claude-3-haiku-20240307,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0499,Claude 3 Haiku,claude-3-haiku-20240307,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0500,Claude 3 Haiku,claude-3-haiku-20240307,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0501,Mistral Large,mistral-large-2402,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0502,Mistral Large,mistral-large-2402,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0503,Mistral Large,mistral-large-2402,NL-API,hallucination,no_hallucination,yes,hallucination,hallucination,flagged,1.0
+G800_0504,Mistral Large,mistral-large-2402,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0505,Mistral Large,mistral-large-2402,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0506,Mistral Large,mistral-large-2402,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0507,Mistral Large,mistral-large-2402,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0508,Mistral Large,mistral-large-2402,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0509,Mistral Large,mistral-large-2402,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0510,Mistral Large,mistral-large-2402,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0511,Mistral Large,mistral-large-2402,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0512,Mistral Large,mistral-large-2402,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0513,Mistral Large,mistral-large-2402,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0514,Mistral Large,mistral-large-2402,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0515,Mistral Large,mistral-large-2402,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0516,Mistral Large,mistral-large-2402,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0517,Mistral Large,mistral-large-2402,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0518,Mistral Large,mistral-large-2402,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0519,Mistral Large,mistral-large-2402,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0520,Mistral Large,mistral-large-2402,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0521,Mistral Large,mistral-large-2402,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0522,Mistral Large,mistral-large-2402,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0523,Mistral Large,mistral-large-2402,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0524,Mistral Large,mistral-large-2402,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0525,Mistral Large,mistral-large-2402,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0526,Mistral Large,mistral-large-2402,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0527,Mistral Large,mistral-large-2402,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0528,Mistral Large,mistral-large-2402,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0529,Mistral Large,mistral-large-2402,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0530,Mistral Large,mistral-large-2402,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0531,Mistral Large,mistral-large-2402,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0532,Mistral Large,mistral-large-2402,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0533,Mistral Large,mistral-large-2402,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0534,Mistral Large,mistral-large-2402,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0535,Mistral Large,mistral-large-2402,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0536,Mistral Large,mistral-large-2402,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0537,Mistral Large,mistral-large-2402,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0538,Mistral Large,mistral-large-2402,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0539,Mistral Large,mistral-large-2402,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0540,Mistral Large,mistral-large-2402,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0541,Mistral Large,mistral-large-2402,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0542,Mistral Large,mistral-large-2402,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0543,Mistral Large,mistral-large-2402,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0544,Mistral Large,mistral-large-2402,HumanEval+,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0545,Mistral Large,mistral-large-2402,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0546,Mistral Large,mistral-large-2402,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0547,Mistral Large,mistral-large-2402,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0548,Mistral Large,mistral-large-2402,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0549,Mistral Large,mistral-large-2402,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0550,Mistral Large,mistral-large-2402,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0551,Phi-3-medium,phi-3-medium-14b,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0552,Phi-3-medium,phi-3-medium-14b,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0553,Phi-3-medium,phi-3-medium-14b,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0554,Phi-3-medium,phi-3-medium-14b,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0555,Phi-3-medium,phi-3-medium-14b,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0556,Phi-3-medium,phi-3-medium-14b,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0557,Phi-3-medium,phi-3-medium-14b,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0558,Phi-3-medium,phi-3-medium-14b,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0559,Phi-3-medium,phi-3-medium-14b,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0560,Phi-3-medium,phi-3-medium-14b,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0561,Phi-3-medium,phi-3-medium-14b,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0562,Phi-3-medium,phi-3-medium-14b,CodeHaluEval,hallucination,no_hallucination,yes,hallucination,hallucination,flagged,1.0
+G800_0563,Phi-3-medium,phi-3-medium-14b,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0564,Phi-3-medium,phi-3-medium-14b,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0565,Phi-3-medium,phi-3-medium-14b,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0566,Phi-3-medium,phi-3-medium-14b,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0567,Phi-3-medium,phi-3-medium-14b,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0568,Phi-3-medium,phi-3-medium-14b,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0569,Phi-3-medium,phi-3-medium-14b,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0570,Phi-3-medium,phi-3-medium-14b,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0571,Phi-3-medium,phi-3-medium-14b,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0572,Phi-3-medium,phi-3-medium-14b,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0573,Phi-3-medium,phi-3-medium-14b,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0574,Phi-3-medium,phi-3-medium-14b,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0575,Phi-3-medium,phi-3-medium-14b,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0576,Phi-3-medium,phi-3-medium-14b,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0577,Phi-3-medium,phi-3-medium-14b,MBPP,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0578,Phi-3-medium,phi-3-medium-14b,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0579,Phi-3-medium,phi-3-medium-14b,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0580,Phi-3-medium,phi-3-medium-14b,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0581,Phi-3-medium,phi-3-medium-14b,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0582,Phi-3-medium,phi-3-medium-14b,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0583,Phi-3-medium,phi-3-medium-14b,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0584,Phi-3-medium,phi-3-medium-14b,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0585,Phi-3-medium,phi-3-medium-14b,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0586,Phi-3-medium,phi-3-medium-14b,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0587,Phi-3-medium,phi-3-medium-14b,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0588,Phi-3-medium,phi-3-medium-14b,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0589,Phi-3-medium,phi-3-medium-14b,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0590,Phi-3-medium,phi-3-medium-14b,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0591,Phi-3-medium,phi-3-medium-14b,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0592,Phi-3-medium,phi-3-medium-14b,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0593,Phi-3-medium,phi-3-medium-14b,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0594,Phi-3-medium,phi-3-medium-14b,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0595,Phi-3-medium,phi-3-medium-14b,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0596,Phi-3-medium,phi-3-medium-14b,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0597,Phi-3-medium,phi-3-medium-14b,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0598,Phi-3-medium,phi-3-medium-14b,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0599,Phi-3-medium,phi-3-medium-14b,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0600,Phi-3-medium,phi-3-medium-14b,HumanEval+,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0601,Llama 3 (70B),llama-3-70b-instruct,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0602,Llama 3 (70B),llama-3-70b-instruct,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0603,Llama 3 (70B),llama-3-70b-instruct,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0604,Llama 3 (70B),llama-3-70b-instruct,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0605,Llama 3 (70B),llama-3-70b-instruct,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0606,Llama 3 (70B),llama-3-70b-instruct,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0607,Llama 3 (70B),llama-3-70b-instruct,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0608,Llama 3 (70B),llama-3-70b-instruct,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0609,Llama 3 (70B),llama-3-70b-instruct,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0610,Llama 3 (70B),llama-3-70b-instruct,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0611,Llama 3 (70B),llama-3-70b-instruct,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0612,Llama 3 (70B),llama-3-70b-instruct,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0613,Llama 3 (70B),llama-3-70b-instruct,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0614,Llama 3 (70B),llama-3-70b-instruct,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0615,Llama 3 (70B),llama-3-70b-instruct,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0616,Llama 3 (70B),llama-3-70b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0617,Llama 3 (70B),llama-3-70b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0618,Llama 3 (70B),llama-3-70b-instruct,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0619,Llama 3 (70B),llama-3-70b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0620,Llama 3 (70B),llama-3-70b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0621,Llama 3 (70B),llama-3-70b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0622,Llama 3 (70B),llama-3-70b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0623,Llama 3 (70B),llama-3-70b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0624,Llama 3 (70B),llama-3-70b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0625,Llama 3 (70B),llama-3-70b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0626,Llama 3 (70B),llama-3-70b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0627,Llama 3 (70B),llama-3-70b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0628,Llama 3 (70B),llama-3-70b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0629,Llama 3 (70B),llama-3-70b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0630,Llama 3 (70B),llama-3-70b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0631,Llama 3 (70B),llama-3-70b-instruct,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0632,Llama 3 (70B),llama-3-70b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0633,Llama 3 (70B),llama-3-70b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0634,Llama 3 (70B),llama-3-70b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0635,Llama 3 (70B),llama-3-70b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0636,Llama 3 (70B),llama-3-70b-instruct,HumanEval+,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0637,Llama 3 (70B),llama-3-70b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0638,Llama 3 (70B),llama-3-70b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0639,Llama 3 (70B),llama-3-70b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0640,Llama 3 (70B),llama-3-70b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0641,Llama 3 (70B),llama-3-70b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0642,Llama 3 (70B),llama-3-70b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0643,Llama 3 (70B),llama-3-70b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0644,Llama 3 (70B),llama-3-70b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0645,Llama 3 (70B),llama-3-70b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0646,Llama 3 (70B),llama-3-70b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0647,Llama 3 (70B),llama-3-70b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0648,Llama 3 (70B),llama-3-70b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0649,Llama 3 (70B),llama-3-70b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0650,Llama 3 (70B),llama-3-70b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0651,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0652,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0653,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0654,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0655,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0656,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0657,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0658,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0659,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0660,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0661,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,MBPP,hallucination,no_hallucination,yes,hallucination,hallucination,flagged,1.0
+G800_0662,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0663,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0664,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0665,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0666,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0667,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0668,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0669,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0670,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0671,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0672,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0673,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0674,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0675,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0676,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0677,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0678,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0679,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0680,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0681,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0682,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0683,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0684,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0685,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0686,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0687,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0688,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0689,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0690,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0691,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0692,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0693,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0694,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0695,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0696,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0697,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0698,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0699,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0700,Mixtral 8x7B,mixtral-8x7b-instruct-v0.1,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0701,Llama 3 (8B),llama-3-8b-instruct,MBPP,hallucination,no_hallucination,yes,hallucination,hallucination,flagged,1.0
+G800_0702,Llama 3 (8B),llama-3-8b-instruct,CodeHaluEval,hallucination,no_hallucination,yes,hallucination,hallucination,flagged,1.0
+G800_0703,Llama 3 (8B),llama-3-8b-instruct,NL-API,hallucination,no_hallucination,yes,hallucination,hallucination,flagged,1.0
+G800_0704,Llama 3 (8B),llama-3-8b-instruct,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0705,Llama 3 (8B),llama-3-8b-instruct,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0706,Llama 3 (8B),llama-3-8b-instruct,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0707,Llama 3 (8B),llama-3-8b-instruct,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0708,Llama 3 (8B),llama-3-8b-instruct,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0709,Llama 3 (8B),llama-3-8b-instruct,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0710,Llama 3 (8B),llama-3-8b-instruct,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0711,Llama 3 (8B),llama-3-8b-instruct,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0712,Llama 3 (8B),llama-3-8b-instruct,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0713,Llama 3 (8B),llama-3-8b-instruct,MBPP,hallucination,no_hallucination,yes,hallucination,hallucination,flagged,1.0
+G800_0714,Llama 3 (8B),llama-3-8b-instruct,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0715,Llama 3 (8B),llama-3-8b-instruct,NL-API,hallucination,no_hallucination,yes,hallucination,hallucination,flagged,1.0
+G800_0716,Llama 3 (8B),llama-3-8b-instruct,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0717,Llama 3 (8B),llama-3-8b-instruct,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0718,Llama 3 (8B),llama-3-8b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0719,Llama 3 (8B),llama-3-8b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0720,Llama 3 (8B),llama-3-8b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0721,Llama 3 (8B),llama-3-8b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0722,Llama 3 (8B),llama-3-8b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0723,Llama 3 (8B),llama-3-8b-instruct,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0724,Llama 3 (8B),llama-3-8b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0725,Llama 3 (8B),llama-3-8b-instruct,MBPP,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0726,Llama 3 (8B),llama-3-8b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0727,Llama 3 (8B),llama-3-8b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0728,Llama 3 (8B),llama-3-8b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0729,Llama 3 (8B),llama-3-8b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0730,Llama 3 (8B),llama-3-8b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0731,Llama 3 (8B),llama-3-8b-instruct,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0732,Llama 3 (8B),llama-3-8b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0733,Llama 3 (8B),llama-3-8b-instruct,MBPP,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0734,Llama 3 (8B),llama-3-8b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0735,Llama 3 (8B),llama-3-8b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0736,Llama 3 (8B),llama-3-8b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0737,Llama 3 (8B),llama-3-8b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0738,Llama 3 (8B),llama-3-8b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0739,Llama 3 (8B),llama-3-8b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0740,Llama 3 (8B),llama-3-8b-instruct,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0741,Llama 3 (8B),llama-3-8b-instruct,MBPP,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0742,Llama 3 (8B),llama-3-8b-instruct,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0743,Llama 3 (8B),llama-3-8b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0744,Llama 3 (8B),llama-3-8b-instruct,HumanEval+,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0745,Llama 3 (8B),llama-3-8b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0746,Llama 3 (8B),llama-3-8b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0747,Llama 3 (8B),llama-3-8b-instruct,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0748,Llama 3 (8B),llama-3-8b-instruct,HumanEval+,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0749,Llama 3 (8B),llama-3-8b-instruct,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0750,Llama 3 (8B),llama-3-8b-instruct,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0751,Mistral 7B,mistral-7b-instruct-v0.3,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0752,Mistral 7B,mistral-7b-instruct-v0.3,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0753,Mistral 7B,mistral-7b-instruct-v0.3,MBPP,hallucination,no_hallucination,yes,hallucination,hallucination,flagged,1.0
+G800_0754,Mistral 7B,mistral-7b-instruct-v0.3,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0755,Mistral 7B,mistral-7b-instruct-v0.3,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0756,Mistral 7B,mistral-7b-instruct-v0.3,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0757,Mistral 7B,mistral-7b-instruct-v0.3,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0758,Mistral 7B,mistral-7b-instruct-v0.3,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0759,Mistral 7B,mistral-7b-instruct-v0.3,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0760,Mistral 7B,mistral-7b-instruct-v0.3,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0761,Mistral 7B,mistral-7b-instruct-v0.3,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0762,Mistral 7B,mistral-7b-instruct-v0.3,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0763,Mistral 7B,mistral-7b-instruct-v0.3,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0764,Mistral 7B,mistral-7b-instruct-v0.3,HumanEval+,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0765,Mistral 7B,mistral-7b-instruct-v0.3,MBPP,hallucination,no_hallucination,yes,hallucination,hallucination,flagged,1.0
+G800_0766,Mistral 7B,mistral-7b-instruct-v0.3,CodeHaluEval,hallucination,no_hallucination,yes,hallucination,hallucination,flagged,1.0
+G800_0767,Mistral 7B,mistral-7b-instruct-v0.3,NL-API,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0768,Mistral 7B,mistral-7b-instruct-v0.3,HumanEval+,hallucination,no_hallucination,yes,hallucination,hallucination,flagged,1.0
+G800_0769,Mistral 7B,mistral-7b-instruct-v0.3,MBPP,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0770,Mistral 7B,mistral-7b-instruct-v0.3,CodeHaluEval,hallucination,hallucination,no,,hallucination,flagged,1.0
+G800_0771,Mistral 7B,mistral-7b-instruct-v0.3,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0772,Mistral 7B,mistral-7b-instruct-v0.3,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0773,Mistral 7B,mistral-7b-instruct-v0.3,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0774,Mistral 7B,mistral-7b-instruct-v0.3,CodeHaluEval,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0775,Mistral 7B,mistral-7b-instruct-v0.3,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0776,Mistral 7B,mistral-7b-instruct-v0.3,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0777,Mistral 7B,mistral-7b-instruct-v0.3,MBPP,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0778,Mistral 7B,mistral-7b-instruct-v0.3,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0779,Mistral 7B,mistral-7b-instruct-v0.3,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0780,Mistral 7B,mistral-7b-instruct-v0.3,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0781,Mistral 7B,mistral-7b-instruct-v0.3,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0782,Mistral 7B,mistral-7b-instruct-v0.3,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0783,Mistral 7B,mistral-7b-instruct-v0.3,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0784,Mistral 7B,mistral-7b-instruct-v0.3,HumanEval+,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0785,Mistral 7B,mistral-7b-instruct-v0.3,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0786,Mistral 7B,mistral-7b-instruct-v0.3,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0787,Mistral 7B,mistral-7b-instruct-v0.3,NL-API,no_hallucination,hallucination,yes,no_hallucination,no_hallucination,not_flagged,1.0
+G800_0788,Mistral 7B,mistral-7b-instruct-v0.3,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0789,Mistral 7B,mistral-7b-instruct-v0.3,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0790,Mistral 7B,mistral-7b-instruct-v0.3,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0791,Mistral 7B,mistral-7b-instruct-v0.3,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0792,Mistral 7B,mistral-7b-instruct-v0.3,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0793,Mistral 7B,mistral-7b-instruct-v0.3,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0794,Mistral 7B,mistral-7b-instruct-v0.3,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0795,Mistral 7B,mistral-7b-instruct-v0.3,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0796,Mistral 7B,mistral-7b-instruct-v0.3,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0797,Mistral 7B,mistral-7b-instruct-v0.3,MBPP,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0798,Mistral 7B,mistral-7b-instruct-v0.3,CodeHaluEval,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0799,Mistral 7B,mistral-7b-instruct-v0.3,NL-API,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0
+G800_0800,Mistral 7B,mistral-7b-instruct-v0.3,HumanEval+,no_hallucination,no_hallucination,no,,no_hallucination,not_flagged,1.0

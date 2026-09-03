@@ -1,0 +1,19 @@
+{
+  "Crypto": "pycryptodome",
+  "OpenSSL": "pyopenssl",
+  "PIL": "pillow",
+  "attr": "attrs",
+  "bs4": "beautifulsoup4",
+  "cv2": "opencv-python",
+  "dateutil": "python-dateutil",
+  "dotenv": "python-dotenv",
+  "google": "google-api-python-client",
+  "jwt": "pyjwt",
+  "nacl": "pynacl",
+  "psycopg2": "psycopg2-binary",
+  "serial": "pyserial",
+  "skimage": "scikit-image",
+  "sklearn": "scikit-learn",
+  "usb": "pyusb",
+  "yaml": "pyyaml"
+}

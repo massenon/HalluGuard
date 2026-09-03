@@ -1,25 +1,27 @@
-# Environments
-venv/
-.venv/
+.env
+*.key
 __pycache__/
 *.pyc
-.env
-
-# API keys / secrets
-*.key
-secrets.yaml
-
-# Large data (use Zenodo / Git LFS instead)
-data/full_576k_corpus/
-*.parquet
-
-# OS
+.pytest_cache/
+.ruff_cache/
+venv/
+.venv/
+build/
+dist/
+*.egg-info/
+results/generated/
+data/prevalence_corpus/
 .DS_Store
-Thumbs.db
 
-# IDE
-.vscode/
-.idea/
+# Manuscript sources are not distributed in this repository (publisher copyright).
+Vibe_Coding_at_Risk__*/
+Vibe_Coding_at_Risk__*.zip
+*.pdf
+# Manuscript figure assets (the files \includegraphics pulls). plot_results.py
+# regenerates the three data-driven figures into results/generated/figures/.
+figures/*.png
+figures/*.jpg
+figures/*.jpeg
 
-# Docker
-docker/sandbox/*.log
+# Local working notes, not part of the released artifact
+PAPER_CORRECTIONS.md

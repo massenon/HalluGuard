@@ -1,28 +1,44 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite the associated paper."
 type: software
-title: "HalluGuard: A CoV-RAG Framework for Mitigating Slopsquatting Attacks in AI-Generated Code"
+title: "HalluGuard: registry-aware Chain-of-Verification (CoV-RAG) middleware for validating Python package dependencies in LLM-generated code"
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/massenon/HalluGuard"
+abstract: >-
+  Reference implementation and replication package for HalluGuard, a middleware
+  prototype that validates third-party Python dependencies in LLM-generated code
+  before installation via a short-circuiting chain of existence, security-posture
+  and contextual-relevance checks. Note that the record-level evaluation files in
+  data/ are reconstructed from reported aggregates rather than raw experimental
+  logs; see data/PROVENANCE.md.
+keywords:
+  - package hallucination
+  - slopsquatting
+  - chain-of-verification
+  - retrieval-augmented generation
+  - software supply-chain security
 authors:
   - family-names: Massenon
     given-names: Rhodes
-    affiliation: Obafemi Awolowo University
+    affiliation: "Department of Software Engineering, Obafemi Awolowo University, Ile-Ife, Nigeria"
   - family-names: Gambo
     given-names: Ishaya
-    affiliation: Obafemi Awolowo University
+    affiliation: "Department of Software Engineering, Obafemi Awolowo University, Ile-Ife, Nigeria"
   - family-names: Okegbile
     given-names: Samuel D.
-    affiliation: Wilfrid Laurier University
+    affiliation: "Department of Computer Science and Physics, Wilfrid Laurier University, Milton, Canada"
   - family-names: Agarwal
     given-names: Saurabh
-    affiliation: Yeungnam University
+    affiliation: "School of Computer Science and Engineering, Yeungnam University, Republic of Korea"
   - family-names: Pak
     given-names: Wooguil
-    affiliation: Yeungnam University
-license: MIT
-repository-code: "https://github.com/[YOUR-ORG]/halluguard"
+    affiliation: "School of Computer Science and Engineering, Yeungnam University, Republic of Korea"
 preferred-citation:
   type: article
   title: "Vibe Coding at Risk: A CoV-RAG Framework for Mitigating Slopsquatting Attacks in AI-Generated Code"
+  journal: "Information and Software Technology"
+  year: 2026
   authors:
     - family-names: Massenon
       given-names: Rhodes
@@ -34,5 +50,3 @@ preferred-citation:
       given-names: Saurabh
     - family-names: Pak
       given-names: Wooguil
-  journal: "Information and Software Technology"
-  year: 2026

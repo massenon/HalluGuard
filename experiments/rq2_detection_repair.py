@@ -1,136 +1,83 @@
-"""
-rq2_detection_repair.py
--------------------------
-Replicates RQ2: "How effectively can the HalluGuard framework detect
-and repair these hallucinations?"
+"""RQ2 — detection, repair, semantic correctness, and adversarial security metrics.
 
-Computes Detection Rate (DR), Automated Repair Rate (ARR), Semantic
-Correctness Rate (SCR), and False Positive Rate (FPR) against the
-human-annotated gold standard (data/annotated_gold_standard.csv),
-NOT against the automated 576k corpus alone — this resolves the
-circular ground-truth concern raised by Review_Paper1 (Major
-Comment #1).
-
-Usage:
-    python experiments/rq2_detection_repair.py --gold data/annotated_gold_standard.csv
+Recomputes every RQ2 metric from the released record-level files:
+  data/gold_standard/annotated_gold_standard_g800.csv   -> DR, FPR, kappa
+  data/gold_standard/repair_attempt_pool.csv            -> ARR
+  data/gold_standard/scr_execution_sample_400.csv       -> SCR + failure taxonomy
+  data/adversarial_benchmark/adversarial_benchmark_500.csv -> precision, recall, F1, FN taxonomy
 """
 
-import argparse
-import csv
-import logging
-import sys
-from pathlib import Path
+from __future__ import annotations
 
-import numpy as np
-from scipy import stats
+from collections import Counter
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger("rq2")
+from experiments.common import DATA, GENERATED, pct, read_csv, write_csv
+from halluguard.stats import ConfusionMatrix, cohens_kappa, wilson_interval
 
 
-def wilson_ci(successes: int, n: int, confidence: float = 0.95) -> tuple[float, float]:
-    """95% Wilson confidence interval for a proportion."""
-    if n == 0:
-        return (0.0, 0.0)
-    z = stats.norm.ppf(1 - (1 - confidence) / 2)
-    p_hat = successes / n
-    denom = 1 + z**2 / n
-    centre = p_hat + z**2 / (2 * n)
-    margin = z * np.sqrt((p_hat * (1 - p_hat) + z**2 / (4 * n)) / n)
-    return ((centre - margin) / denom, (centre + margin) / denom)
-
-
-def load_gold_standard(path: Path) -> list[dict]:
-    with open(path, newline="") as f:
-        return list(csv.DictReader(f))
-
-
-def compute_metrics(gold_rows: list[dict]) -> dict:
-    """
-    Expects gold_rows with columns:
-      snippet_id, final_label (hallucination/no_hallucination),
-      halluguard_prediction (flagged/not_flagged), repaired_correctly (yes/no/na)
-    """
+def confusion(rows: list[dict], label_key: str, positive: str, pred_key: str) -> ConfusionMatrix:
     tp = fp = tn = fn = 0
-    repaired_total = repaired_success = 0
-
-    for row in gold_rows:
-        actual = row["final_label"] == "hallucination"
-        predicted = row["halluguard_prediction"] == "flagged"
-
-        if actual and predicted:
+    for r in rows:
+        actual, flagged = r[label_key] == positive, r[pred_key] == "flagged"
+        if actual and flagged:
             tp += 1
-            repaired_total += 1
-            if row.get("repaired_correctly") == "yes":
-                repaired_success += 1
-        elif actual and not predicted:
+        elif actual:
             fn += 1
-        elif not actual and predicted:
+        elif flagged:
             fp += 1
         else:
             tn += 1
-
-    dr = tp / max(tp + fn, 1)
-    fpr = fp / max(fp + tn, 1)
-    arr = repaired_success / max(repaired_total, 1)
-
-    dr_ci = wilson_ci(tp, tp + fn)
-    fpr_ci = wilson_ci(fp, fp + tn)
-    arr_ci = wilson_ci(repaired_success, repaired_total)
-
-    return {
-        "n_gold_standard": len(gold_rows),
-        "detection_rate_pct": round(dr * 100, 1),
-        "detection_rate_ci": tuple(round(x * 100, 1) for x in dr_ci),
-        "false_positive_rate_pct": round(fpr * 100, 2),
-        "false_positive_rate_ci": tuple(round(x * 100, 2) for x in fpr_ci),
-        "automated_repair_rate_pct": round(arr * 100, 1),
-        "automated_repair_rate_ci": tuple(round(x * 100, 1) for x in arr_ci),
-        "tp": tp, "fp": fp, "tn": tn, "fn": fn,
-    }
+    return ConfusionMatrix(tp, fp, tn, fn)
 
 
-def compute_scr_from_sandbox(sandbox_results_path: Path) -> dict:
-    """
-    Reads execution-based SCR results from the Docker sandbox
-    (see docker/sandbox/ and experiments/verify_scr.py).
-    Expects a CSV with columns: snippet_id, unit_tests_passed (bool).
-    """
-    if not sandbox_results_path.exists():
-        logger.warning("Sandbox results not found at %s; run docker/sandbox first.",
-                        sandbox_results_path)
-        return {"scr_pct": None, "scr_ci": None}
+def main() -> None:
+    results: list[dict] = []
 
-    with open(sandbox_results_path, newline="") as f:
-        rows = list(csv.DictReader(f))
-    n = len(rows)
-    passed = sum(1 for r in rows if r["unit_tests_passed"].lower() == "true")
-    scr = passed / max(n, 1)
-    ci = wilson_ci(passed, n)
-    return {
-        "n_sandbox_sample": n,
-        "scr_pct": round(scr * 100, 1),
-        "scr_ci": tuple(round(x * 100, 1) for x in ci),
-    }
+    g800 = read_csv(DATA / "gold_standard/annotated_gold_standard_g800.csv")
+    cm = confusion(g800, "final_label", "hallucination", "halluguard_prediction")
+    dr_ci = wilson_interval(cm.tp, cm.tp + cm.fn)
+    fpr_ci = wilson_interval(cm.fp, cm.fp + cm.tn)
+    kappa = cohens_kappa([r["annotator_a_label"] for r in g800], [r["annotator_b_label"] for r in g800])
+    disagreements = sum(r["adjudicated"] == "yes" for r in g800)
+    results += [
+        {"metric": "DR", "count": f"{cm.tp}/{cm.tp + cm.fn}", "value": pct(cm.detection_rate),
+         "ci_low": pct(dr_ci[0]), "ci_high": pct(dr_ci[1])},
+        {"metric": "FPR", "count": f"{cm.fp}/{cm.fp + cm.tn}", "value": pct(cm.false_positive_rate),
+         "ci_low": pct(fpr_ci[0]), "ci_high": pct(fpr_ci[1])},
+        {"metric": "annotator_disagreements", "count": f"{disagreements}/{len(g800)}",
+         "value": pct(disagreements / len(g800)), "ci_low": "", "ci_high": ""},
+        {"metric": "cohens_kappa_pre_adjudication", "count": "", "value": f"{kappa:.3f}", "ci_low": "", "ci_high": ""},
+    ]
+
+    pool = read_csv(DATA / "gold_standard/repair_attempt_pool.csv")
+    repaired = sum(r["repaired_all_checks_pass"] == "yes" for r in pool)
+    arr_ci = wilson_interval(repaired, len(pool))
+    results.append({"metric": "ARR", "count": f"{repaired}/{len(pool)}", "value": pct(repaired / len(pool)),
+                    "ci_low": pct(arr_ci[0]), "ci_high": pct(arr_ci[1])})
+
+    scr = read_csv(DATA / "gold_standard/scr_execution_sample_400.csv")
+    passed = sum(r["unit_tests_passed"] == "True" for r in scr)
+    scr_ci = wilson_interval(passed, len(scr))
+    results.append({"metric": "SCR", "count": f"{passed}/{len(scr)}", "value": pct(passed / len(scr)),
+                    "ci_low": pct(scr_ci[0]), "ci_high": pct(scr_ci[1])})
+    for cat, n in sorted(Counter(r["result_category"] for r in scr if r["result_category"] != "pass").items()):
+        results.append({"metric": f"SCR_failure:{cat}", "count": str(n), "value": "", "ci_low": "", "ci_high": ""})
+
+    adv = read_csv(DATA / "adversarial_benchmark/adversarial_benchmark_500.csv")
+    acm = confusion(adv, "true_label", "malicious", "halluguard_prediction")
+    results += [
+        {"metric": "adversarial_TP/FP/TN/FN", "count": f"{acm.tp}/{acm.fp}/{acm.tn}/{acm.fn}", "value": "", "ci_low": "", "ci_high": ""},
+        {"metric": "adversarial_precision", "count": "", "value": pct(acm.precision), "ci_low": "", "ci_high": ""},
+        {"metric": "adversarial_recall", "count": "", "value": pct(acm.detection_rate), "ci_low": "", "ci_high": ""},
+        {"metric": "adversarial_F1", "count": "", "value": pct(acm.f1), "ci_low": "", "ci_high": ""},
+    ]
+    for cat, n in sorted(Counter(r["false_negative_category"] for r in adv if r["false_negative_category"]).items()):
+        results.append({"metric": f"adversarial_FN:{cat}", "count": str(n), "value": "", "ci_low": "", "ci_high": ""})
+
+    for r in results:
+        print(f"{r['metric']:<40} {r['count']:<14} {r['value']:<8} {r['ci_low']:<8} {r['ci_high']}")
+    write_csv(GENERATED / "rq2_metrics.csv", results, ["metric", "count", "value", "ci_low", "ci_high"])
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Replicate RQ2 detection/repair metrics.")
-    parser.add_argument("--gold", type=Path, default=Path("data/annotated_gold_standard.csv"))
-    parser.add_argument("--sandbox-results", type=Path,
-                         default=Path("results/raw/scr_sandbox_results.csv"))
-    parser.add_argument("--output", type=Path, default=Path("results/raw/rq2_metrics.csv"))
-    args = parser.parse_args()
-
-    gold_rows = load_gold_standard(args.gold)
-    metrics = compute_metrics(gold_rows)
-    scr_metrics = compute_scr_from_sandbox(args.sandbox_results)
-    metrics.update(scr_metrics)
-
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    with open(args.output, "w", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=list(metrics.keys()))
-        writer.writeheader()
-        writer.writerow(metrics)
-
-    logger.info("RQ2 metrics: %s", metrics)
+    main()

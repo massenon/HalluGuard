@@ -1,0 +1,67 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: pytest (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-22.04
+    strategy:
+      fail-fast: false
+      matrix:
+        # Dependencies are hard-pinned (numpy 1.26.4, scipy 1.13.1); 3.13+ has no
+        # matching wheels. The study environment was 3.11.9.
+        python-version: ["3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev,figures]"
+      - name: Test
+        run: python -m pytest -q
+      - name: Lint
+        run: ruff check .
+
+  artifact-integrity:
+    name: Data checksums and reproduction scripts
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: pip install -e ".[dev,figures]"
+      - name: Verify released data checksums
+        run: sha256sum -c data/checksums.sha256
+      - name: Run every reproduction script
+        # None of these require network access or credentials.
+        run: |
+          python -m experiments.rq1_prevalence
+          python -m experiments.rq2_detection_repair
+          python -m experiments.rq3_latency
+          python -m experiments.rq4_ablation
+          python -m experiments.grid_search
+          python -m experiments.descriptive_summaries
+          python figures/plot_results.py
+      - name: Confirm grid search still selects the published configuration
+        run: |
+          python - <<'PY'
+          import csv
+          rows = list(csv.DictReader(open("results/generated/grid_search_30_configs.csv")))
+          best = max(rows, key=lambda r: float(r["cv_f1"]))
+          assert (best["w_vuln"], best["w_rep"], best["w_typo"], best["tau"]) == \
+                 ("0.6", "0.2", "0.2", "0.7"), best
+          print("grid search selects w=(0.6,0.2,0.2), tau=0.70 as published")
+          PY

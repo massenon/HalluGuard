@@ -1,0 +1,8 @@
+ORIGINAL REQUEST: "{original_prompt}"
+
+FLAWED CODE:
+{flawed_code}
+
+REASON FOR REJECTION: The package "{package_name}" {reason_code}.
+
+DIRECTIVE: Rewrite the code to accomplish the same task without using "{package_name}". Use only packages that exist on PyPI (Python). Prefer widely-adopted, well-maintained libraries with active community support.

@@ -1,0 +1,7 @@
+A developer submitted the following natural-language request:
+
+REQUEST: "{original_prompt}"
+
+The code generator proposed importing the software package: "{package_name}" (version specifier: "{version_specifier}").
+
+Question: Is this package contextually appropriate and functionally relevant for satisfying the developer's request? Answer Yes or No.

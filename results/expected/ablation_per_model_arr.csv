@@ -1,0 +1,17 @@
+model,no_guard_arr,simple_rag_arr,secure_rag_arr,full_halluguard_arr
+Claude 3 Opus,0.0,77.34,91.21,92.38
+DeepSeek-Coder,0.0,77.56,88.9,93.52
+Gemini 1.5 Pro,0.0,75.7,89.71,91.36
+GPT-4,0.0,74.59,89.52,93.26
+Claude 3 Sonnet,0.0,74.15,90.05,92.03
+Code Llama (34B),0.0,75.66,88.33,92.02
+Gemini 1.0 Pro,0.0,74.24,89.09,94.16
+GPT-3.5-Turbo,0.0,73.69,88.83,92.44
+StarCoder2 (15B),0.0,75.88,88.59,92.24
+Claude 3 Haiku,0.0,75.79,88.76,93.0
+Mistral Large,0.0,76.35,89.02,93.39
+Phi-3-medium,0.0,74.39,89.19,92.25
+Llama 3 (70B),0.0,75.62,88.71,92.86
+Mixtral 8x7B,0.0,75.53,89.73,91.32
+Llama 3 (8B),0.0,73.59,88.99,91.92
+Mistral 7B,0.0,76.33,86.95,91.85

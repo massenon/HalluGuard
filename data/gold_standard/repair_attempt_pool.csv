@@ -1,0 +1,790 @@
+repair_id,model,reason_code,attempts_used,repaired_all_checks_pass
+RA_0001,Claude 3 Opus,not_relevant,3,yes
+RA_0002,Claude 3 Opus,not_exist,2,yes
+RA_0003,Claude 3 Opus,not_exist,1,yes
+RA_0004,Claude 3 Opus,not_exist,2,yes
+RA_0005,Claude 3 Opus,not_exist,1,yes
+RA_0006,Claude 3 Opus,not_exist,3,yes
+RA_0007,Claude 3 Opus,insecure,3,yes
+RA_0008,Claude 3 Opus,insecure,2,yes
+RA_0009,Claude 3 Opus,not_exist,2,yes
+RA_0010,Claude 3 Opus,not_exist,3,yes
+RA_0011,Claude 3 Opus,not_exist,3,yes
+RA_0012,Claude 3 Opus,not_exist,1,yes
+RA_0013,Claude 3 Opus,not_relevant,3,yes
+RA_0014,Claude 3 Opus,not_exist,1,yes
+RA_0015,Claude 3 Opus,insecure,1,yes
+RA_0016,Claude 3 Opus,not_exist,2,yes
+RA_0017,Claude 3 Opus,insecure,3,yes
+RA_0018,Claude 3 Opus,insecure,3,yes
+RA_0019,Claude 3 Opus,insecure,3,yes
+RA_0020,Claude 3 Opus,not_relevant,3,yes
+RA_0021,Claude 3 Opus,insecure,3,yes
+RA_0022,Claude 3 Opus,insecure,3,yes
+RA_0023,Claude 3 Opus,not_relevant,2,yes
+RA_0024,Claude 3 Opus,not_relevant,3,yes
+RA_0025,Claude 3 Opus,not_relevant,3,yes
+RA_0026,Claude 3 Opus,insecure,2,yes
+RA_0027,Claude 3 Opus,not_relevant,2,yes
+RA_0028,Claude 3 Opus,not_exist,3,yes
+RA_0029,Claude 3 Opus,insecure,1,yes
+RA_0030,Claude 3 Opus,not_exist,1,yes
+RA_0031,Claude 3 Opus,not_exist,3,yes
+RA_0032,Claude 3 Opus,insecure,2,yes
+RA_0033,Claude 3 Opus,not_exist,3,yes
+RA_0034,Claude 3 Opus,insecure,2,yes
+RA_0035,Claude 3 Opus,insecure,2,yes
+RA_0036,Claude 3 Opus,insecure,1,yes
+RA_0037,Claude 3 Opus,insecure,2,yes
+RA_0038,Claude 3 Opus,not_exist,1,yes
+RA_0039,Claude 3 Opus,not_exist,2,yes
+RA_0040,Claude 3 Opus,not_relevant,1,yes
+RA_0041,Claude 3 Opus,insecure,3,yes
+RA_0042,Claude 3 Opus,not_relevant,1,yes
+RA_0043,Claude 3 Opus,not_relevant,2,yes
+RA_0044,Claude 3 Opus,insecure,1,yes
+RA_0045,Claude 3 Opus,not_exist,1,yes
+RA_0046,Claude 3 Opus,not_exist,2,yes
+RA_0047,Claude 3 Opus,insecure,2,yes
+RA_0048,Claude 3 Opus,insecure,2,yes
+RA_0049,Claude 3 Opus,not_relevant,2,no
+RA_0050,Claude 3 Opus,insecure,1,no
+RA_0051,Claude 3 Opus,insecure,1,no
+RA_0052,DeepSeek-Coder,insecure,1,yes
+RA_0053,DeepSeek-Coder,not_exist,1,yes
+RA_0054,DeepSeek-Coder,not_relevant,1,yes
+RA_0055,DeepSeek-Coder,insecure,2,yes
+RA_0056,DeepSeek-Coder,not_exist,2,yes
+RA_0057,DeepSeek-Coder,insecure,2,yes
+RA_0058,DeepSeek-Coder,not_relevant,2,yes
+RA_0059,DeepSeek-Coder,not_exist,3,yes
+RA_0060,DeepSeek-Coder,insecure,2,yes
+RA_0061,DeepSeek-Coder,not_relevant,3,yes
+RA_0062,DeepSeek-Coder,insecure,1,yes
+RA_0063,DeepSeek-Coder,insecure,1,yes
+RA_0064,DeepSeek-Coder,insecure,2,yes
+RA_0065,DeepSeek-Coder,not_exist,2,yes
+RA_0066,DeepSeek-Coder,not_relevant,1,yes
+RA_0067,DeepSeek-Coder,not_exist,1,yes
+RA_0068,DeepSeek-Coder,not_exist,3,yes
+RA_0069,DeepSeek-Coder,not_relevant,3,yes
+RA_0070,DeepSeek-Coder,insecure,1,yes
+RA_0071,DeepSeek-Coder,not_exist,3,yes
+RA_0072,DeepSeek-Coder,not_exist,3,yes
+RA_0073,DeepSeek-Coder,not_relevant,2,yes
+RA_0074,DeepSeek-Coder,not_exist,2,yes
+RA_0075,DeepSeek-Coder,insecure,2,yes
+RA_0076,DeepSeek-Coder,not_relevant,2,yes
+RA_0077,DeepSeek-Coder,insecure,3,yes
+RA_0078,DeepSeek-Coder,insecure,2,yes
+RA_0079,DeepSeek-Coder,insecure,1,yes
+RA_0080,DeepSeek-Coder,not_relevant,3,yes
+RA_0081,DeepSeek-Coder,not_exist,2,yes
+RA_0082,DeepSeek-Coder,insecure,2,yes
+RA_0083,DeepSeek-Coder,not_relevant,1,yes
+RA_0084,DeepSeek-Coder,not_relevant,3,yes
+RA_0085,DeepSeek-Coder,not_relevant,3,yes
+RA_0086,DeepSeek-Coder,not_relevant,3,yes
+RA_0087,DeepSeek-Coder,not_exist,1,yes
+RA_0088,DeepSeek-Coder,insecure,2,yes
+RA_0089,DeepSeek-Coder,not_relevant,3,yes
+RA_0090,DeepSeek-Coder,insecure,3,yes
+RA_0091,DeepSeek-Coder,not_relevant,3,yes
+RA_0092,DeepSeek-Coder,insecure,1,yes
+RA_0093,DeepSeek-Coder,not_exist,1,yes
+RA_0094,DeepSeek-Coder,not_exist,3,yes
+RA_0095,DeepSeek-Coder,insecure,2,yes
+RA_0096,DeepSeek-Coder,insecure,1,yes
+RA_0097,DeepSeek-Coder,not_exist,1,yes
+RA_0098,DeepSeek-Coder,insecure,1,yes
+RA_0099,DeepSeek-Coder,not_exist,1,no
+RA_0100,DeepSeek-Coder,insecure,3,no
+RA_0101,DeepSeek-Coder,not_exist,2,no
+RA_0102,Gemini 1.5 Pro,not_exist,2,yes
+RA_0103,Gemini 1.5 Pro,not_relevant,3,yes
+RA_0104,Gemini 1.5 Pro,insecure,1,yes
+RA_0105,Gemini 1.5 Pro,not_exist,1,yes
+RA_0106,Gemini 1.5 Pro,not_exist,1,yes
+RA_0107,Gemini 1.5 Pro,insecure,3,yes
+RA_0108,Gemini 1.5 Pro,insecure,1,yes
+RA_0109,Gemini 1.5 Pro,not_exist,2,yes
+RA_0110,Gemini 1.5 Pro,not_exist,3,yes
+RA_0111,Gemini 1.5 Pro,insecure,1,yes
+RA_0112,Gemini 1.5 Pro,not_exist,3,yes
+RA_0113,Gemini 1.5 Pro,insecure,2,yes
+RA_0114,Gemini 1.5 Pro,not_relevant,3,yes
+RA_0115,Gemini 1.5 Pro,insecure,2,yes
+RA_0116,Gemini 1.5 Pro,insecure,3,yes
+RA_0117,Gemini 1.5 Pro,not_relevant,3,yes
+RA_0118,Gemini 1.5 Pro,not_relevant,2,yes
+RA_0119,Gemini 1.5 Pro,not_relevant,3,yes
+RA_0120,Gemini 1.5 Pro,insecure,3,yes
+RA_0121,Gemini 1.5 Pro,not_exist,3,yes
+RA_0122,Gemini 1.5 Pro,not_relevant,3,yes
+RA_0123,Gemini 1.5 Pro,not_relevant,3,yes
+RA_0124,Gemini 1.5 Pro,not_relevant,2,yes
+RA_0125,Gemini 1.5 Pro,not_relevant,1,yes
+RA_0126,Gemini 1.5 Pro,not_exist,1,yes
+RA_0127,Gemini 1.5 Pro,insecure,2,yes
+RA_0128,Gemini 1.5 Pro,insecure,2,yes
+RA_0129,Gemini 1.5 Pro,not_relevant,2,yes
+RA_0130,Gemini 1.5 Pro,insecure,3,yes
+RA_0131,Gemini 1.5 Pro,insecure,1,yes
+RA_0132,Gemini 1.5 Pro,not_relevant,2,yes
+RA_0133,Gemini 1.5 Pro,insecure,1,yes
+RA_0134,Gemini 1.5 Pro,not_exist,3,yes
+RA_0135,Gemini 1.5 Pro,not_exist,1,yes
+RA_0136,Gemini 1.5 Pro,not_exist,2,yes
+RA_0137,Gemini 1.5 Pro,not_exist,1,yes
+RA_0138,Gemini 1.5 Pro,not_relevant,3,yes
+RA_0139,Gemini 1.5 Pro,not_relevant,2,yes
+RA_0140,Gemini 1.5 Pro,insecure,3,yes
+RA_0141,Gemini 1.5 Pro,insecure,2,yes
+RA_0142,Gemini 1.5 Pro,not_relevant,2,yes
+RA_0143,Gemini 1.5 Pro,insecure,1,yes
+RA_0144,Gemini 1.5 Pro,not_exist,1,yes
+RA_0145,Gemini 1.5 Pro,not_relevant,2,yes
+RA_0146,Gemini 1.5 Pro,not_relevant,1,yes
+RA_0147,Gemini 1.5 Pro,insecure,1,yes
+RA_0148,Gemini 1.5 Pro,insecure,2,yes
+RA_0149,Gemini 1.5 Pro,insecure,1,no
+RA_0150,Gemini 1.5 Pro,insecure,2,no
+RA_0151,Gemini 1.5 Pro,not_exist,2,no
+RA_0152,GPT-4,insecure,1,yes
+RA_0153,GPT-4,insecure,1,yes
+RA_0154,GPT-4,insecure,2,yes
+RA_0155,GPT-4,insecure,3,yes
+RA_0156,GPT-4,not_exist,2,yes
+RA_0157,GPT-4,insecure,1,yes
+RA_0158,GPT-4,insecure,1,yes
+RA_0159,GPT-4,not_relevant,1,yes
+RA_0160,GPT-4,insecure,1,yes
+RA_0161,GPT-4,not_relevant,2,yes
+RA_0162,GPT-4,not_relevant,2,yes
+RA_0163,GPT-4,not_exist,1,yes
+RA_0164,GPT-4,not_exist,1,yes
+RA_0165,GPT-4,not_relevant,1,yes
+RA_0166,GPT-4,not_exist,3,yes
+RA_0167,GPT-4,insecure,2,yes
+RA_0168,GPT-4,not_exist,3,yes
+RA_0169,GPT-4,not_relevant,1,yes
+RA_0170,GPT-4,not_exist,1,yes
+RA_0171,GPT-4,insecure,1,yes
+RA_0172,GPT-4,not_exist,1,yes
+RA_0173,GPT-4,insecure,2,yes
+RA_0174,GPT-4,not_relevant,3,yes
+RA_0175,GPT-4,not_relevant,2,yes
+RA_0176,GPT-4,not_relevant,3,yes
+RA_0177,GPT-4,not_exist,1,yes
+RA_0178,GPT-4,not_exist,2,yes
+RA_0179,GPT-4,insecure,1,yes
+RA_0180,GPT-4,not_exist,3,yes
+RA_0181,GPT-4,not_exist,1,yes
+RA_0182,GPT-4,not_relevant,1,yes
+RA_0183,GPT-4,not_exist,1,yes
+RA_0184,GPT-4,insecure,2,yes
+RA_0185,GPT-4,not_exist,2,yes
+RA_0186,GPT-4,not_relevant,2,yes
+RA_0187,GPT-4,not_relevant,3,yes
+RA_0188,GPT-4,not_exist,3,yes
+RA_0189,GPT-4,insecure,1,yes
+RA_0190,GPT-4,not_exist,2,yes
+RA_0191,GPT-4,not_relevant,2,yes
+RA_0192,GPT-4,not_exist,3,yes
+RA_0193,GPT-4,not_relevant,3,yes
+RA_0194,GPT-4,not_exist,2,yes
+RA_0195,GPT-4,not_relevant,1,yes
+RA_0196,GPT-4,not_relevant,2,yes
+RA_0197,GPT-4,not_exist,2,yes
+RA_0198,GPT-4,insecure,3,yes
+RA_0199,GPT-4,not_exist,3,yes
+RA_0200,GPT-4,insecure,2,no
+RA_0201,GPT-4,insecure,3,no
+RA_0202,GPT-4,insecure,2,no
+RA_0203,Claude 3 Sonnet,not_relevant,3,yes
+RA_0204,Claude 3 Sonnet,insecure,2,yes
+RA_0205,Claude 3 Sonnet,not_exist,2,yes
+RA_0206,Claude 3 Sonnet,not_relevant,2,yes
+RA_0207,Claude 3 Sonnet,not_exist,1,yes
+RA_0208,Claude 3 Sonnet,insecure,1,yes
+RA_0209,Claude 3 Sonnet,not_relevant,1,yes
+RA_0210,Claude 3 Sonnet,not_exist,1,yes
+RA_0211,Claude 3 Sonnet,not_exist,3,yes
+RA_0212,Claude 3 Sonnet,not_exist,1,yes
+RA_0213,Claude 3 Sonnet,not_exist,2,yes
+RA_0214,Claude 3 Sonnet,not_exist,1,yes
+RA_0215,Claude 3 Sonnet,not_relevant,1,yes
+RA_0216,Claude 3 Sonnet,insecure,2,yes
+RA_0217,Claude 3 Sonnet,not_relevant,2,yes
+RA_0218,Claude 3 Sonnet,not_relevant,1,yes
+RA_0219,Claude 3 Sonnet,not_relevant,2,yes
+RA_0220,Claude 3 Sonnet,insecure,2,yes
+RA_0221,Claude 3 Sonnet,not_exist,3,yes
+RA_0222,Claude 3 Sonnet,not_relevant,3,yes
+RA_0223,Claude 3 Sonnet,not_relevant,3,yes
+RA_0224,Claude 3 Sonnet,not_relevant,2,yes
+RA_0225,Claude 3 Sonnet,not_relevant,1,yes
+RA_0226,Claude 3 Sonnet,insecure,3,yes
+RA_0227,Claude 3 Sonnet,not_exist,2,yes
+RA_0228,Claude 3 Sonnet,not_exist,2,yes
+RA_0229,Claude 3 Sonnet,not_exist,2,yes
+RA_0230,Claude 3 Sonnet,not_exist,1,yes
+RA_0231,Claude 3 Sonnet,not_exist,2,yes
+RA_0232,Claude 3 Sonnet,insecure,1,yes
+RA_0233,Claude 3 Sonnet,insecure,2,yes
+RA_0234,Claude 3 Sonnet,not_relevant,2,yes
+RA_0235,Claude 3 Sonnet,not_relevant,2,yes
+RA_0236,Claude 3 Sonnet,insecure,1,yes
+RA_0237,Claude 3 Sonnet,insecure,3,yes
+RA_0238,Claude 3 Sonnet,not_relevant,2,yes
+RA_0239,Claude 3 Sonnet,not_relevant,2,yes
+RA_0240,Claude 3 Sonnet,not_relevant,3,yes
+RA_0241,Claude 3 Sonnet,not_exist,1,yes
+RA_0242,Claude 3 Sonnet,not_exist,2,yes
+RA_0243,Claude 3 Sonnet,insecure,1,yes
+RA_0244,Claude 3 Sonnet,insecure,2,yes
+RA_0245,Claude 3 Sonnet,not_exist,1,yes
+RA_0246,Claude 3 Sonnet,not_exist,1,yes
+RA_0247,Claude 3 Sonnet,not_relevant,3,yes
+RA_0248,Claude 3 Sonnet,insecure,2,yes
+RA_0249,Claude 3 Sonnet,not_exist,3,yes
+RA_0250,Claude 3 Sonnet,not_exist,2,no
+RA_0251,Claude 3 Sonnet,not_exist,1,no
+RA_0252,Claude 3 Sonnet,not_relevant,2,no
+RA_0253,Code Llama (34B),not_relevant,2,yes
+RA_0254,Code Llama (34B),not_relevant,2,yes
+RA_0255,Code Llama (34B),insecure,1,yes
+RA_0256,Code Llama (34B),not_exist,2,yes
+RA_0257,Code Llama (34B),not_relevant,1,yes
+RA_0258,Code Llama (34B),not_exist,1,yes
+RA_0259,Code Llama (34B),insecure,3,yes
+RA_0260,Code Llama (34B),not_relevant,3,yes
+RA_0261,Code Llama (34B),not_relevant,3,yes
+RA_0262,Code Llama (34B),insecure,3,yes
+RA_0263,Code Llama (34B),insecure,3,yes
+RA_0264,Code Llama (34B),not_relevant,3,yes
+RA_0265,Code Llama (34B),not_relevant,1,yes
+RA_0266,Code Llama (34B),insecure,3,yes
+RA_0267,Code Llama (34B),not_exist,2,yes
+RA_0268,Code Llama (34B),not_relevant,3,yes
+RA_0269,Code Llama (34B),not_relevant,2,yes
+RA_0270,Code Llama (34B),not_relevant,2,yes
+RA_0271,Code Llama (34B),not_exist,2,yes
+RA_0272,Code Llama (34B),insecure,1,yes
+RA_0273,Code Llama (34B),insecure,3,yes
+RA_0274,Code Llama (34B),not_relevant,1,yes
+RA_0275,Code Llama (34B),insecure,2,yes
+RA_0276,Code Llama (34B),insecure,3,yes
+RA_0277,Code Llama (34B),not_relevant,1,yes
+RA_0278,Code Llama (34B),insecure,3,yes
+RA_0279,Code Llama (34B),not_exist,2,yes
+RA_0280,Code Llama (34B),insecure,2,yes
+RA_0281,Code Llama (34B),not_relevant,1,yes
+RA_0282,Code Llama (34B),not_exist,3,yes
+RA_0283,Code Llama (34B),not_relevant,2,yes
+RA_0284,Code Llama (34B),insecure,2,yes
+RA_0285,Code Llama (34B),not_exist,3,yes
+RA_0286,Code Llama (34B),not_exist,1,yes
+RA_0287,Code Llama (34B),not_exist,2,yes
+RA_0288,Code Llama (34B),not_exist,2,yes
+RA_0289,Code Llama (34B),not_exist,2,yes
+RA_0290,Code Llama (34B),not_exist,1,yes
+RA_0291,Code Llama (34B),insecure,3,yes
+RA_0292,Code Llama (34B),not_relevant,2,yes
+RA_0293,Code Llama (34B),not_exist,3,yes
+RA_0294,Code Llama (34B),not_relevant,3,yes
+RA_0295,Code Llama (34B),insecure,3,yes
+RA_0296,Code Llama (34B),not_relevant,1,yes
+RA_0297,Code Llama (34B),insecure,3,yes
+RA_0298,Code Llama (34B),not_exist,3,yes
+RA_0299,Code Llama (34B),not_relevant,3,yes
+RA_0300,Code Llama (34B),insecure,1,no
+RA_0301,Code Llama (34B),not_exist,2,no
+RA_0302,Code Llama (34B),not_relevant,3,no
+RA_0303,Gemini 1.0 Pro,insecure,1,yes
+RA_0304,Gemini 1.0 Pro,not_relevant,3,yes
+RA_0305,Gemini 1.0 Pro,not_exist,1,yes
+RA_0306,Gemini 1.0 Pro,not_relevant,2,yes
+RA_0307,Gemini 1.0 Pro,not_exist,2,yes
+RA_0308,Gemini 1.0 Pro,not_relevant,1,yes
+RA_0309,Gemini 1.0 Pro,insecure,1,yes
+RA_0310,Gemini 1.0 Pro,not_exist,1,yes
+RA_0311,Gemini 1.0 Pro,not_relevant,3,yes
+RA_0312,Gemini 1.0 Pro,insecure,1,yes
+RA_0313,Gemini 1.0 Pro,not_relevant,2,yes
+RA_0314,Gemini 1.0 Pro,not_relevant,2,yes
+RA_0315,Gemini 1.0 Pro,insecure,1,yes
+RA_0316,Gemini 1.0 Pro,insecure,1,yes
+RA_0317,Gemini 1.0 Pro,not_relevant,1,yes
+RA_0318,Gemini 1.0 Pro,insecure,1,yes
+RA_0319,Gemini 1.0 Pro,insecure,2,yes
+RA_0320,Gemini 1.0 Pro,not_relevant,3,yes
+RA_0321,Gemini 1.0 Pro,not_relevant,3,yes
+RA_0322,Gemini 1.0 Pro,not_exist,1,yes
+RA_0323,Gemini 1.0 Pro,not_exist,1,yes
+RA_0324,Gemini 1.0 Pro,not_exist,1,yes
+RA_0325,Gemini 1.0 Pro,not_exist,2,yes
+RA_0326,Gemini 1.0 Pro,not_exist,1,yes
+RA_0327,Gemini 1.0 Pro,insecure,2,yes
+RA_0328,Gemini 1.0 Pro,not_exist,3,yes
+RA_0329,Gemini 1.0 Pro,not_relevant,2,yes
+RA_0330,Gemini 1.0 Pro,not_relevant,1,yes
+RA_0331,Gemini 1.0 Pro,insecure,3,yes
+RA_0332,Gemini 1.0 Pro,not_relevant,2,yes
+RA_0333,Gemini 1.0 Pro,not_exist,2,yes
+RA_0334,Gemini 1.0 Pro,not_exist,2,yes
+RA_0335,Gemini 1.0 Pro,not_exist,2,yes
+RA_0336,Gemini 1.0 Pro,not_exist,3,yes
+RA_0337,Gemini 1.0 Pro,insecure,3,yes
+RA_0338,Gemini 1.0 Pro,not_exist,3,yes
+RA_0339,Gemini 1.0 Pro,not_exist,1,yes
+RA_0340,Gemini 1.0 Pro,not_exist,1,yes
+RA_0341,Gemini 1.0 Pro,insecure,1,yes
+RA_0342,Gemini 1.0 Pro,not_relevant,3,yes
+RA_0343,Gemini 1.0 Pro,not_relevant,1,yes
+RA_0344,Gemini 1.0 Pro,insecure,3,yes
+RA_0345,Gemini 1.0 Pro,insecure,1,yes
+RA_0346,Gemini 1.0 Pro,insecure,2,yes
+RA_0347,Gemini 1.0 Pro,insecure,1,yes
+RA_0348,Gemini 1.0 Pro,not_relevant,2,yes
+RA_0349,Gemini 1.0 Pro,not_exist,1,yes
+RA_0350,Gemini 1.0 Pro,not_exist,3,no
+RA_0351,Gemini 1.0 Pro,not_relevant,2,no
+RA_0352,Gemini 1.0 Pro,not_relevant,3,no
+RA_0353,GPT-3.5-Turbo,not_relevant,1,yes
+RA_0354,GPT-3.5-Turbo,not_relevant,1,yes
+RA_0355,GPT-3.5-Turbo,not_relevant,2,yes
+RA_0356,GPT-3.5-Turbo,not_relevant,2,yes
+RA_0357,GPT-3.5-Turbo,insecure,2,yes
+RA_0358,GPT-3.5-Turbo,not_relevant,2,yes
+RA_0359,GPT-3.5-Turbo,not_exist,1,yes
+RA_0360,GPT-3.5-Turbo,not_exist,2,yes
+RA_0361,GPT-3.5-Turbo,not_exist,1,yes
+RA_0362,GPT-3.5-Turbo,not_relevant,2,yes
+RA_0363,GPT-3.5-Turbo,not_exist,3,yes
+RA_0364,GPT-3.5-Turbo,insecure,3,yes
+RA_0365,GPT-3.5-Turbo,insecure,2,yes
+RA_0366,GPT-3.5-Turbo,not_relevant,1,yes
+RA_0367,GPT-3.5-Turbo,insecure,2,yes
+RA_0368,GPT-3.5-Turbo,not_exist,1,yes
+RA_0369,GPT-3.5-Turbo,not_exist,3,yes
+RA_0370,GPT-3.5-Turbo,not_relevant,3,yes
+RA_0371,GPT-3.5-Turbo,not_exist,3,yes
+RA_0372,GPT-3.5-Turbo,not_exist,2,yes
+RA_0373,GPT-3.5-Turbo,insecure,3,yes
+RA_0374,GPT-3.5-Turbo,not_relevant,3,yes
+RA_0375,GPT-3.5-Turbo,insecure,1,yes
+RA_0376,GPT-3.5-Turbo,not_relevant,1,yes
+RA_0377,GPT-3.5-Turbo,not_relevant,2,yes
+RA_0378,GPT-3.5-Turbo,not_exist,2,yes
+RA_0379,GPT-3.5-Turbo,not_relevant,2,yes
+RA_0380,GPT-3.5-Turbo,insecure,1,yes
+RA_0381,GPT-3.5-Turbo,not_exist,1,yes
+RA_0382,GPT-3.5-Turbo,insecure,3,yes
+RA_0383,GPT-3.5-Turbo,not_exist,3,yes
+RA_0384,GPT-3.5-Turbo,insecure,2,yes
+RA_0385,GPT-3.5-Turbo,not_exist,2,yes
+RA_0386,GPT-3.5-Turbo,insecure,2,yes
+RA_0387,GPT-3.5-Turbo,not_exist,3,yes
+RA_0388,GPT-3.5-Turbo,insecure,1,yes
+RA_0389,GPT-3.5-Turbo,insecure,2,yes
+RA_0390,GPT-3.5-Turbo,not_relevant,2,yes
+RA_0391,GPT-3.5-Turbo,insecure,1,yes
+RA_0392,GPT-3.5-Turbo,not_exist,2,yes
+RA_0393,GPT-3.5-Turbo,insecure,1,yes
+RA_0394,GPT-3.5-Turbo,not_relevant,1,yes
+RA_0395,GPT-3.5-Turbo,not_exist,3,yes
+RA_0396,GPT-3.5-Turbo,not_relevant,3,yes
+RA_0397,GPT-3.5-Turbo,not_exist,2,yes
+RA_0398,GPT-3.5-Turbo,not_exist,1,yes
+RA_0399,GPT-3.5-Turbo,insecure,2,no
+RA_0400,GPT-3.5-Turbo,insecure,1,no
+RA_0401,GPT-3.5-Turbo,not_exist,3,no
+RA_0402,StarCoder2 (15B),not_exist,3,yes
+RA_0403,StarCoder2 (15B),not_exist,1,yes
+RA_0404,StarCoder2 (15B),not_exist,2,yes
+RA_0405,StarCoder2 (15B),insecure,3,yes
+RA_0406,StarCoder2 (15B),not_relevant,1,yes
+RA_0407,StarCoder2 (15B),not_relevant,3,yes
+RA_0408,StarCoder2 (15B),not_relevant,3,yes
+RA_0409,StarCoder2 (15B),not_relevant,2,yes
+RA_0410,StarCoder2 (15B),not_relevant,3,yes
+RA_0411,StarCoder2 (15B),insecure,1,yes
+RA_0412,StarCoder2 (15B),insecure,1,yes
+RA_0413,StarCoder2 (15B),insecure,2,yes
+RA_0414,StarCoder2 (15B),not_exist,3,yes
+RA_0415,StarCoder2 (15B),insecure,2,yes
+RA_0416,StarCoder2 (15B),not_relevant,1,yes
+RA_0417,StarCoder2 (15B),not_exist,1,yes
+RA_0418,StarCoder2 (15B),not_exist,3,yes
+RA_0419,StarCoder2 (15B),not_exist,1,yes
+RA_0420,StarCoder2 (15B),insecure,1,yes
+RA_0421,StarCoder2 (15B),insecure,2,yes
+RA_0422,StarCoder2 (15B),insecure,3,yes
+RA_0423,StarCoder2 (15B),not_exist,2,yes
+RA_0424,StarCoder2 (15B),not_exist,3,yes
+RA_0425,StarCoder2 (15B),not_relevant,1,yes
+RA_0426,StarCoder2 (15B),not_exist,2,yes
+RA_0427,StarCoder2 (15B),not_exist,1,yes
+RA_0428,StarCoder2 (15B),not_relevant,3,yes
+RA_0429,StarCoder2 (15B),not_relevant,1,yes
+RA_0430,StarCoder2 (15B),not_relevant,1,yes
+RA_0431,StarCoder2 (15B),insecure,1,yes
+RA_0432,StarCoder2 (15B),not_relevant,3,yes
+RA_0433,StarCoder2 (15B),not_exist,1,yes
+RA_0434,StarCoder2 (15B),not_relevant,3,yes
+RA_0435,StarCoder2 (15B),not_relevant,1,yes
+RA_0436,StarCoder2 (15B),insecure,1,yes
+RA_0437,StarCoder2 (15B),not_relevant,3,yes
+RA_0438,StarCoder2 (15B),insecure,3,yes
+RA_0439,StarCoder2 (15B),not_relevant,1,yes
+RA_0440,StarCoder2 (15B),insecure,3,yes
+RA_0441,StarCoder2 (15B),not_exist,1,yes
+RA_0442,StarCoder2 (15B),insecure,1,yes
+RA_0443,StarCoder2 (15B),not_relevant,3,yes
+RA_0444,StarCoder2 (15B),insecure,1,yes
+RA_0445,StarCoder2 (15B),not_relevant,2,yes
+RA_0446,StarCoder2 (15B),insecure,1,yes
+RA_0447,StarCoder2 (15B),insecure,3,yes
+RA_0448,StarCoder2 (15B),insecure,3,no
+RA_0449,StarCoder2 (15B),insecure,2,no
+RA_0450,StarCoder2 (15B),not_exist,3,no
+RA_0451,Claude 3 Haiku,not_exist,3,yes
+RA_0452,Claude 3 Haiku,insecure,2,yes
+RA_0453,Claude 3 Haiku,not_relevant,3,yes
+RA_0454,Claude 3 Haiku,insecure,1,yes
+RA_0455,Claude 3 Haiku,not_exist,2,yes
+RA_0456,Claude 3 Haiku,not_relevant,1,yes
+RA_0457,Claude 3 Haiku,not_relevant,2,yes
+RA_0458,Claude 3 Haiku,not_relevant,1,yes
+RA_0459,Claude 3 Haiku,not_relevant,1,yes
+RA_0460,Claude 3 Haiku,not_relevant,3,yes
+RA_0461,Claude 3 Haiku,not_exist,3,yes
+RA_0462,Claude 3 Haiku,not_exist,1,yes
+RA_0463,Claude 3 Haiku,not_relevant,1,yes
+RA_0464,Claude 3 Haiku,not_exist,1,yes
+RA_0465,Claude 3 Haiku,not_relevant,1,yes
+RA_0466,Claude 3 Haiku,not_relevant,1,yes
+RA_0467,Claude 3 Haiku,not_relevant,2,yes
+RA_0468,Claude 3 Haiku,not_exist,1,yes
+RA_0469,Claude 3 Haiku,insecure,1,yes
+RA_0470,Claude 3 Haiku,not_relevant,1,yes
+RA_0471,Claude 3 Haiku,not_relevant,1,yes
+RA_0472,Claude 3 Haiku,not_relevant,1,yes
+RA_0473,Claude 3 Haiku,not_relevant,1,yes
+RA_0474,Claude 3 Haiku,insecure,1,yes
+RA_0475,Claude 3 Haiku,insecure,1,yes
+RA_0476,Claude 3 Haiku,insecure,1,yes
+RA_0477,Claude 3 Haiku,not_exist,3,yes
+RA_0478,Claude 3 Haiku,not_relevant,1,yes
+RA_0479,Claude 3 Haiku,insecure,2,yes
+RA_0480,Claude 3 Haiku,insecure,2,yes
+RA_0481,Claude 3 Haiku,not_relevant,3,yes
+RA_0482,Claude 3 Haiku,not_relevant,2,yes
+RA_0483,Claude 3 Haiku,insecure,3,yes
+RA_0484,Claude 3 Haiku,not_exist,3,yes
+RA_0485,Claude 3 Haiku,not_exist,1,yes
+RA_0486,Claude 3 Haiku,insecure,2,yes
+RA_0487,Claude 3 Haiku,not_exist,3,yes
+RA_0488,Claude 3 Haiku,not_relevant,1,yes
+RA_0489,Claude 3 Haiku,insecure,2,yes
+RA_0490,Claude 3 Haiku,insecure,2,yes
+RA_0491,Claude 3 Haiku,not_exist,2,yes
+RA_0492,Claude 3 Haiku,not_exist,2,yes
+RA_0493,Claude 3 Haiku,insecure,1,yes
+RA_0494,Claude 3 Haiku,not_exist,1,yes
+RA_0495,Claude 3 Haiku,not_relevant,2,yes
+RA_0496,Claude 3 Haiku,not_relevant,2,yes
+RA_0497,Claude 3 Haiku,not_exist,2,no
+RA_0498,Claude 3 Haiku,not_exist,2,no
+RA_0499,Claude 3 Haiku,not_exist,2,no
+RA_0500,Mistral Large,insecure,1,yes
+RA_0501,Mistral Large,insecure,1,yes
+RA_0502,Mistral Large,insecure,3,yes
+RA_0503,Mistral Large,not_exist,3,yes
+RA_0504,Mistral Large,insecure,2,yes
+RA_0505,Mistral Large,insecure,3,yes
+RA_0506,Mistral Large,not_exist,2,yes
+RA_0507,Mistral Large,not_exist,3,yes
+RA_0508,Mistral Large,insecure,2,yes
+RA_0509,Mistral Large,insecure,2,yes
+RA_0510,Mistral Large,not_exist,2,yes
+RA_0511,Mistral Large,not_exist,2,yes
+RA_0512,Mistral Large,not_exist,1,yes
+RA_0513,Mistral Large,not_exist,3,yes
+RA_0514,Mistral Large,insecure,2,yes
+RA_0515,Mistral Large,not_exist,3,yes
+RA_0516,Mistral Large,not_relevant,3,yes
+RA_0517,Mistral Large,not_exist,1,yes
+RA_0518,Mistral Large,insecure,3,yes
+RA_0519,Mistral Large,insecure,3,yes
+RA_0520,Mistral Large,insecure,3,yes
+RA_0521,Mistral Large,not_exist,2,yes
+RA_0522,Mistral Large,not_relevant,3,yes
+RA_0523,Mistral Large,insecure,3,yes
+RA_0524,Mistral Large,insecure,1,yes
+RA_0525,Mistral Large,not_exist,3,yes
+RA_0526,Mistral Large,not_exist,1,yes
+RA_0527,Mistral Large,insecure,2,yes
+RA_0528,Mistral Large,not_exist,3,yes
+RA_0529,Mistral Large,not_relevant,3,yes
+RA_0530,Mistral Large,not_relevant,3,yes
+RA_0531,Mistral Large,not_exist,3,yes
+RA_0532,Mistral Large,insecure,3,yes
+RA_0533,Mistral Large,not_exist,1,yes
+RA_0534,Mistral Large,not_exist,2,yes
+RA_0535,Mistral Large,not_relevant,3,yes
+RA_0536,Mistral Large,insecure,3,yes
+RA_0537,Mistral Large,insecure,1,yes
+RA_0538,Mistral Large,insecure,1,yes
+RA_0539,Mistral Large,not_exist,1,yes
+RA_0540,Mistral Large,not_relevant,2,yes
+RA_0541,Mistral Large,not_relevant,2,yes
+RA_0542,Mistral Large,insecure,3,yes
+RA_0543,Mistral Large,insecure,3,yes
+RA_0544,Mistral Large,not_exist,3,yes
+RA_0545,Mistral Large,insecure,3,yes
+RA_0546,Mistral Large,not_relevant,3,no
+RA_0547,Mistral Large,not_relevant,2,no
+RA_0548,Mistral Large,not_exist,2,no
+RA_0549,Phi-3-medium,insecure,3,yes
+RA_0550,Phi-3-medium,not_exist,1,yes
+RA_0551,Phi-3-medium,insecure,1,yes
+RA_0552,Phi-3-medium,insecure,2,yes
+RA_0553,Phi-3-medium,insecure,1,yes
+RA_0554,Phi-3-medium,not_relevant,2,yes
+RA_0555,Phi-3-medium,insecure,1,yes
+RA_0556,Phi-3-medium,insecure,3,yes
+RA_0557,Phi-3-medium,not_exist,3,yes
+RA_0558,Phi-3-medium,not_exist,1,yes
+RA_0559,Phi-3-medium,not_relevant,1,yes
+RA_0560,Phi-3-medium,not_exist,2,yes
+RA_0561,Phi-3-medium,not_exist,1,yes
+RA_0562,Phi-3-medium,insecure,2,yes
+RA_0563,Phi-3-medium,not_relevant,3,yes
+RA_0564,Phi-3-medium,not_exist,1,yes
+RA_0565,Phi-3-medium,not_relevant,3,yes
+RA_0566,Phi-3-medium,insecure,3,yes
+RA_0567,Phi-3-medium,not_exist,1,yes
+RA_0568,Phi-3-medium,not_relevant,1,yes
+RA_0569,Phi-3-medium,not_exist,2,yes
+RA_0570,Phi-3-medium,not_exist,1,yes
+RA_0571,Phi-3-medium,insecure,1,yes
+RA_0572,Phi-3-medium,not_relevant,2,yes
+RA_0573,Phi-3-medium,not_exist,2,yes
+RA_0574,Phi-3-medium,not_relevant,3,yes
+RA_0575,Phi-3-medium,insecure,1,yes
+RA_0576,Phi-3-medium,not_exist,2,yes
+RA_0577,Phi-3-medium,not_exist,3,yes
+RA_0578,Phi-3-medium,not_exist,1,yes
+RA_0579,Phi-3-medium,insecure,3,yes
+RA_0580,Phi-3-medium,not_relevant,3,yes
+RA_0581,Phi-3-medium,not_relevant,1,yes
+RA_0582,Phi-3-medium,not_exist,2,yes
+RA_0583,Phi-3-medium,not_relevant,2,yes
+RA_0584,Phi-3-medium,not_relevant,1,yes
+RA_0585,Phi-3-medium,not_relevant,3,yes
+RA_0586,Phi-3-medium,not_relevant,1,yes
+RA_0587,Phi-3-medium,insecure,1,yes
+RA_0588,Phi-3-medium,insecure,2,yes
+RA_0589,Phi-3-medium,not_exist,1,yes
+RA_0590,Phi-3-medium,not_relevant,3,yes
+RA_0591,Phi-3-medium,not_exist,3,yes
+RA_0592,Phi-3-medium,insecure,1,yes
+RA_0593,Phi-3-medium,insecure,3,yes
+RA_0594,Phi-3-medium,insecure,2,no
+RA_0595,Phi-3-medium,insecure,3,no
+RA_0596,Phi-3-medium,not_relevant,1,no
+RA_0597,Llama 3 (70B),not_exist,3,yes
+RA_0598,Llama 3 (70B),not_exist,3,yes
+RA_0599,Llama 3 (70B),not_relevant,1,yes
+RA_0600,Llama 3 (70B),not_relevant,2,yes
+RA_0601,Llama 3 (70B),not_exist,1,yes
+RA_0602,Llama 3 (70B),not_exist,1,yes
+RA_0603,Llama 3 (70B),not_relevant,1,yes
+RA_0604,Llama 3 (70B),not_relevant,1,yes
+RA_0605,Llama 3 (70B),not_exist,1,yes
+RA_0606,Llama 3 (70B),not_exist,1,yes
+RA_0607,Llama 3 (70B),insecure,2,yes
+RA_0608,Llama 3 (70B),not_exist,3,yes
+RA_0609,Llama 3 (70B),insecure,1,yes
+RA_0610,Llama 3 (70B),not_relevant,1,yes
+RA_0611,Llama 3 (70B),not_exist,1,yes
+RA_0612,Llama 3 (70B),not_relevant,3,yes
+RA_0613,Llama 3 (70B),not_exist,2,yes
+RA_0614,Llama 3 (70B),not_relevant,2,yes
+RA_0615,Llama 3 (70B),not_relevant,2,yes
+RA_0616,Llama 3 (70B),not_exist,3,yes
+RA_0617,Llama 3 (70B),not_exist,1,yes
+RA_0618,Llama 3 (70B),insecure,2,yes
+RA_0619,Llama 3 (70B),not_exist,1,yes
+RA_0620,Llama 3 (70B),insecure,1,yes
+RA_0621,Llama 3 (70B),not_relevant,1,yes
+RA_0622,Llama 3 (70B),not_relevant,2,yes
+RA_0623,Llama 3 (70B),not_exist,1,yes
+RA_0624,Llama 3 (70B),not_exist,1,yes
+RA_0625,Llama 3 (70B),not_exist,1,yes
+RA_0626,Llama 3 (70B),insecure,1,yes
+RA_0627,Llama 3 (70B),insecure,1,yes
+RA_0628,Llama 3 (70B),not_relevant,1,yes
+RA_0629,Llama 3 (70B),insecure,3,yes
+RA_0630,Llama 3 (70B),not_relevant,3,yes
+RA_0631,Llama 3 (70B),not_relevant,3,yes
+RA_0632,Llama 3 (70B),not_relevant,3,yes
+RA_0633,Llama 3 (70B),not_relevant,2,yes
+RA_0634,Llama 3 (70B),insecure,1,yes
+RA_0635,Llama 3 (70B),not_relevant,3,yes
+RA_0636,Llama 3 (70B),not_relevant,3,yes
+RA_0637,Llama 3 (70B),not_exist,2,yes
+RA_0638,Llama 3 (70B),insecure,1,yes
+RA_0639,Llama 3 (70B),not_relevant,2,yes
+RA_0640,Llama 3 (70B),insecure,2,yes
+RA_0641,Llama 3 (70B),insecure,3,yes
+RA_0642,Llama 3 (70B),not_exist,3,yes
+RA_0643,Llama 3 (70B),not_exist,1,no
+RA_0644,Llama 3 (70B),insecure,2,no
+RA_0645,Llama 3 (70B),insecure,3,no
+RA_0646,Mixtral 8x7B,insecure,1,yes
+RA_0647,Mixtral 8x7B,not_relevant,1,yes
+RA_0648,Mixtral 8x7B,not_relevant,1,yes
+RA_0649,Mixtral 8x7B,not_exist,1,yes
+RA_0650,Mixtral 8x7B,not_relevant,3,yes
+RA_0651,Mixtral 8x7B,not_relevant,1,yes
+RA_0652,Mixtral 8x7B,not_relevant,2,yes
+RA_0653,Mixtral 8x7B,insecure,3,yes
+RA_0654,Mixtral 8x7B,not_relevant,3,yes
+RA_0655,Mixtral 8x7B,not_relevant,1,yes
+RA_0656,Mixtral 8x7B,not_exist,3,yes
+RA_0657,Mixtral 8x7B,not_exist,3,yes
+RA_0658,Mixtral 8x7B,not_exist,1,yes
+RA_0659,Mixtral 8x7B,not_exist,1,yes
+RA_0660,Mixtral 8x7B,not_relevant,3,yes
+RA_0661,Mixtral 8x7B,not_relevant,1,yes
+RA_0662,Mixtral 8x7B,not_exist,3,yes
+RA_0663,Mixtral 8x7B,not_relevant,1,yes
+RA_0664,Mixtral 8x7B,insecure,3,yes
+RA_0665,Mixtral 8x7B,not_relevant,1,yes
+RA_0666,Mixtral 8x7B,insecure,2,yes
+RA_0667,Mixtral 8x7B,insecure,3,yes
+RA_0668,Mixtral 8x7B,not_exist,1,yes
+RA_0669,Mixtral 8x7B,not_exist,2,yes
+RA_0670,Mixtral 8x7B,insecure,1,yes
+RA_0671,Mixtral 8x7B,not_exist,1,yes
+RA_0672,Mixtral 8x7B,not_relevant,3,yes
+RA_0673,Mixtral 8x7B,not_exist,3,yes
+RA_0674,Mixtral 8x7B,not_exist,3,yes
+RA_0675,Mixtral 8x7B,insecure,1,yes
+RA_0676,Mixtral 8x7B,insecure,3,yes
+RA_0677,Mixtral 8x7B,not_relevant,3,yes
+RA_0678,Mixtral 8x7B,not_exist,3,yes
+RA_0679,Mixtral 8x7B,insecure,2,yes
+RA_0680,Mixtral 8x7B,not_exist,3,yes
+RA_0681,Mixtral 8x7B,insecure,2,yes
+RA_0682,Mixtral 8x7B,not_exist,1,yes
+RA_0683,Mixtral 8x7B,not_exist,1,yes
+RA_0684,Mixtral 8x7B,not_relevant,3,yes
+RA_0685,Mixtral 8x7B,not_exist,3,yes
+RA_0686,Mixtral 8x7B,not_exist,1,yes
+RA_0687,Mixtral 8x7B,insecure,1,yes
+RA_0688,Mixtral 8x7B,not_relevant,3,yes
+RA_0689,Mixtral 8x7B,not_relevant,1,yes
+RA_0690,Mixtral 8x7B,not_exist,3,yes
+RA_0691,Mixtral 8x7B,not_exist,2,no
+RA_0692,Mixtral 8x7B,not_exist,2,no
+RA_0693,Mixtral 8x7B,not_relevant,3,no
+RA_0694,Llama 3 (8B),insecure,1,yes
+RA_0695,Llama 3 (8B),not_relevant,3,yes
+RA_0696,Llama 3 (8B),not_relevant,1,yes
+RA_0697,Llama 3 (8B),not_relevant,1,yes
+RA_0698,Llama 3 (8B),insecure,2,yes
+RA_0699,Llama 3 (8B),insecure,3,yes
+RA_0700,Llama 3 (8B),not_exist,3,yes
+RA_0701,Llama 3 (8B),not_relevant,2,yes
+RA_0702,Llama 3 (8B),insecure,2,yes
+RA_0703,Llama 3 (8B),not_exist,1,yes
+RA_0704,Llama 3 (8B),not_relevant,1,yes
+RA_0705,Llama 3 (8B),not_relevant,3,yes
+RA_0706,Llama 3 (8B),not_relevant,3,yes
+RA_0707,Llama 3 (8B),insecure,2,yes
+RA_0708,Llama 3 (8B),insecure,3,yes
+RA_0709,Llama 3 (8B),not_exist,1,yes
+RA_0710,Llama 3 (8B),not_exist,2,yes
+RA_0711,Llama 3 (8B),not_relevant,3,yes
+RA_0712,Llama 3 (8B),not_exist,2,yes
+RA_0713,Llama 3 (8B),insecure,2,yes
+RA_0714,Llama 3 (8B),not_exist,3,yes
+RA_0715,Llama 3 (8B),insecure,2,yes
+RA_0716,Llama 3 (8B),not_exist,1,yes
+RA_0717,Llama 3 (8B),not_relevant,1,yes
+RA_0718,Llama 3 (8B),not_exist,3,yes
+RA_0719,Llama 3 (8B),insecure,1,yes
+RA_0720,Llama 3 (8B),insecure,2,yes
+RA_0721,Llama 3 (8B),not_relevant,2,yes
+RA_0722,Llama 3 (8B),not_exist,2,yes
+RA_0723,Llama 3 (8B),not_relevant,3,yes
+RA_0724,Llama 3 (8B),insecure,3,yes
+RA_0725,Llama 3 (8B),not_exist,2,yes
+RA_0726,Llama 3 (8B),insecure,3,yes
+RA_0727,Llama 3 (8B),not_exist,1,yes
+RA_0728,Llama 3 (8B),insecure,1,yes
+RA_0729,Llama 3 (8B),insecure,3,yes
+RA_0730,Llama 3 (8B),not_exist,2,yes
+RA_0731,Llama 3 (8B),insecure,3,yes
+RA_0732,Llama 3 (8B),not_exist,2,yes
+RA_0733,Llama 3 (8B),insecure,1,yes
+RA_0734,Llama 3 (8B),not_relevant,2,yes
+RA_0735,Llama 3 (8B),not_relevant,1,yes
+RA_0736,Llama 3 (8B),not_relevant,3,yes
+RA_0737,Llama 3 (8B),not_exist,3,yes
+RA_0738,Llama 3 (8B),insecure,1,yes
+RA_0739,Llama 3 (8B),insecure,1,no
+RA_0740,Llama 3 (8B),not_exist,2,no
+RA_0741,Llama 3 (8B),not_relevant,3,no
+RA_0742,Mistral 7B,not_relevant,2,yes
+RA_0743,Mistral 7B,not_relevant,2,yes
+RA_0744,Mistral 7B,not_exist,3,yes
+RA_0745,Mistral 7B,not_relevant,3,yes
+RA_0746,Mistral 7B,not_exist,1,yes
+RA_0747,Mistral 7B,not_exist,1,yes
+RA_0748,Mistral 7B,insecure,1,yes
+RA_0749,Mistral 7B,not_exist,2,yes
+RA_0750,Mistral 7B,insecure,3,yes
+RA_0751,Mistral 7B,not_exist,3,yes
+RA_0752,Mistral 7B,not_relevant,3,yes
+RA_0753,Mistral 7B,not_exist,2,yes
+RA_0754,Mistral 7B,not_relevant,3,yes
+RA_0755,Mistral 7B,insecure,3,yes
+RA_0756,Mistral 7B,not_exist,3,yes
+RA_0757,Mistral 7B,insecure,2,yes
+RA_0758,Mistral 7B,not_exist,3,yes
+RA_0759,Mistral 7B,not_exist,2,yes
+RA_0760,Mistral 7B,not_relevant,1,yes
+RA_0761,Mistral 7B,not_relevant,3,yes
+RA_0762,Mistral 7B,not_exist,2,yes
+RA_0763,Mistral 7B,insecure,1,yes
+RA_0764,Mistral 7B,not_exist,3,yes
+RA_0765,Mistral 7B,not_exist,1,yes
+RA_0766,Mistral 7B,not_relevant,2,yes
+RA_0767,Mistral 7B,not_relevant,3,yes
+RA_0768,Mistral 7B,insecure,3,yes
+RA_0769,Mistral 7B,not_exist,3,yes
+RA_0770,Mistral 7B,not_relevant,3,yes
+RA_0771,Mistral 7B,not_relevant,3,yes
+RA_0772,Mistral 7B,not_relevant,2,yes
+RA_0773,Mistral 7B,insecure,2,yes
+RA_0774,Mistral 7B,not_exist,1,yes
+RA_0775,Mistral 7B,not_exist,2,no
+RA_0776,Mistral 7B,not_relevant,1,no
+RA_0777,Mistral 7B,insecure,3,no
+RA_0778,Mistral 7B,not_relevant,3,no
+RA_0779,Mistral 7B,insecure,1,no
+RA_0780,Mistral 7B,not_exist,2,no
+RA_0781,Mistral 7B,insecure,1,no
+RA_0782,Mistral 7B,insecure,1,no
+RA_0783,Mistral 7B,insecure,2,no
+RA_0784,Mistral 7B,not_relevant,2,no
+RA_0785,Mistral 7B,not_exist,2,no
+RA_0786,Mistral 7B,insecure,2,no
+RA_0787,Mistral 7B,not_exist,1,no
+RA_0788,Mistral 7B,insecure,1,no
+RA_0789,Mistral 7B,not_relevant,3,no

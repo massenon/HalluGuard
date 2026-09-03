@@ -1,146 +1,91 @@
-"""
-verifier.py
-------------
-Main orchestration loop implementing Algorithm 1 (HalluGuard CoV
-Process / VerifyAndMitigate) from Section 3.4.
-
-This is the entry point that ties together:
-  - registry_client.py   (V_exist)
-  - security_score.py    (V_secure)
-  - relevance_judge.py   (V_relevant)
-  - mitigation.py         (Mitigation & Regeneration Module)
-"""
+"""Chain-of-Verification loop (V_exist -> V_secure -> V_relevant) with mitigation."""
 
 from __future__ import annotations
-import logging
+
 from dataclasses import dataclass, field
-from typing import Optional
+from enum import Enum
 
-from registry_client import RegistryClient, Dependency
-from security_score import calculate_security_score
-from relevance_judge import CrossModelJudge
-from mitigation import MitigationModule, MitigationRequest
+from halluguard.extractor import Dependency, resolve_dependencies
+from halluguard.mitigation import MitigationModule, ReasonCode
+from halluguard.registry_client import RegistryClient
+from halluguard.relevance_judge import RelevanceJudge
+from halluguard.security_score import SecurityScorer
 
-logger = logging.getLogger("halluguard.verifier")
+
+class Outcome(str, Enum):
+    VERIFIED = "verified"
+    FAILED = "failed"            # exhausted regeneration attempts
+    INDETERMINATE = "indeterminate"  # a data source was unreachable; human review required
+    UNPARSEABLE = "unparseable"  # generated code is not valid Python
+
+
+@dataclass(frozen=True)
+class Rejection:
+    attempt: int
+    dependency: Dependency
+    reason: ReasonCode
 
 
 @dataclass
 class VerificationOutcome:
-    final_code: Optional[str]
-    success: bool
-    iterations_used: int
-    rejection_log: list = field(default_factory=list)
+    outcome: Outcome
+    final_code: str | None
+    attempts: int
+    rejections: list[Rejection] = field(default_factory=list)
 
 
 class HalluGuardVerifier:
-    """
-    Implements Algorithm 1: VerifyAndMitigate(P, k).
+    def __init__(self, generator, registry: RegistryClient, scorer: SecurityScorer,
+                 judge: RelevanceJudge, mitigation: MitigationModule,
+                 module_to_package: dict[str, str], max_attempts: int) -> None:
+        self._generate = generator          # callable(prompt) -> code
+        self._registry = registry
+        self._scorer = scorer
+        self._judge = judge
+        self._mitigation = mitigation
+        self._module_map = module_to_package
+        self._max_attempts = max_attempts
 
-    Sequential, short-circuiting Chain-of-Verification:
-        V_pkg(d_i, P) = V_exist(d_i) -> V_secure(d_i) -> V_relevant(d_i, P)
-    A failure at any stage halts the chain for that dependency and
-    triggers the Mitigation Module before re-entering the loop.
-    """
+    def verify_and_mitigate(self, prompt: str) -> VerificationOutcome:
+        code = self._generate(prompt)
+        rejections: list[Rejection] = []
 
-    def __init__(self, llm_client_factory, popular_packages: list[str],
-                 module_dictionary: dict, config: dict):
-        self.registry = RegistryClient()
-        self.judge = CrossModelJudge(llm_client_factory)
-        self.mitigation = MitigationModule(llm_client_factory)
-        self.llm_client_factory = llm_client_factory
-        self.popular_packages = popular_packages
-        self.module_dictionary = module_dictionary
-        self.config = config
+        for attempt in range(1, self._max_attempts + 1):
+            try:
+                deps = resolve_dependencies(code, self._module_map)
+            except SyntaxError:
+                return VerificationOutcome(Outcome.UNPARSEABLE, code, attempt, rejections)
 
-    def extract_dependencies(self, code: str, ecosystem: str = "python") -> list[Dependency]:
-        """
-        Stage 1 (Section 3.3.1): AST/tree-sitter parsing to extract
-        import statements. Simplified regex-based stub here; the full
-        tree-sitter implementation is provided in the companion module
-        `ast_extractor.py` (omitted here for brevity).
-        """
-        import re
-        deps = []
-        if ecosystem == "python":
-            for match in re.finditer(r"^\s*(?:import|from)\s+([\w\.]+)", code, re.MULTILINE):
-                module = match.group(1).split(".")[0]
-                canonical = self.registry.resolve_canonical_name(
-                    module, ecosystem, self.module_dictionary
-                )
-                deps.append(Dependency(canonical, ecosystem=ecosystem))
-        return deps
+            failure = self._first_failure(deps, prompt)
+            if failure is None:
+                return VerificationOutcome(Outcome.VERIFIED, code, attempt, rejections)
+            if failure == "indeterminate":
+                return VerificationOutcome(Outcome.INDETERMINATE, code, attempt, rejections)
 
-    def generate_initial_code(self, prompt: str, generator_model: str) -> str:
-        client = self.llm_client_factory(generator_model)
-        return client.complete(prompt)
+            dep, reason = failure
+            rejections.append(Rejection(attempt, dep, reason))
+            code = self._mitigation.regenerate(prompt, code, dep.package_name, reason)
 
-    def verify_and_mitigate(self, prompt: str, max_iterations: int = 3,
-                             generator_model: str = "gpt-4-turbo-2024-04-09",
-                             judge_model: str = "claude-3-5-sonnet-20240620"
-                             ) -> VerificationOutcome:
-        code = self.generate_initial_code(prompt, generator_model)
-        rejection_log = []
+        return VerificationOutcome(Outcome.FAILED, None, self._max_attempts, rejections)
 
-        for iteration in range(1, max_iterations + 1):
-            deps = self.extract_dependencies(code)
-            all_verified = True
+    def _first_failure(self, deps: list[Dependency], prompt: str):
+        """Short-circuit chain: returns None (all pass), 'indeterminate', or (dep, reason)."""
+        for dep in deps:
+            exist = self._registry.verify_existence(dep)
+            if exist.exists is None:
+                return "indeterminate"
+            if not exist.exists:
+                return dep, ReasonCode.NOT_EXIST
 
-            for dep in deps:
-                # --- V_exist ---
-                exist_result = self.registry.verify_existence(dep)
-                if not exist_result.exists:
-                    rejection_log.append((iteration, dep.package_name, "not_exist"))
-                    req = MitigationRequest(prompt, code, dep.package_name, "not_exist")
-                    code = self.mitigation.regenerate(req, generator_model)
-                    all_verified = False
-                    break
+            sec = self._scorer.score(dep)
+            if sec.passed is None:
+                return "indeterminate"
+            if not sec.passed:
+                return dep, ReasonCode.INSECURE
 
-                # --- V_secure ---
-                sec_result = calculate_security_score(
-                    dep.package_name, dep.version_specifier, self.popular_packages
-                )
-                if not sec_result.passed:
-                    rejection_log.append((iteration, dep.package_name, "insecure"))
-                    req = MitigationRequest(prompt, code, dep.package_name, "insecure")
-                    code = self.mitigation.regenerate(req, generator_model)
-                    all_verified = False
-                    break
-
-                # --- V_relevant ---
-                rel_result = self.judge.verify_relevance(
-                    dep.package_name, prompt, generator_model, judge_model
-                )
-                if not rel_result.verdict:
-                    rejection_log.append((iteration, dep.package_name, "not_relevant"))
-                    req = MitigationRequest(prompt, code, dep.package_name, "not_relevant")
-                    code = self.mitigation.regenerate(req, generator_model)
-                    all_verified = False
-                    break
-
-            if all_verified:
-                return VerificationOutcome(
-                    final_code=code, success=True,
-                    iterations_used=iteration, rejection_log=rejection_log,
-                )
-
-        return VerificationOutcome(
-            final_code=None, success=False,
-            iterations_used=max_iterations, rejection_log=rejection_log,
-        )
-
-
-if __name__ == "__main__":
-    class DummyClient:
-        def complete(self, prompt: str) -> str:
-            return "import requests\nresponse = requests.get('https://example.com')"
-
-    verifier = HalluGuardVerifier(
-        llm_client_factory=lambda model: DummyClient(),
-        popular_packages=["requests", "numpy", "pandas"],
-        module_dictionary={},
-        config={},
-    )
-    outcome = verifier.verify_and_mitigate(
-        "Write Python code to fetch and parse data from a URL."
-    )
-    print(outcome)
+            rel = self._judge.judge(dep, prompt)
+            if rel.relevant is None:
+                return "indeterminate"
+            if not rel.relevant:
+                return dep, ReasonCode.NOT_RELEVANT
+        return None

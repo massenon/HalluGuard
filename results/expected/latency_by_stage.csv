@@ -1,0 +1,6 @@
+stage,mean_ms,sd_ms,dispersion_lower_ms,dispersion_upper_ms
+V_exist,85,18,50,120
+V_secure,110,24,63,157
+V_relevant,90,21,49,131
+total_verification,285,42,202,368
+per_mitigation_iteration,520,78,367,673

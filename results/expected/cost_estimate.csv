@@ -1,0 +1,4 @@
+metric,value_usd,note
+generator_side_cost_per_snippet,0.0012,"lower bound; excludes judge calls, failed requests, retries"
+generator_side_cost_per_1000_snippets,1.2,lower bound
+generator_side_cost_prevalence_corpus_573696,688.44,lower bound
