@@ -32,7 +32,7 @@ def cm(rs, label_key, positive, pred_key):
 
 def test_nl_api_size_and_domains():
     lines = (DATA / "nl_api/nl_api_prompts.jsonl").read_text().splitlines()
-    recs = [json.loads(l) for l in lines]
+    recs = [json.loads(line) for line in lines]
     assert len(recs) == 2500
     counts = {d: sum(r["domain"] == d for r in recs) for d in ("langchain", "boto3", "stripe", "kubernetes", "other")}
     assert counts == {"langchain": 700, "boto3": 650, "stripe": 400, "kubernetes": 300, "other": 450}
