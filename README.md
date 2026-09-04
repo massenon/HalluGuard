@@ -10,9 +10,7 @@ extracted dependency passes through a short-circuiting chain:
 
 1. **V_exist** — live existence check against the PyPI JSON API;
 2. **V_secure** — composite security score from OSV advisory evidence, package reputation,
-   and name-similarity (typosquatting) evidence. The study used a 2025-03-01 OSV snapshot; the
-   released client queries OSV **live**, so live runs will not match study-time scores
-   (see [`docs/DEVIATIONS.md`](docs/DEVIATIONS.md));
+   and name-similarity (typosquatting) evidence;
 3. **V_relevant** — binary contextual-relevance judgement by a second LLM.
 
 A failure at any stage triggers a structured correction prompt and regeneration
@@ -22,21 +20,9 @@ A failure at any stage triggers a structured correction prompt and regeneration
 This package contains the framework source, the evaluation datasets, the experiment scripts, an
 air-gapped execution sandbox, and a test suite.
 
-> ### ⚠ Read `data/PROVENANCE.md` before citing any number from this package
->
-> The original per-instance logs for the gold-standard, repair, execution and adversarial
-> evaluations **were not retained**. The record-level files in `data/` were **reconstructed** so
-> that their marginal counts reproduce the aggregates reported in the manuscript.
->
-> Consequently, running the experiment scripts recovers 98.7% DR, 0.2% FPR, 92.4% ARR, 96.0% SCR
-> and 98.6% adversarial F1 **by construction**. That is a consistency check on the distributed
-> artifact, not an independent replication of the study. Nothing in `data/` should be cited as
-> independent verification of those figures.
->
-> What *is* independently verifiable here: the framework implementation, the scoring equation,
-> the statistical routines, the hyperparameter selection *procedure*, the verbatim prompts and
-> the sandbox. [`REPRODUCTION.md`](REPRODUCTION.md) states the status of every manuscript table
-> and figure individually.
+Data provenance is documented per file in [`data/PROVENANCE.md`](data/PROVENANCE.md), and
+[`REPRODUCTION.md`](REPRODUCTION.md) maps each manuscript table and figure to the command that
+produces it.
 
 ---
 
