@@ -67,7 +67,8 @@ results/expected/           Released per-model, per-stage, and per-configuration
 results/generated/          Written by the scripts (git-ignored)
 database/                   Upstream benchmark inputs; NOT wired into the framework (see database/README.md)
 docker/sandbox/             Air-gapped execution environment (network_mode: none)
-figures/plot_results.py     Regenerates summary figures at 300 DPI
+figures/plot_results.py     Regenerates the data-driven figures at 300 DPI
+figures/plot_diagrams.py    Regenerates the schematic figures that carry study numbers
 tests/                      25 offline tests (no network access required)
 
 REPRODUCTION.md             Every manuscript table/figure -> command, input, and honest status
@@ -109,7 +110,8 @@ python -m experiments.grid_search            # selects w = (0.6, 0.2, 0.2), tau 
 python -m experiments.rq1_prevalence         # per-model PHR / UDR summary
 python -m experiments.rq3_latency            # per-stage latency summary
 python -m experiments.descriptive_summaries  # cross-model judge + cost summaries
-python figures/plot_results.py               # figures -> results/generated/figures/
+python figures/plot_results.py               # data figures (7, 8, 9, 12)
+python figures/plot_diagrams.py              # schematic figures (10, 11, annotation protocol)
 ```
 
 | Quantity | Source file | Recomputed value | Status |

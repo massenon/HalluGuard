@@ -39,10 +39,16 @@ study result is correct.
 
 | Figure | Command | Status |
 |---|---|---|
-| `fig:hallucination_rates` (fig8) | `python figures/plot_results.py` | Regenerated at 300 DPI → `results/generated/figures/prevalence_by_model.png` |
-| `fig:latency_overhead` (fig7) | `python figures/plot_results.py` | Regenerated → `latency_by_stage.png` |
-| `fig:ablation_study` (fig9) | `python figures/plot_results.py` | Regenerated → `ablation_arr.png` |
-| `fig:architecture`, `fig:vexist_flow`, `fig:vsecure_pipeline`, `fig:vrelevant_flow`, `fig:mitigation_module`, `fig:slopsquatting_lifecycle`, `fig:nlapi_sequence`, `fig:annotation_protocol`, `fig:crossmodel_judge`, case studies 1–2 | — | Hand-authored diagrams; **not in package** as regenerable artifacts |
+| `fig:hallucination_rates` (fig8) | `python figures/plot_results.py` | Regenerated at 300 DPI → `fig8_hallucination_rates.png` |
+| `fig:latency_overhead` (fig7) | `python figures/plot_results.py` | Regenerated → `fig7_latency_bar.png` |
+| `fig:ablation_study` (fig9) | `python figures/plot_results.py` | Regenerated → `fig9_ablation.png` |
+| `fig:crossmodel_judge` (fig12) | `python figures/plot_results.py` | Regenerated → `fig12_crossmodel_judge.png` |
+| `fig:annotation_protocol` | `python figures/plot_diagrams.py` | Regenerated; the conflict count, conflict rate and κ are read from `annotated_gold_standard_g800.csv` at draw time rather than hard coded, so the figure cannot drift from the data |
+| `fig:casestudy1` (fig10), `fig:casestudy2` (fig11) | `python figures/plot_diagrams.py` | Regenerated → `fig10_casestudy1.png`, `fig11_casestudy2.png` |
+| `fig:architecture`, `fig:vexist_flow`, `fig:vsecure_pipeline`, `fig:vrelevant_flow`, `fig:mitigation_module`, `fig:slopsquatting_lifecycle`, `fig:nlapi_sequence` | — | Hand-authored diagrams; **not in package** as regenerable artifacts |
+
+Both figure scripts write to `results/generated/figures/`, to `figures/`, and to the manuscript's
+own `figures/` directory, so recompiling the paper picks up regenerated artefacts directly.
 
 ## Formal specifications, verifiable by reading
 
