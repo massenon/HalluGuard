@@ -27,7 +27,9 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
-from matplotlib.patches import FancyArrowPatch, FancyBboxPatch  # noqa: E402
+from matplotlib.patches import (  # noqa: E402
+    FancyArrowPatch, FancyBboxPatch, Rectangle,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -44,13 +46,22 @@ BLUE, ORANGE, GREEN, PINK, RED, GREY = (
 )
 INK = "#1a1a1a"
 
+# Computer Modern mathtext so V_exist and friends match the LaTeX body font.
+plt.rcParams["mathtext.fontset"] = "cm"
+plt.rcParams["font.family"] = "DejaVu Sans"
 
-def save(fig, filename: str) -> None:
+
+def save(fig, filename: str, also_pdf: bool = False) -> None:
+    """Write at 300 DPI to every target, optionally alongside a vector PDF."""
     for d in OUT_DIRS:
         d.mkdir(parents=True, exist_ok=True)
         fig.savefig(d / filename, dpi=300, bbox_inches="tight", facecolor="white")
+        if also_pdf:
+            fig.savefig(d / filename.replace(".png", ".pdf"),
+                        bbox_inches="tight", facecolor="white")
     plt.close(fig)
-    print(f"  wrote {filename} to {len(OUT_DIRS)} directories")
+    suffix = " (+ vector PDF)" if also_pdf else ""
+    print(f"  wrote {filename} to {len(OUT_DIRS)} directories{suffix}")
 
 
 def box(ax, x, y, w, h, text, face="#ffffff", edge=INK, fontsize=9,
@@ -126,82 +137,134 @@ def annotation_protocol() -> None:
 
 
 # --------------------------------------------------------------- Figure 10
+DIFF_RED_BG, DIFF_RED_INK = "#ffeef0", "#82071e"
+DIFF_GRN_BG, DIFF_GRN_INK = "#e6ffed", "#04663b"
+NODE_BG, NODE_EDGE = "#eef2f7", "#43607e"
+
+
+def _code_block(ax, x, y_top, lines, width, mono=7.6, line_h=0.255):
+    """Render git-diff style code: '-' lines on red, '+' on green, context plain."""
+    y = y_top
+    for marker, text in lines:
+        if marker in "-+":
+            bg = DIFF_RED_BG if marker == "-" else DIFF_GRN_BG
+            ink = DIFF_RED_INK if marker == "-" else DIFF_GRN_INK
+            ax.add_patch(Rectangle((x, y - line_h * 0.78), width, line_h,
+                                   facecolor=bg, edgecolor="none", zorder=2))
+        else:
+            ink = "#3a3f45"
+        ax.text(x + 0.10, y - line_h * 0.30, marker, fontsize=mono, family="monospace",
+                color=ink, va="center", zorder=3, fontweight="bold")
+        ax.text(x + 0.34, y - line_h * 0.30, text, fontsize=mono, family="monospace",
+                color=ink, va="center", zorder=3)
+        y -= line_h
+
+
 def case_study_1() -> None:
-    """Path analogy hallucination: caught at V_relevant, not at a sub-module stage."""
-    fig, ax = plt.subplots(figsize=(12.5, 6.2))
-    ax.set_xlim(0, 12.5)
-    ax.set_ylim(0, 6.2)
+    """Detection to repair: the chain is V_exist, V_secure, V_relevant."""
+    fig, ax = plt.subplots(figsize=(13.2, 6.6))
+    ax.set_xlim(0, 13.2)
+    ax.set_ylim(0, 6.6)
     ax.axis("off")
 
-    ax.text(1.95, 5.85, "LLM generated candidate", ha="center", fontsize=11, fontweight="bold")
-    ax.text(6.25, 5.85, "HalluGuard verification chain", ha="center", fontsize=11, fontweight="bold")
-    ax.text(10.55, 5.85, "Verified repair", ha="center", fontsize=11, fontweight="bold")
+    for cx, title in [(2.15, "LLM generated snippet"),
+                      (6.6, "Verification workflow"),
+                      (11.05, "Verified repair")]:
+        ax.text(cx, 6.28, title, ha="center", fontsize=11.5, fontweight="bold", color=INK)
 
-    ax.add_patch(FancyBboxPatch((0.15, 2.15), 3.6, 3.4,
-                                boxstyle="round,pad=0.01,rounding_size=0.04",
-                                facecolor="#fdecea", edgecolor=RED, linewidth=1.3))
-    ax.text(0.32, 5.28, "from langchain_milvus.retrievers import \\\n"
-                        "    MilvusCollectionHybridSearchRetriever",
-            fontsize=7.4, family="monospace", va="top", color="#8a1c10")
-    ax.text(0.32, 4.35, "retriever = MilvusCollectionHybrid\\\n"
-                        "    SearchRetriever(\n"
-                        "        collection=collection,\n"
-                        "        anns_fields=[\"dense\", \"sparse\"],\n"
-                        "        top_k=5)",
-            fontsize=7.4, family="monospace", va="top", color="#333333")
-    ax.text(1.95, 2.42, "sub-module .retrievers does not exist",
-            fontsize=8, style="italic", ha="center", color=RED)
+    # ---- left: flawed snippet -------------------------------------------
+    ax.add_patch(FancyBboxPatch((0.25, 2.30), 3.8, 3.68,
+                                boxstyle="round,pad=0.012,rounding_size=0.05",
+                                facecolor="#ffffff", edgecolor=DIFF_RED_INK, linewidth=1.4))
+    _code_block(ax, 0.35, 5.80, [
+        ("-", "from langchain_milvus.retrievers \\"),
+        ("-", "     import MilvusCollectionHybrid \\"),
+        ("-", "           SearchRetriever"),
+        (" ", ""),
+        (" ", "retriever = MilvusCollection \\"),
+        (" ", "    HybridSearchRetriever("),
+        (" ", "    collection=collection,"),
+        (" ", "    anns_fields=[\"dense\",\"sparse\"],"),
+        (" ", "    top_k=5)"),
+    ], width=3.60)
+    ax.text(2.15, 2.52, "sub-module .retrievers absent from the distribution",
+            fontsize=7.9, style="italic", ha="center", color=DIFF_RED_INK)
 
+    # ---- centre: verification workflow ----------------------------------
     stages = [
-        ("$V_{exist}$", "PyPI: HTTP 200\nparent registered", "PASS", GREEN, "#e8f6ef"),
-        ("$V_{secure}$", "no advisory,\nestablished package", "PASS", GREEN, "#e8f6ef"),
-        ("$V_{relevant}$", "cannot satisfy\nthe stated request", "FAIL", RED, "#fdecea"),
+        (r"$V_{\mathit{exist}}$", "PyPI JSON API, HTTP 200\nparent distribution registered",
+         "PASS", GREEN),
+        (r"$V_{\mathit{secure}}$", "no advisory, established\nreputation, low name similarity",
+         "PASS", GREEN),
+        (r"$V_{\mathit{relevant}}$", "package cannot satisfy\nthe stated request",
+         "FAIL", DIFF_RED_INK),
     ]
-    y = 4.55
-    for name, detail, verdict, colour, face in stages:
-        box(ax, 4.55, y, 3.4, 0.88, "", face=face, edge=colour)
-        ax.text(4.75, y + 0.58, name, fontsize=10, fontweight="bold", va="center")
-        ax.text(4.75, y + 0.27, detail, fontsize=7.6, va="center", color="#333333")
-        ax.text(7.72, y + 0.44, verdict, fontsize=9, fontweight="bold",
-                color=colour, ha="right", va="center")
-        if y > 2.8:
-            arrow(ax, (6.25, y), (6.25, y - 0.27), colour=GREY)
-        y -= 1.15
+    y = 5.42
+    for name, detail, verdict, colour in stages:
+        face = "#e8f6ef" if verdict == "PASS" else DIFF_RED_BG
+        ax.add_patch(FancyBboxPatch((4.70, y), 3.80, 0.86,
+                                    boxstyle="round,pad=0.010,rounding_size=0.04",
+                                    facecolor=face, edgecolor=colour, linewidth=1.4, zorder=2))
+        ax.text(4.92, y + 0.58, name, fontsize=11, va="center", zorder=3)
+        ax.text(4.92, y + 0.25, detail, fontsize=7.4, va="center", color="#3a3f45", zorder=3)
+        ax.text(8.30, y + 0.43, verdict, fontsize=9.5, fontweight="bold",
+                color=colour, ha="right", va="center", zorder=3)
+        if y > 3.4:
+            arrow(ax, (6.60, y), (6.60, y - 0.36), colour=NODE_EDGE)
+        y -= 1.22
 
-    box(ax, 4.55, 1.28, 3.4, 0.72, "Mitigation module\nstructured correction prompt",
-        face="#fff4e2", edge=ORANGE, fontsize=8.5)
-    arrow(ax, (6.25, 2.25), (6.25, 2.03), colour=RED)
+    ax.add_patch(FancyBboxPatch((4.70, 2.02), 3.80, 0.80,
+                                boxstyle="round,pad=0.010,rounding_size=0.04",
+                                facecolor="#fff4e2", edgecolor=ORANGE, linewidth=1.4, zorder=2))
+    ax.text(6.60, 2.42, "Mitigation module\nstructured correction prompt",
+            fontsize=8.6, ha="center", va="center", zorder=3)
+    arrow(ax, (6.60, 2.98), (6.60, 2.86), colour=DIFF_RED_INK)
 
-    ax.add_patch(FancyBboxPatch((4.55, 0.30), 3.4, 0.72,
-                                boxstyle="round,pad=0.01,rounding_size=0.03",
-                                facecolor="#f4f4f4", edgecolor="#bbbbbb",
+    ax.add_patch(FancyBboxPatch((4.70, 1.02), 3.80, 0.68,
+                                boxstyle="round,pad=0.010,rounding_size=0.03",
+                                facecolor="#f6f7f8", edgecolor="#c3c8ce",
                                 linestyle="--", linewidth=1.1))
-    ax.text(6.25, 0.66, "sub-module resolution ($V_{path}$)\nout of scope, future work",
+    ax.text(6.60, 1.36, r"sub-module resolution ($V_{\mathit{path}}$)"
+                        "\nnot implemented, future work",
             fontsize=7.8, ha="center", va="center", style="italic", color=GREY)
 
-    ax.add_patch(FancyBboxPatch((8.75, 2.15), 3.6, 3.4,
-                                boxstyle="round,pad=0.01,rounding_size=0.04",
-                                facecolor="#e8f6ef", edgecolor=GREEN, linewidth=1.3))
-    ax.text(8.92, 5.28, "from langchain_milvus import Milvus\n"
-                        "from langchain_milvus.function \\\n"
-                        "    import BM25BuiltInFunction",
-            fontsize=7.4, family="monospace", va="top", color="#0b5c3f")
-    ax.text(8.92, 4.20, "store = Milvus(\n"
-                        "    builtin_function=\n"
-                        "        BM25BuiltInFunction(),\n"
-                        "    vector_field=[\"dense\",\n"
-                        "                  \"sparse\"])",
-            fontsize=7.4, family="monospace", va="top", color="#333333")
-    ax.text(10.55, 2.42, "all symbols resolved against PyPI",
-            fontsize=8, style="italic", ha="center", color=GREEN)
+    # ---- right: verified repair -----------------------------------------
+    ax.add_patch(FancyBboxPatch((9.15, 2.30), 3.8, 3.68,
+                                boxstyle="round,pad=0.012,rounding_size=0.05",
+                                facecolor="#ffffff", edgecolor=DIFF_GRN_INK, linewidth=1.4))
+    _code_block(ax, 9.25, 5.80, [
+        ("+", "from langchain_milvus import Milvus"),
+        ("+", "from langchain_milvus.function \\"),
+        ("+", "     import BM25BuiltInFunction"),
+        (" ", ""),
+        ("+", "store = Milvus("),
+        ("+", "    builtin_function="),
+        ("+", "        BM25BuiltInFunction(),"),
+        ("+", "    vector_field=[\"dense\","),
+        ("+", "                  \"sparse\"])"),
+    ], width=3.60)
+    ax.text(11.05, 2.52, "every symbol resolves against PyPI",
+            fontsize=7.9, style="italic", ha="center", color=DIFF_GRN_INK)
 
-    arrow(ax, (3.75, 3.9), (4.55, 3.9), colour=GREY)
-    arrow(ax, (7.95, 1.64), (8.60, 1.64), colour=ORANGE)
-    arrow(ax, (8.60, 1.64), (8.60, 3.85), colour=ORANGE)
-    arrow(ax, (8.60, 3.85), (8.75, 3.85), colour=ORANGE)
-    ax.text(8.00, 1.36, "regenerate", fontsize=7.8, color=ORANGE)
+    # ---- orthogonal connectors ------------------------------------------
+    arrow(ax, (4.05, 4.16), (4.70, 4.16), colour=NODE_EDGE)
+    ax.text(4.38, 4.28, "extract", fontsize=7.4, ha="center", color=NODE_EDGE)
 
-    save(fig, "fig10_casestudy1.png")
+    # detection to repair: mitigation feeds the regenerated snippet forward
+    arrow(ax, (8.50, 2.42), (8.85, 2.42), colour=ORANGE)
+    arrow(ax, (8.85, 2.42), (8.85, 4.16), colour=ORANGE)
+    arrow(ax, (8.85, 4.16), (9.15, 4.16), colour=ORANGE)
+    ax.text(8.99, 4.34, "regenerate", fontsize=7.6, color=ORANGE, ha="left", va="bottom")
+
+    # feedback loop back to the generator
+    ax.add_patch(FancyArrowPatch((4.70, 2.42), (2.15, 2.30), arrowstyle="-|>",
+                                 mutation_scale=13, linewidth=1.3, color=ORANGE,
+                                 linestyle=(0, (4, 2)),
+                                 connectionstyle="angle,angleA=180,angleB=90,rad=6"))
+    ax.text(3.30, 1.88, "correction prompt to generator", fontsize=7.4,
+            ha="center", color=ORANGE, style="italic")
+
+    save(fig, "fig10_casestudy1.png", also_pdf=True)
 
 
 # --------------------------------------------------------------- Figure 11
