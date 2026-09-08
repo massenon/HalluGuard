@@ -13,6 +13,8 @@ security:
     vuln: 0.6
     rep: 0.2
     typo: 0.2
+  # Recorded for reference. The scorer queries the live OSV API and receives its
+  # name-similarity list as a constructor argument, so neither key is read by code.
   osv_snapshot_date: "2025-03-01"
   typosquat_list_size: 5000
 
@@ -23,6 +25,6 @@ network:
   libraries_io_url: "https://libraries.io/api/pypi/{package}"
 
 reproducibility:
-  seeds: [42, 137, 2024]
+  seeds: [42, 137, 2024]   # recorded for reference; grid_search.py takes its own --seed
   python_version: "3.11.9"
   os: "Ubuntu 22.04 LTS"

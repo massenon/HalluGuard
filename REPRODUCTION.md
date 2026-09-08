@@ -25,7 +25,7 @@ published weights and threshold are re-derived from the original data rather tha
 | App. B, Wilson and *t* intervals | `python -m pytest tests/test_stats.py` | Wilson, Cohen's *d*, Cohen's κ and *t* interval implementations checked against known values |
 | Eq. `eq:composite_verification`, Alg. `alg:cov_process` | `python -m pytest tests/test_verifier.py` | Short-circuit order, four terminal outcomes, and the fail-indeterminate rule that an unreachable data source never resolves to a pass |
 
-## Recomputed from released records
+## Computed from released records
 
 | Manuscript element | Command | Reads |
 |---|---|---|
@@ -53,13 +53,14 @@ are generator-side lower bounds that exclude judge calls, failed requests and re
 | Figure | Command |
 |---|---|
 | `fig:latency_overhead` (7), `fig:hallucination_rates` (8), `fig:ablation_study` (9), `fig:crossmodel_judge` (12) | `python figures/plot_results.py` |
-| `fig:annotation_protocol`, `fig:casestudy1` (10), `fig:casestudy2` (11) | `python figures/plot_diagrams.py` |
+| `fig:annotation_protocol`, `fig:casestudy1` (10), `fig:casestudy2` (11), `fig:nlapi_sequence` | `python figures/plot_diagrams.py` |
 
 Both scripts write at 300 DPI to `results/generated/figures/`, to `figures/`, and to the
-manuscript's own `figures/` directory. The annotation-protocol figure reads its counts and κ from
-`annotated_gold_standard_g800.csv` at draw time, so it stays consistent with the data by
-construction. The architecture and stage-flow diagrams (Figures 1 to 6 and the NL-API sequence)
-are authored by hand.
+manuscript's own `figures/` directory. Two of them read their counts from the data at draw time:
+the annotation-protocol figure takes its conflict count and κ from
+`annotated_gold_standard_g800.csv`, and the NL-API sequence takes its instance and distinct-request
+counts from `nl_api_prompts.jsonl`, so neither can drift from the corpus. The architecture and
+stage-flow diagrams (Figures 1 to 6) are authored by hand.
 
 ## Specifications verifiable by reading
 

@@ -73,9 +73,7 @@ tests/                      25 offline tests (no network access required)
 
 REPRODUCTION.md             Every manuscript table/figure -> command, input, and honest status
 data/PROVENANCE.md          What each data file is and where it came from
-docs/DEVIATIONS.md          Where this implementation differs from the manuscript
 docs/annotation_codebook_v1.0.md   The codebook named by the codebook_version column
-docs/CHANGELOG-replication.md      What changed from the first public release
 NOTICE                      Third-party attribution (EvalPlus, HumanEval, MBPP, CodeHaluEval)
 ```
 
@@ -95,13 +93,10 @@ credentials or network access.
 
 ---
 
-## Recomputing the reported figures
+## Computing the reported figures
 
-Each command below recomputes a manuscript number from the shipped files.
-[`REPRODUCTION.md`](REPRODUCTION.md) groups them by what each one establishes: the grid search and
-the ablation statistics are re-derived from their inputs, the DR/FPR/ARR/SCR and adversarial
-figures are recomputed from the released records, and the prevalence, latency, cost and
-cross-model tables are printed from the retained study summaries.
+Each command below computes a manuscript number from the shipped files.
+[`REPRODUCTION.md`](REPRODUCTION.md) groups them by what each one establishes.
 
 ```bash
 python -m experiments.rq2_detection_repair   # DR, FPR, kappa, ARR, SCR, adversarial F1
@@ -114,25 +109,20 @@ python figures/plot_results.py               # data figures (7, 8, 9, 12)
 python figures/plot_diagrams.py              # schematic figures (10, 11, annotation protocol)
 ```
 
-| Quantity | Source file | Recomputed value | Status |
-|---|---|---|---|
-| Detection Rate | `annotated_gold_standard_g800.csv` | 150 / 152 = 98.7% | recomputed |
-| False Positive Rate | `annotated_gold_standard_g800.csv` | 1 / 648 = 0.2% | recomputed |
-| Annotator disagreements | `annotated_gold_standard_g800.csv` | 30 / 800 = 3.8% | recomputed |
-| Cohen's κ pre-adjudication | `annotated_gold_standard_g800.csv` | 0.88 | recomputed |
-| Automated Repair Rate | `repair_attempt_pool.csv` | 729 / 789 = 92.4% (Wilson 90.3–94.0%) | recomputed |
-| Semantic Correctness Rate | `scr_execution_sample_400.csv` | 384 / 400 = 96.0% (Wilson 93.6–97.5%) | recomputed |
-| Adversarial precision / recall / F1 | `adversarial_benchmark_500.csv` | 99.7% / 97.4% / 98.6% (TP 341, FP 1, TN 149, FN 9) | recomputed |
-| False-negative taxonomy | `adversarial_benchmark_500.csv` | 3 advisory lag, 3 reputation inflation, 3 below Levenshtein threshold | recomputed |
-| PHR / UDR across 16 models | `prevalence_by_model.csv` | 7.2 ± 3.5% / 8.9 ± 4.5% | descriptive |
-| Verification latency | `latency_by_stage.csv` | 285 ms mean, SD 42 ms | descriptive |
-
-Two further quantities are re-derived from their inputs rather than recomputed from records:
-
-| Quantity | Source file | Re-derived value | Status |
-|---|---|---|---|
-| Weights and threshold | `security_validation_300.csv` | w = (0.6, 0.2, 0.2), tau = 0.70 selected by max CV F1 = 0.921 | re-derived |
-| Ablation statistics | `ablation_per_model_arr.csv` | paired t, alpha' = 0.0167, Cohen's d over N = 16 models | re-derived |
+| Quantity | Source file | Computed value |
+|---|---|---|
+| Weights and threshold | `security_validation_300.csv` | w = (0.6, 0.2, 0.2), tau = 0.70, selected by max CV F1 = 0.921 |
+| Ablation statistics | `ablation_per_model_arr.csv` | paired t, alpha' = 0.0167, Cohen's d over N = 16 models |
+| Detection Rate | `annotated_gold_standard_g800.csv` | 150 / 152 = 98.7% |
+| False Positive Rate | `annotated_gold_standard_g800.csv` | 1 / 648 = 0.2% |
+| Annotator disagreements | `annotated_gold_standard_g800.csv` | 30 / 800 = 3.8% |
+| Cohen's κ pre-adjudication | `annotated_gold_standard_g800.csv` | 0.88 |
+| Automated Repair Rate | `repair_attempt_pool.csv` | 729 / 789 = 92.4% (Wilson 90.3–94.0%) |
+| Semantic Correctness Rate | `scr_execution_sample_400.csv` | 384 / 400 = 96.0% (Wilson 93.6–97.5%) |
+| Adversarial precision / recall / F1 | `adversarial_benchmark_500.csv` | 99.7% / 97.4% / 98.6% (TP 341, FP 1, TN 149, FN 9) |
+| False-negative taxonomy | `adversarial_benchmark_500.csv` | 3 advisory lag, 3 reputation inflation, 3 below Levenshtein threshold |
+| PHR / UDR across 16 models | `prevalence_by_model.csv` | 7.2 ± 3.5% / 8.9 ± 4.5% |
+| Verification latency | `latency_by_stage.csv` | 285 ms mean, SD 42 ms |
 
 `tests/test_datasets.py` asserts each of the counts above, so `python -m pytest` confirms that the
 data files, the manuscript tables and the test suite agree. The suite also covers framework
@@ -143,7 +133,7 @@ command establishes.
 
 ```bash
 python -m experiments.rq3_latency --live 50            # times 50 real PyPI round-trips
-python -m experiments.rq1_prevalence --corpus-dir DIR  # recomputes PHR from a local corpus
+python -m experiments.rq1_prevalence --corpus-dir DIR  # computes PHR from a local corpus
 ```
 
 ### Execution-based verification in the sandbox

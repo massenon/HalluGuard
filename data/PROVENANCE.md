@@ -35,7 +35,7 @@ change the input file and the selected configuration changes with it.
 
 These four files are derived from the study's retained aggregate summaries rather than from
 original per-instance logs, and are distributed so that the published counts, rates and
-taxonomies can be inspected and recomputed at row level.
+taxonomies can be inspected and computed at row level.
 
 Malicious package identifiers in the adversarial benchmark are pseudonymised (`cve-pkg-###`,
 `typo-pkg-###`, `slop-pkg-###`) so that publication does not propagate attack names. Benign

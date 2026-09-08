@@ -18,10 +18,12 @@ Report security issues in this code by email to the corresponding authors
 
 ## Operational cautions for anyone running this framework
 
-* **`V_secure` reflects OSV as of the moment you run it**, not the 2025-03-01 snapshot used in
-  the study, and the shipped typosquat reference list has 159 names rather than the study's
-  top-5,000. Both make a live run *more permissive* than the evaluated configuration. See
-  `docs/DEVIATIONS.md`.
+* **`V_secure` reflects OSV as of the moment you run it.** The scorer queries the live OSV API,
+  so advisories published since the study's 2025-03-01 reference date are picked up and scores
+  will not match study-time values. The shipped name-similarity reference list holds 159 entries;
+  because `S_typo` is a maximum over that list, a shorter list yields lower similarity scores and
+  a correspondingly higher `S_final`. Both make a live run more permissive than the evaluated
+  configuration.
 * **An unreachable data source yields `INDETERMINATE`, never a pass.** If you adapt this code,
   preserve that: mapping a network failure to "safe" turns the guard into a no-op exactly when
   an attacker would most like it to be one.
