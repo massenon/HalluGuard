@@ -269,9 +269,9 @@ def case_study_1() -> None:
 
 # --------------------------------------------------------------- Figure 11
 def case_study_2() -> None:
-    """Temporal version extrapolation with a correctly ordered version axis."""
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(13, 5.4),
-                                   gridspec_kw={"width_ratios": [1.05, 1]})
+    """Temporal version extrapolation, and the security stage that rejects it."""
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(13.4, 5.8),
+                                   gridspec_kw={"width_ratios": [1.02, 1]})
 
     # Official releases: newer version implies younger package, all mature.
     official = [("v60", 365), ("v65", 270), ("v70", 180), ("v72", 95)]
@@ -284,10 +284,10 @@ def case_study_2() -> None:
         ax1.annotate(v, (age, ypos[v]), textcoords="offset points",
                      xytext=(10, -15), fontsize=9, color="#0b5c3f", fontweight="bold")
 
-    ax1.scatter([3], [ypos["v80"]], s=150, marker="X", color=RED, zorder=3,
+    ax1.scatter([3], [ypos["v80"]], s=175, marker="X", color=DIFF_RED_INK, zorder=3,
                 label="Speculative package (attacker)")
     ax1.annotate("v80\nage < 72 h", (3, ypos["v80"]), textcoords="offset points",
-                 xytext=(12, -4), fontsize=9, color="#8a1c10", fontweight="bold")
+                 xytext=(12, -4), fontsize=9, color=DIFF_RED_INK, fontweight="bold")
 
     ax1.annotate("", xy=(3, ypos["v80"]), xytext=(95, ypos["v72"]),
                  arrowprops={"arrowstyle": "-|>", "color": ORANGE, "linewidth": 2})
@@ -304,34 +304,56 @@ def case_study_2() -> None:
     ax1.grid(alpha=0.3, zorder=0)
     ax1.legend(fontsize=8.5, loc="upper left", framealpha=0.95)
 
-    ax2.set_xlim(0, 10)
-    ax2.set_ylim(0, 10)
+    ax2.set_xlim(0, 10.6)
+    ax2.set_ylim(0, 10.6)
     ax2.axis("off")
-    box(ax2, 0.6, 8.2, 8.8, 1.0, 'import "github.com/stripe/stripe-go/v80"',
-        face="#fdecea", edge=RED, fontsize=9)
-    box(ax2, 1.5, 6.3, 7.0, 1.0, "$V_{exist}$   HTTP 200, attacker repository active",
-        face="#e8f6ef", edge=GREEN, fontsize=9)
-    ax2.text(9.0, 6.8, "PASS", fontsize=9.5, fontweight="bold", color=GREEN,
-             ha="right", va="center")
-    box(ax2, 1.5, 4.4, 7.0, 1.0,
-        "$V_{secure}$   age < 72 h, zero downloads,\nsignature mismatch",
-        face="#fdecea", edge=RED, fontsize=9)
-    ax2.text(9.0, 4.9, "FAIL", fontsize=9.5, fontweight="bold", color=RED,
-             ha="right", va="center")
-    box(ax2, 2.3, 2.9, 5.4, 0.85,
-        "$S_{final} = 0.08 \\; < \\; \\tau_{secure} = 0.70$",
-        face="#ffffff", edge=INK, fontsize=9.5, weight="bold")
-    box(ax2, 1.5, 1.0, 7.0, 1.0,
-        "Mitigation   revert import to verified v72", face="#fff4e2",
-        edge=ORANGE, fontsize=9)
 
-    for y0, y1, col in [(8.2, 7.3, GREY), (6.3, 5.4, RED), (4.4, 3.75, RED),
-                        (2.9, 2.0, ORANGE)]:
-        arrow(ax2, (5.0, y0), (5.0, y1), colour=col)
-    ax2.set_title("(b) Verification path, blocked before installation", fontsize=10.5)
+    box(ax2, 1.15, 9.15, 7.3, 0.86, 'import "github.com/stripe/stripe-go/v80"',
+        face=DIFF_RED_BG, edge=DIFF_RED_INK, fontsize=9.2)
+
+    box(ax2, 1.15, 7.30, 7.3, 0.92,
+        r"$V_{\mathit{exist}}$    HTTP 200, attacker repository resolves",
+        face="#e8f6ef", edge=GREEN, fontsize=9.2)
+    ax2.text(8.62, 7.76, "PASS", fontsize=10, fontweight="bold", color=GREEN,
+             ha="left", va="center")
+
+    box(ax2, 1.15, 5.25, 7.3, 1.16,
+        r"$V_{\mathit{secure}}$    age $<$ 72 h, zero downloads," "\n"
+        "signature mismatch, no advisory history",
+        face=DIFF_RED_BG, edge=DIFF_RED_INK, fontsize=9.2)
+    ax2.text(8.62, 5.83, "FAIL", fontsize=10, fontweight="bold", color=DIFF_RED_INK,
+             ha="left", va="center")
+
+    box(ax2, 1.95, 3.75, 5.7, 0.92,
+        r"composite score $S_{\mathit{final}} = 0.08$" "\n"
+        r"below threshold $\tau_{\mathit{secure}} = 0.70$",
+        face="#ffffff", edge=INK, fontsize=9.4)
+
+    ax2.text(8.62, 4.21, r"$V_{\mathit{relevant}}$ never runs" "\n" "(chain short-circuits)",
+             fontsize=7.6, color=GREY, style="italic", ha="left", va="center")
+
+    box(ax2, 1.15, 2.10, 7.3, 0.92,
+        "Mitigation module    structured correction prompt",
+        face="#fff4e2", edge=ORANGE, fontsize=9.2)
+
+    box(ax2, 1.15, 0.35, 7.3, 0.86, "LLM generator",
+        face="#eef2f7", edge=NODE_EDGE, fontsize=9.2)
+
+    for y0, y1, col in [(9.15, 8.22, NODE_EDGE), (7.30, 6.41, DIFF_RED_INK),
+                        (5.25, 4.67, DIFF_RED_INK), (3.75, 3.02, ORANGE)]:
+        arrow(ax2, (4.80, y0), (4.80, y1), colour=col)
+
+    # bold revert directive back to the generator
+    ax2.add_patch(FancyArrowPatch((4.80, 2.10), (4.80, 1.21), arrowstyle="-|>",
+                                  mutation_scale=20, linewidth=2.6,
+                                  color=DIFF_RED_INK, zorder=5))
+    ax2.text(5.05, 1.66, "directive: revert to v72", fontsize=9, fontweight="bold",
+             color=DIFF_RED_INK, ha="left", va="center")
+
+    ax2.set_title("(b) Verification path, blocked before installation", fontsize=11)
 
     fig.tight_layout()
-    save(fig, "fig11_casestudy2.png")
+    save(fig, "fig11_casestudy2.png", also_pdf=True)
 
 
 def nlapi_sequence() -> None:
