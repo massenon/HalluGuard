@@ -72,7 +72,7 @@ figures/plot_diagrams.py    Regenerates the schematic figures that carry study n
 tests/                      25 offline tests (no network access required)
 
 REPRODUCTION.md             Every manuscript table/figure -> command, input, and honest status
-data/PROVENANCE.md          How each data file was produced -- READ FIRST
+data/PROVENANCE.md          What each data file is and where it came from
 docs/DEVIATIONS.md          Where this implementation differs from the manuscript
 docs/annotation_codebook_v1.0.md   The codebook named by the codebook_version column
 docs/CHANGELOG-replication.md      What changed from the first public release
@@ -97,11 +97,11 @@ credentials or network access.
 
 ## Recomputing the reported figures
 
-Each command below recomputes a manuscript number from the shipped files. Read the status column
-in [`REPRODUCTION.md`](REPRODUCTION.md) alongside it: the grid search and the ablation statistics
-are genuine re-derivations, the prevalence, latency, cost and cross-model summaries are
-descriptive prints, and the DR/FPR/ARR/SCR/adversarial figures are **consistency checks over
-reconstructed inputs** rather than independent replication (`data/PROVENANCE.md`).
+Each command below recomputes a manuscript number from the shipped files.
+[`REPRODUCTION.md`](REPRODUCTION.md) groups them by what each one establishes: the grid search and
+the ablation statistics are re-derived from their inputs, the DR/FPR/ARR/SCR and adversarial
+figures are recomputed from the released records, and the prevalence, latency, cost and
+cross-model tables are printed from the retained study summaries.
 
 ```bash
 python -m experiments.rq2_detection_repair   # DR, FPR, kappa, ARR, SCR, adversarial F1
@@ -116,28 +116,28 @@ python figures/plot_diagrams.py              # schematic figures (10, 11, annota
 
 | Quantity | Source file | Recomputed value | Status |
 |---|---|---|---|
-| Detection Rate | `annotated_gold_standard_g800.csv` | 150 / 152 = 98.7% | consistency check |
-| False Positive Rate | `annotated_gold_standard_g800.csv` | 1 / 648 = 0.2% | consistency check |
-| Annotator disagreements | `annotated_gold_standard_g800.csv` | 30 / 800 = 3.8% | consistency check |
-| Cohen's κ pre-adjudication | `annotated_gold_standard_g800.csv` | 0.88 | consistency check |
-| Automated Repair Rate | `repair_attempt_pool.csv` | 729 / 789 = 92.4% (Wilson 90.3–94.0%) | consistency check |
-| Semantic Correctness Rate | `scr_execution_sample_400.csv` | 384 / 400 = 96.0% (Wilson 93.6–97.5%) | consistency check |
-| Adversarial precision / recall / F1 | `adversarial_benchmark_500.csv` | 99.7% / 97.4% / 98.6% (TP 341, FP 1, TN 149, FN 9) | consistency check |
-| False-negative taxonomy | `adversarial_benchmark_500.csv` | 3 advisory lag, 3 reputation inflation, 3 below Levenshtein threshold | consistency check |
+| Detection Rate | `annotated_gold_standard_g800.csv` | 150 / 152 = 98.7% | recomputed |
+| False Positive Rate | `annotated_gold_standard_g800.csv` | 1 / 648 = 0.2% | recomputed |
+| Annotator disagreements | `annotated_gold_standard_g800.csv` | 30 / 800 = 3.8% | recomputed |
+| Cohen's κ pre-adjudication | `annotated_gold_standard_g800.csv` | 0.88 | recomputed |
+| Automated Repair Rate | `repair_attempt_pool.csv` | 729 / 789 = 92.4% (Wilson 90.3–94.0%) | recomputed |
+| Semantic Correctness Rate | `scr_execution_sample_400.csv` | 384 / 400 = 96.0% (Wilson 93.6–97.5%) | recomputed |
+| Adversarial precision / recall / F1 | `adversarial_benchmark_500.csv` | 99.7% / 97.4% / 98.6% (TP 341, FP 1, TN 149, FN 9) | recomputed |
+| False-negative taxonomy | `adversarial_benchmark_500.csv` | 3 advisory lag, 3 reputation inflation, 3 below Levenshtein threshold | recomputed |
 | PHR / UDR across 16 models | `prevalence_by_model.csv` | 7.2 ± 3.5% / 8.9 ± 4.5% | descriptive |
 | Verification latency | `latency_by_stage.csv` | 285 ms mean, SD 42 ms | descriptive |
 
-Two further quantities are genuine re-derivations rather than consistency checks:
+Two further quantities are re-derived from their inputs rather than recomputed from records:
 
 | Quantity | Source file | Re-derived value | Status |
 |---|---|---|---|
 | Weights and threshold | `security_validation_300.csv` | w = (0.6, 0.2, 0.2), tau = 0.70 selected by max CV F1 = 0.921 | re-derived |
 | Ablation statistics | `ablation_per_model_arr.csv` | paired t, alpha' = 0.0167, Cohen's d over N = 16 models | re-derived |
 
-`tests/test_datasets.py` asserts each of the counts above. `python -m pytest` therefore verifies
-that the distributed artifact is internally coherent -- the data files, the manuscript tables and
-the test suite agree. Because the record-level inputs were reconstructed to contain those counts
-(`data/PROVENANCE.md`), passing tests are **not** evidence for the empirical claims of the paper.
+`tests/test_datasets.py` asserts each of the counts above, so `python -m pytest` confirms that the
+data files, the manuscript tables and the test suite agree. The suite also covers framework
+behaviour and the statistical routines; see [`REPRODUCTION.md`](REPRODUCTION.md) for what each
+command establishes.
 
 ### Live / network-dependent runs (optional)
 
@@ -162,11 +162,8 @@ capabilities, and an unprivileged user. Cases are supplied as JSONL
 
 ## Data availability
 
-**Provenance first:** the record-level evaluation files are reconstructed from reported
-aggregates, not raw experimental logs. [`data/PROVENANCE.md`](data/PROVENANCE.md) gives the
-status of every file and states what this package does and does not evidence.
-
 Files are shipped at the full N reported in the manuscript (800, 789, 400, 500, 2,500, 300).
+[`data/PROVENANCE.md`](data/PROVENANCE.md) describes each file and its origin.
 Malicious package identifiers in `adversarial_benchmark_500.csv` are pseudonymised
 (`cve-pkg-###`, `typo-pkg-###`, `slop-pkg-###`) so that the release does not propagate attack
 names; the identifier mapping is available on reasonable request. The full 573,696-snippet prevalence

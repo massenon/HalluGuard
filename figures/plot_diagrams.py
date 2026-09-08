@@ -19,6 +19,8 @@ Output goes to every directory in OUT_DIRS at 300 DPI.
 from __future__ import annotations
 
 import csv
+import io
+import json
 from pathlib import Path
 
 import matplotlib
@@ -269,11 +271,59 @@ def case_study_2() -> None:
     save(fig, "fig11_casestudy2.png")
 
 
+def nlapi_sequence() -> None:
+    """NL-API curation, with counts read from the released corpus."""
+    recs = [json.loads(line) for line in
+            io.open(DATA / "nl_api/nl_api_prompts.jsonl", encoding="utf-8")]
+    n_inst = len(recs)
+    n_distinct = len({r["prompt"] for r in recs})
+    n_src = len({r["source"] for r in recs})
+
+    fig, ax = plt.subplots(figsize=(11.5, 5.4))
+    ax.set_xlim(0, 11.5)
+    ax.set_ylim(0, 5.4)
+    ax.axis("off")
+
+    lanes = [(0.9, "Practitioner"), (3.5, f"Source APIs\n({n_src} sources)"),
+             (6.6, "Cleaning module"), (9.9, "NL-API corpus")]
+    for x, label in lanes:
+        box(ax, x - 1.0, 4.35, 2.0, 0.68, label, face="#eaf2fb", edge=BLUE, fontsize=9)
+        ax.plot([x, x], [0.55, 4.35], color="#bbbbbb", linewidth=1.0, zorder=0)
+
+    steps = [
+        (0.9, 3.5, 3.85, "CurateNicheDataset()"),
+        (3.5, 6.6, 3.15, "raw issues and questions"),
+    ]
+    for x0, x1, y, label in steps:
+        arrow(ax, (x0, y), (x1, y), colour=INK)
+        ax.text((x0 + x1) / 2, y + 0.12, label, ha="center", fontsize=8.2)
+
+    for y, label in [(2.55, "DeduplicateMinHash (Jaccard 0.85)"),
+                     (1.95, "FilterComplexity (min_imports $\\geq$ 3)")]:
+        ax.add_patch(FancyBboxPatch((6.75, y - 0.16), 3.0, 0.34,
+                                    boxstyle="round,pad=0.006,rounding_size=0.02",
+                                    facecolor="#ffffff", edgecolor=GREY, linewidth=1.0))
+        ax.text(8.25, y, label, ha="center", va="center", fontsize=7.8)
+    ax.text(6.72, 2.25, f"{n_distinct} distinct\nrequests", ha="right", va="center",
+            fontsize=8.2, color=GREEN, fontweight="bold")
+
+    arrow(ax, (6.6, 1.35), (9.9, 1.35), colour=GREEN)
+    ax.text(8.25, 1.47, f"{n_inst:,} evaluation instances", ha="center",
+            fontsize=8.5, fontweight="bold", color="#0b5c3f")
+
+    box(ax, 8.9, 0.35, 2.0, 0.62,
+        f"{n_inst:,} instances\n{n_distinct} distinct", face="#e8f6ef", edge=GREEN, fontsize=8.2)
+
+    ax.set_title("NL-API dataset curation", fontsize=12, fontweight="bold", pad=6)
+    save(fig, "fig_nlapi_sequence.png")
+
+
 def main() -> None:
     print("Regenerating schematic manuscript figures at 300 DPI")
     annotation_protocol()
     case_study_1()
     case_study_2()
+    nlapi_sequence()
     print("\nTargets:")
     for d in OUT_DIRS:
         print(f"  {d}")

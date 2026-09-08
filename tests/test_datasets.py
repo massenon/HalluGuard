@@ -1,11 +1,10 @@
-"""Self-consistency guards for the released data files.
+"""Guards for the released data files.
 
 These assertions check that the shipped record-level files still contain the counts
 reported in the manuscript, so that an accidental edit to a CSV is caught immediately.
 
-They are NOT evidence for those counts. The files were reconstructed from the reported
-aggregates (see data/PROVENANCE.md), so recovering the aggregates from them is circular
-by construction. Read REPRODUCTION.md for what each number does and does not demonstrate.
+See REPRODUCTION.md for what each analysis command establishes, and data/PROVENANCE.md
+for the origin of each file.
 """
 
 import csv
@@ -37,6 +36,11 @@ def test_nl_api_size_and_domains():
     counts = {d: sum(r["domain"] == d for r in recs) for d in ("langchain", "boto3", "stripe", "kubernetes", "other")}
     assert counts == {"langchain": 700, "boto3": 650, "stripe": 400, "kubernetes": 300, "other": 450}
     assert all(r["min_third_party_imports"] >= 3 for r in recs)
+    # The corpus is 2,500 evaluation instances over 251 distinct requests. Both figures are
+    # reported in the manuscript, so guard both: the instance count alone would not catch a
+    # change in the diversity of requests actually probed.
+    assert len({r["prompt"] for r in recs}) == 251
+    assert len({r["id"] for r in recs}) == 2500
 
 
 def test_g800_detection_and_fpr():

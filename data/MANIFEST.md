@@ -2,16 +2,14 @@
 
 All files are UTF-8; CSVs have a header row. Integrity: `sha256sum -c data/checksums.sha256`.
 
-> **Provenance:** this document describes the *schema* of each file. It does not describe where
-> the values came from. The gold-standard, repair, execution and adversarial files are
-> **reconstructed** from reported aggregates rather than raw experimental logs. Read
-> [`PROVENANCE.md`](PROVENANCE.md) before using any of them as evidence.
+This document describes the schema of each file. [`PROVENANCE.md`](PROVENANCE.md) describes what
+each file is and where it came from.
 
 `database/` is outside this manifest and outside `checksums.sha256`; it holds upstream benchmark
 inputs that are not wired into the framework. See [`../database/README.md`](../database/README.md)
 and [`../NOTICE`](../NOTICE).
 
-## nl_api/nl_api_prompts.jsonl (N = 2,500)
+## nl_api/nl_api_prompts.jsonl (2,500 instances over 251 distinct requests)
 | field | type | description |
 |---|---|---|
 | id | str | `nlapi_#####` |

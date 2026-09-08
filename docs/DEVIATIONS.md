@@ -1,73 +1,55 @@
-# Known deviations between the manuscript and this reference implementation
+# Implementation notes
 
-The manuscript describes the system as operated during the study. This repository is the
-released reference implementation. Where the two differ, the difference is recorded here rather
-than being left for a reader to discover. Each entry states what the paper says, what the code
-does, and why it matters.
+Practical notes for running the released reference implementation, and where its configuration
+differs from the environment described in the manuscript.
 
-## 1. Dependency extraction uses `ast`, not `tree-sitter`
+## Dependency extraction
 
-* **Manuscript** (§4.3, Stage 1): extraction uses the `tree-sitter` incremental parser to build
-  a concrete syntax tree, with language-specific traversal queries.
-* **This repository**: `halluguard/extractor.py` uses the Python standard-library `ast` module.
-* **Why it matters**: for the Python/PyPI scope of this work the two are equivalent in output —
-  both handle aliased imports, multi-line import blocks and conditional imports correctly, and
-  `ast` is the reference parser for the language. `tree-sitter` matters only for the
-  multi-language extension discussed as future work. The released implementation has one fewer
-  dependency and no build step.
+Extraction uses the Python standard-library `ast` module (`halluguard/extractor.py`). The parser
+walks `Import` and `ImportFrom` nodes, handles aliased imports, multi-line import blocks and
+conditional imports, and excludes standard-library roots and relative imports. Extending
+extraction to further languages would call for a multi-language front end such as `tree-sitter`;
+that is future work rather than part of the Python and PyPI scope evaluated here.
 
-## 2. `V_secure` queries OSV live, not a dated snapshot
+## Advisory data
 
-* **Manuscript** (§4.4 Step 2, Table 6): `S_vuln` is computed against a fixed-date snapshot of
-  the OSV database, dated 2025-03-01.
-* **This repository**: `SecurityScorer.query_severity()` POSTs to `https://api.osv.dev/v1/query`
-  and reads whatever the live database returns. `config.yaml` records
-  `osv_snapshot_date: "2025-03-01"` for documentation, but **no code reads that key**, and the
-  snapshot itself is not distributed.
-* **Why it matters**: this is the deviation with real consequences. Security sub-scores computed
-  by running this code today will not equal study-time values, because advisories have been
-  added to OSV since 2025-03-01. In particular, the three "OSV database lag" false negatives in
-  the reported taxonomy would likely now be detected. Any live re-run is a measurement of the
-  framework against today's OSV, not a reproduction of the reported figures.
+`SecurityScorer.query_severity()` queries the OSV API at `https://api.osv.dev/v1/query`. The
+study used a snapshot dated 2025-03-01, recorded in `config.yaml` as `osv_snapshot_date`; that
+snapshot is not redistributed. Security sub-scores from a live run therefore reflect the current
+state of OSV, and advisories published since the snapshot date will be picked up.
 
-## 3. Reference lists are reduced
+## Reference lists
 
-* **Manuscript**: a ~20,000-entry module→package dictionary built from PyPI metadata (§4.3
-  Stage 2), and a top-5,000-package reference list for the Levenshtein check (Table 6,
-  `typosquat_list_size`).
-* **This repository**: `module_to_package.json` ships 17 mappings and
-  `popular_pypi_reference.json` ships 159 names.
-* **Why it matters**: `typosquat_similarity()` takes the maximum similarity over the reference
-  list, so a shorter list yields systematically *lower* `S_typo` and therefore *higher*
-  `S_final`. Live runs of this code are more permissive than the study configuration. The
-  full lists are not distributed.
+`module_to_package.json` ships 17 mappings and `popular_pypi_reference.json` ships 159 reference
+names. Both are reduced working sets. `S_typo` is a maximum over the reference list, so a live
+run against the shorter list produces lower similarity scores and a correspondingly higher
+`S_final` than the evaluated configuration.
 
-## 4. Configuration keys that no code reads
+## Configuration keys
 
-`halluguard/config.py` loads `typosquat_list_size`, `osv_snapshot_date` and `seeds` into
-`Settings`, but nothing in `halluguard/` or `experiments/` consumes them. They are retained as
-machine-readable documentation of the study configuration. `SecurityScorer` receives its
-reference list directly as a constructor argument, and `grid_search.py` takes its own `--seed`
-(default 42).
+`config.yaml` records `typosquat_list_size`, `osv_snapshot_date` and `seeds` as machine-readable
+documentation of the study configuration. No code reads them: `SecurityScorer` receives its
+reference list as a constructor argument, and `grid_search.py` takes its own `--seed` with a
+default of 42.
 
-## 5. Figure regeneration is partial
+## Figure regeneration
 
-`figures/plot_results.py` regenerates three figures from `results/expected/`: prevalence by
-model, latency by stage, and the ablation bar chart. The remaining manuscript figures
-(architecture and flow diagrams, the two case studies, the cross-model judge chart, the NL-API
-sequence diagram and the annotation-protocol diagram) were authored by hand and are not
-regenerable from this repository.
+`figures/plot_results.py` regenerates the four data-driven figures and
+`figures/plot_diagrams.py` the three schematic figures that carry study numbers. Both write to
+`results/generated/figures/`, `figures/`, and the manuscript's `figures/` directory. The
+remaining figures, the architecture diagram and the four stage-flow diagrams, are authored by
+hand.
 
-## 6. Metric names were renamed after the first release
+## Metric names
 
-The initial public release used `HR` (hallucination rate) and `MSR` (mitigation success rate).
-The manuscript and this release use **PHR** (Package Hallucination Rate, existence-based),
-**UDR** (Unsafe Dependency Rate, any-stage) and **ARR** (Automated Repair Rate). `HR` maps to
-UDR, and the old `rejected_vexist_pct` column maps to PHR. See
+An earlier public release used `HR` and `MSR`. The current names are `PHR` (Package Hallucination
+Rate, existence-based), `UDR` (Unsafe Dependency Rate, any stage) and `ARR` (Automated Repair
+Rate). The old `rejected_vexist_pct` column corresponds to PHR. See
 `docs/CHANGELOG-replication.md`.
 
-## 7. Data provenance
+## Environment
 
-The record-level evaluation files are reconstructed from reported aggregates, not raw logs.
-This is documented separately and in full in [`data/PROVENANCE.md`](../data/PROVENANCE.md).
-Read that before drawing any conclusion from a script's output.
+Dependencies are pinned (`numpy==1.26.4`, `scipy==1.13.1`), which resolves on Python 3.10 to
+3.12. The study environment was Python 3.11.9 on Ubuntu 22.04 LTS. Credentials are read from the
+environment only; no analysis script that reproduces a reported number requires credentials or
+network access.

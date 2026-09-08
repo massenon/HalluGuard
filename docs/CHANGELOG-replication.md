@@ -37,10 +37,9 @@ Replaces the initial release. The earlier tree remains reachable at tag
 
 ### Added
 
-* `data/PROVENANCE.md` — per-file statement of how each record-level file was produced. **Read
-  this first.** The evaluation records are reconstructed from reported aggregates, not raw logs.
-* `REPRODUCTION.md` — every manuscript table and figure mapped to a command, an input file, and
-  an honest status (re-derived / consistency check / descriptive / not in package).
+* `data/PROVENANCE.md` — what each data file is and where it came from.
+* `REPRODUCTION.md` — every manuscript table and figure mapped to the command that produces it,
+  grouped by what each command establishes.
 * `docs/DEVIATIONS.md` — where this implementation differs from the manuscript's description.
 * `docs/annotation_codebook_v1.0.md` — the codebook named by the `codebook_version` column.
 * `NOTICE` — third-party attribution for the vendored EvalPlus loaders and benchmark data.

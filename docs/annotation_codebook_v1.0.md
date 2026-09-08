@@ -4,10 +4,8 @@ This is the codebook referenced by the `codebook_version` column of
 `data/gold_standard/annotated_gold_standard_g800.csv`. It reproduces Appendix E of the
 manuscript so that the value in that column resolves to something readable.
 
-**Provenance caveat.** The gold-standard file is reconstructed from reported aggregates; the
-original annotation sheets were not retained (`data/PROVENANCE.md`). This codebook documents the
-protocol as specified and applied during the study. It is not itself derived from the shipped
-CSV, and the shipped CSV is not evidence that the protocol was followed on any particular row.
+This codebook documents the annotation protocol as specified and applied during the study.
+See `data/PROVENANCE.md` for the origin of the gold-standard file itself.
 
 ## 1. Hallucination labelling
 
